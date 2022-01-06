@@ -1,0 +1,169 @@
+\documentclass[a4paper, 9pt]{scrreprt}
+
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage[margin=20mm]{geometry}
+\usepackage[graphicx]{realboxes}
+\usepackage{tabularx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{multicol}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+%\pagestyle{empty} % remove page numbers
+\pagebreak
+
+\begin{table}[!ht]
+
+    \centering
+    \begin{adjustbox}{center, width=0.9\linewidth}
+        \renewcommand{\arraystretch}{1.2}
+        \newcolumntype{R}{>{\raggedright\arraybackslash}X}%
+        \begin{tabularx}{\textwidth}{llllllR}
+            \hline
+            \textbf{Waffe}      & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} & \textbf{Länge} & \textbf{Schaden} & \textbf{Qualitäten und Markel}           \\ \hline
+            \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Standard}}                                                                                                  \\ \hline
+            Handwaffe           & 1 GK           & 1           & Verbreitet             & Durchschnitt   & +STB+4           & -                                        \\ \hline
+            Improvisierte Waffe & Keiner         & -           & Keine                  & Verschieden    & +STB+1           & Stumpf                                   \\ \hline
+            Dolch               & 16 S           & 0           & Verbreitet             & Sehr kurz      & +STB+2           & -                                        \\ \hline
+            Messer              & 8 S            & 0           & Verbreitet             & Sehr kurz      & +STB+1           & -                                        \\ \hline
+            Schild (Buckler)    & 18 S, 2 G      & 0           & Verbreitet             & Persönlich     & +STB+1           & Defensiv, Schild 1, Stumpf               \\ \hline
+            Schild              & 2 GK           & 1           & Verbreitet             & Sehr kurz      & +STB+2           & Defensiv, Schild 2, Stumpf               \\ \hline
+            Schild (Groß)       & 3 GK           & 3           & Verbreitet             & Sehr kurz      & +STB+3           & Defensiv, Schild 3, Stumpf               \\ \hline
+            \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Kavallerie}}                                                                                                \\ \hline
+            Reiterhammer (2H)   & 3 GK           & 3           & Knapp                  & Lang           & +STB+5           & Betäubend                                \\ \hline
+            Lanze               & 1 GK           & 3           & Selten                 & Sehr lang      & +STB+6*          & Durchbohrend, Wuchtig                    \\ \hline
+            \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Fechten}  }                                                                                                 \\ \hline
+            Florett             & 5 GK           & 1           & Knapp                  & Durchschnitt   & +STB+3           & Durchbohrend, Präzise, Schnell, Stumpf   \\ \hline
+            Rapier              & 5 GK           & 1           & Knapp                  & Lang           & +STB+4           & Durchbohrend, Schnell                    \\ \hline
+            \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Waffenlos}}                                                                                                 \\ \hline
+            Waffenlos           & Keiner         & 0           & Keine                  & Persönlich     & +STB+0           & Stumpf                                   \\ \hline
+            Schlagring          & 2 S, 6 G       & 0           & Verbreitet             & Persönlich     & +STB+2           & -                                        \\ \hline
+            \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Flegel}}                                                                                                    \\ \hline
+            Dreschflegel        & 10 S           & 1           & Verbreitet             & Durchschnitt   & +STB+3           & Ablenkend, Umwickelnd, Unpräzise         \\ \hline
+            Flegel              & 2 GK           & 1           & Knapp                  & Durchschnitt   & +STB+5           & Ablenkend, Umwickelnd                    \\ \hline
+            Kriegsflegel (2H)   & 3 GK           & 2           & Selten                 & Lang           & +STB+6           & Ablenkend, Ermüdend, Umwickelnd, Wuchtig \\ \hline
+            \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Parade}}                                                                                                    \\ \hline
+            Parierdolch         & 1 GK           & 0           & Selten                 & Sehr kurz      & +STB+2           & Defensiv                                 \\ \hline
+            Klingenbrecher      & 1 GK, 2 S, 6 G & 1           & Knapp                  & Kurz           & +STB+3           & Defensiv, Klingenfänger                  \\ \hline
+            \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Stangenwaffe}}                                                                                              \\ \hline
+            Hellebarde (2H)     & 2 GK           & 3           & Verbreitet             & Lang           & +STB+4           & Defensiv, Durchbohrend, Durchschlagend   \\ \hline
+            Speer (2H)          & 15 S           & 2           & Verbreitet             & Sehr lang      & +STB+4           & Durchbohrend                             \\ \hline
+            Pike (2H)           & 18 S           & 4           & Selten                 & Gewaltig       & +STB+4           & Durchbohrend                             \\ \hline
+            Kampfstab (2H)      & 3 S            & 2           & Verbreitet             & Lang           & +STB+4           & Betäubend, Defensiv                      \\ \hline
+            \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Zweihändig}}                                                                                                \\ \hline
+            Langes Schwert (2H) & 8 GK           & 3           & Knapp                  & Lang           & +STB+5           & Defensiv, Verwundend                     \\ \hline
+            Zweihandaxt (2H)    & 4 GK           & 3           & Knapp                  & Lang           & +STB+6           & Durchschlagend, Ermüdend, Wuchtig        \\ \hline
+            Kriegshacke (2H)    & 9 S            & 3           & Verbreitet             & Durchschnitt   & +STB+5           & Durchbohrend, Langsam, Verwundend        \\ \hline
+            Kriegshammer (2H)   & 3 GK           & 3           & Verbreitet             & Durchschnitt   & +STB+6           & Betäubend, Langsam, Verwundend           \\ \hline
+            Zweihänder (2H)     & 10 GK          & 3           & Knapp                  & Lang           & +STB+5           & Durchschlagend, Verwundend
+        \end{tabularx}%
+    \end{adjustbox}
+
+    \caption{*Lanzen zählen als Improvisierte Waffe, wenn sie in einer Runde eingesetzt werden, in der du keinen Sturmangriff durchgeführt hast.}
+
+\end{table}
+
+
+\newpage
+
+\begin{table}[!ht]
+    \centering
+
+    \renewcommand{\arraystretch}{1.2}
+    \newcolumntype{R}{>{\raggedright\arraybackslash}X}%
+    \begin{tabularx}{\textwidth}{llllllR}
+        \hline
+        \textbf{Waffe}            & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} & \textbf{Reichweite} & \textbf{Schaden} & \textbf{Qualitäten und Makel}                   \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Schießpulver*}}                                                                                                               \\ \hline
+        Donnerbüchse* (2H)        & 2 GK           & 1           & Knapp                  & 20                  & 8                & Gefährlich, Nachladen 2, Radius 3               \\ \hline
+        Hochland-Langbüchse* (2H) & 100 GK         & 3           & Exotisch               & 100                 & 9                & Akkurat, Nachladen 4, Präzise                   \\ \hline
+        Muskete* (2H)             & 4 GK           & 2           & Knapp                  & 50                  & 9                & Gefährlich, Nachladen 3                         \\ \hline
+        Pistole*                  & 8 GK           & 0           & Selten                 & 20                  & 8                & Pistole, Nachladen 1                            \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Bogen}}                                                                                                                       \\ \hline
+        Elfenbogen (2H)           & 10 GK          & 2           & Exotisch               & 150                 & +STB+4           & Präzise, Verwundend                             \\ \hline
+        Langbogen (2H)            & 5 GK           & 3           & Knapp                  & 100                 & +STB+4           & Verwundend                                      \\ \hline
+        Bogen (2H)                & 4 GK           & 2           & Verbreitet             & 50                  & +STB+3           & -                                               \\ \hline
+        Kurzbogen (2H)            & 3 GK           & 1           & Verbreitet             & 20                  & +STB+2           & -                                               \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Armbrust}}                                                                                                                    \\ \hline
+        Handarmbrust              & 6 GK           & 0           & Knapp                  & 10                  & 7                & Pistole                                         \\ \hline
+        Schwere Armbrust (2H)     & 7 GK           & 3           & Selten                 & 100                 & 9                & Nachladen 2, Verwundend                         \\ \hline
+        Armbrust (2H)             & 5 GK           & 2           & Verbreitet             & 60                  & 9                & Nachladen 1                                     \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Technicus*}}                                                                                                                  \\ \hline
+        Bündelmuskete* (2H)       & 10 GK          & 3           & Selten                 & 30                  & 9                & Gefährlich, Nachladen 5, Repetierend 4          \\ \hline
+        Bündelpistole*            & 15 GK          & 1           & Selten                 & 10                  & 8                & Gefährlich, Nachladen 4, Pistole, Repetierend 4 \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Fesseld**}}                                                                                                                   \\ \hline
+        Lasso                     & 6 S            & 0           & Verbreitet             & STBx2               & -                & Fesselnd                                        \\ \hline
+        Peitsche                  & 5 S            & 0           & Verbreitet             & 6                   & +STB+2           & Fesselnd                                        \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Explosiv}}                                                                                                                    \\ \hline
+        Bombe                     & 3 GK           & 0           & Selten                 & STB                 & 12               & Gefährlich, Radius 5, Wuchtig                   \\ \hline
+        Brandflasche              & 1 GK           & 0           & Knapp                  & STB                 & Speziell***      & Gefährlich, Radius 4                            \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Schleuder}}                                                                                                                   \\ \hline
+        Schleuder                 & 1 S            & 0           & Verbreitet             & 60                  & 6                & -                                               \\ \hline
+        Stabschleuder (2H)        & 4 S            & 2           & Knapp                  & 100                 & 7                & -                                               \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Werfen}}                                                                                                                      \\ \hline
+        Bola                      & 10 S           & 0           & Selten                 & STB$\times$3        & +STB             & Fesselnd                                        \\ \hline
+        Pfeil                     & 2 S            & 0           & Knapp                  & STB$\times$2        & +STB+1           & Durchbohrend                                    \\ \hline
+        Wurfspeer                 & 10 S, 6 G      & 1           & Knapp                  & STB$\times$3        & +STB+3           & Durchbohrend                                    \\ \hline
+        Stein                     & -              & 0           & Verbreitet             & STB$\times$3        & +STB             & -                                               \\ \hline
+        Wurfaxt                   & 1 GK           & 1           & Verbreitet             & STB$\times$2        & +STB+3           & Durchschlagend                                  \\ \hline
+        Wurfmesser                & 18 S           & 0           & Verbreitet             & STB$\times$2        & +STB+2           & -                                               \\
+    \end{tabularx}
+    \caption{* Alle Schießpulver- und Technicus-Waffen haben die Qualitäten Schießpulver und Verwundend. \newline
+        ** Fesselnd-Waffen haben keine Reichweiten-Stufen, nur die hier angegebene Reichweite. \newline
+        *** Eine Brandflasche verursacht bei jedem betroffenen Ziel 1+EG Brennend-Zustände.}
+\end{table}
+
+\begin{table}[!ht]
+    \centering
+    \renewcommand{\arraystretch}{1.2}
+    \newcolumntype{R}{>{\raggedright\arraybackslash}X}%
+    \begin{tabularx}{\textwidth}{XlllllR}
+        \hline
+        \textbf{Waffe}                          & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} & \textbf{Reichweite} & \textbf{Schaden} & \textbf{Qualitäten und Makel}                   \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Schießpulver und Technicus}}                                                                                                                \\ \hline
+        Kugel und Pulver (12)                   & 3 S, 3 G       & 0           & Verbreitet             & Wie Waffe           & +1               & Durchbohrend, Rüstungsbrechend                  \\ \hline
+        Improvisierte Kugeln\newline und Pulver & 3 G            & 0           & Verbreitet             & Halbe Waffe         & -                & -                                               \\ \hline
+        Kleine Kugeln und Pulver                & 3 S, 3 G       & 0           & Verbreitet             & Wie Waffe           & -                & Radius +1                                       \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Bogen}}                                                                                                                                     \\ \hline
+        Pfeil (12)                              & 5 S            & 0           & Verbreitet             & Wie Waffe           & -                & Durchbohrend                                    \\ \hline
+        Elfenpfeil                              & 6 S            & 0           & Exotisch               & +50                 & +1               & Akkurat,\newline Durchbohrend, Rüstungsbrechend \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Armbrust}}                                                                                                                                  \\ \hline
+        Bolzen (12)                             & 5 S            & 0           & Verbreitet             & Wie Waffe           & -                & Durchbohrend                                    \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Schleudder}}                                                                                                                                \\ \hline
+        Bleikugel (12)                          & 4 G            & 0           & Verbreitet             & -10                 & +1               & Betäubend                                       \\ \hline
+        Steinkugel (12)                         & 2 G            & 0           & Verbreitet             & Wie Waffe           & -                & Betäubend                                       \\
+    \end{tabularx}%
+\end{table}
+
+\begin{table}[!ht]
+    \centering
+    \renewcommand{\arraystretch}{1.2}
+    \newcolumntype{R}{>{\raggedright\arraybackslash}X}%
+    \begin{tabularx}{\textwidth}{lllllllR}
+        \hline
+        \textbf{Rüstung} & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} & \textbf{Abzug}  & \textbf{Trefferzonen} & \textbf{RP} & \textbf{Qualitäten und Markel}  \\ \hline
+        \multicolumn{8}{c}{\cellcolor{gray!25}\textbf{Weiches Leder*}}                                                                                                     \\ \hline
+        Gambeson         & 12 S           & 1           & Verbreitet             & -               & Arme, Körper          & 1           & -                               \\ \hline
+        Lederwams        & 10 S           & 1           & Verbreitet             & -               & Körper                & 1           & -                               \\ \hline
+        Lederbeinlinge   & 14 S           & 1           & Verbreitet             & -               & Beine                 & 1           & -                               \\ \hline
+        Lederkappe       & 8 S            & 0           & Verbreitet             & -               & Kopf                  & 1           & Partiell                        \\ \hline
+        \multicolumn{8}{c}{\cellcolor{gray!25}\textbf{Gekochtes Leder}}                                                                                                    \\ \hline
+        Lederpanzer      & 18 S           & 2           & Knapp                  & -               & Körper                & 2           & Schwachpunkte                   \\ \hline
+        \multicolumn{8}{c}{\cellcolor{gray!25}\textbf{Kette**}}                                                                                                            \\ \hline
+        Kettenbeinlinge  & 2 GK           & 3           & Knapp                  & -               & Beine                 & 2           & Flexibel                        \\ \hline
+        Kettenbrünne     & 3 GK           & 3           & Verbreitet             & -               & Arme, Körper          & 2           & Flexibel                        \\ \hline
+        Kettenhaube      & 1 GK           & 2           & Knapp                  & -10 Wahrnehmung & Kopf                  & 2           & Flexibel, Partiell              \\ \hline
+        Kettenhemd       & 2 GK           & 2           & Knapp                  & -               & Körper                & 2           & Flexibel                        \\ \hline
+        \multicolumn{8}{c}{\cellcolor{gray!25}\textbf{Platte**}}                                                                                                           \\ \hline
+        Kürass           & 10 GK          & 3           & Knapp                  & -               & Körper                & 2           & Schwachpunkte, Undurchdringlich \\ \hline
+        Offener Helm     & 2 GK           & 1           & Verbreitet             & -10 Wahrnehmung & Kopf                  & 2           & Partiell                        \\ \hline
+        Plattenarme      & 8 GK           & 3           & Selten                 & -               & Arme                  & 2           & Schwachpunkte, Undurchdringlich \\ \hline
+        Plattenbeine     & 10 GK          & 3           & Selten                 & -10 Schleichen  & Beine                 & 2           & Schwachpunkte, Undurchdringlich \\ \hline
+        Helm             & 3 GK           & 2           & Selten                 & -20 Wahrnehmung & Kopf                  & 2           & Schwachpunkte, Undurchdringlich
+    \end{tabularx}%
+\end{table}
+
+
+\end{document}
