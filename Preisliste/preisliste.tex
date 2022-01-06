@@ -17,49 +17,47 @@
 \begin{table}[!ht]
 
     \centering
-    \begin{adjustbox}{center, width=0.9\linewidth}
-        \renewcommand{\arraystretch}{1.2}
-        \newcolumntype{R}{>{\raggedright\arraybackslash}X}%
-        \begin{tabularx}{\textwidth}{llllllR}
-            \hline
-            \textbf{Waffe}      & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} & \textbf{Länge} & \textbf{Schaden} & \textbf{Qualitäten und Markel}           \\ \hline
-            \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Standard}}                                                                                                  \\ \hline
-            Handwaffe           & 1 GK           & 1           & Verbreitet             & Durchschnitt   & +STB+4           & -                                        \\ \hline
-            Improvisierte Waffe & Keiner         & -           & Keine                  & Verschieden    & +STB+1           & Stumpf                                   \\ \hline
-            Dolch               & 16 S           & 0           & Verbreitet             & Sehr kurz      & +STB+2           & -                                        \\ \hline
-            Messer              & 8 S            & 0           & Verbreitet             & Sehr kurz      & +STB+1           & -                                        \\ \hline
-            Schild (Buckler)    & 18 S, 2 G      & 0           & Verbreitet             & Persönlich     & +STB+1           & Defensiv, Schild 1, Stumpf               \\ \hline
-            Schild              & 2 GK           & 1           & Verbreitet             & Sehr kurz      & +STB+2           & Defensiv, Schild 2, Stumpf               \\ \hline
-            Schild (Groß)       & 3 GK           & 3           & Verbreitet             & Sehr kurz      & +STB+3           & Defensiv, Schild 3, Stumpf               \\ \hline
-            \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Kavallerie}}                                                                                                \\ \hline
-            Reiterhammer (2H)   & 3 GK           & 3           & Knapp                  & Lang           & +STB+5           & Betäubend                                \\ \hline
-            Lanze               & 1 GK           & 3           & Selten                 & Sehr lang      & +STB+6*          & Durchbohrend, Wuchtig                    \\ \hline
-            \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Fechten}  }                                                                                                 \\ \hline
-            Florett             & 5 GK           & 1           & Knapp                  & Durchschnitt   & +STB+3           & Durchbohrend, Präzise, Schnell, Stumpf   \\ \hline
-            Rapier              & 5 GK           & 1           & Knapp                  & Lang           & +STB+4           & Durchbohrend, Schnell                    \\ \hline
-            \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Waffenlos}}                                                                                                 \\ \hline
-            Waffenlos           & Keiner         & 0           & Keine                  & Persönlich     & +STB+0           & Stumpf                                   \\ \hline
-            Schlagring          & 2 S, 6 G       & 0           & Verbreitet             & Persönlich     & +STB+2           & -                                        \\ \hline
-            \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Flegel}}                                                                                                    \\ \hline
-            Dreschflegel        & 10 S           & 1           & Verbreitet             & Durchschnitt   & +STB+3           & Ablenkend, Umwickelnd, Unpräzise         \\ \hline
-            Flegel              & 2 GK           & 1           & Knapp                  & Durchschnitt   & +STB+5           & Ablenkend, Umwickelnd                    \\ \hline
-            Kriegsflegel (2H)   & 3 GK           & 2           & Selten                 & Lang           & +STB+6           & Ablenkend, Ermüdend, Umwickelnd, Wuchtig \\ \hline
-            \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Parade}}                                                                                                    \\ \hline
-            Parierdolch         & 1 GK           & 0           & Selten                 & Sehr kurz      & +STB+2           & Defensiv                                 \\ \hline
-            Klingenbrecher      & 1 GK, 2 S, 6 G & 1           & Knapp                  & Kurz           & +STB+3           & Defensiv, Klingenfänger                  \\ \hline
-            \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Stangenwaffe}}                                                                                              \\ \hline
-            Hellebarde (2H)     & 2 GK           & 3           & Verbreitet             & Lang           & +STB+4           & Defensiv, Durchbohrend, Durchschlagend   \\ \hline
-            Speer (2H)          & 15 S           & 2           & Verbreitet             & Sehr lang      & +STB+4           & Durchbohrend                             \\ \hline
-            Pike (2H)           & 18 S           & 4           & Selten                 & Gewaltig       & +STB+4           & Durchbohrend                             \\ \hline
-            Kampfstab (2H)      & 3 S            & 2           & Verbreitet             & Lang           & +STB+4           & Betäubend, Defensiv                      \\ \hline
-            \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Zweihändig}}                                                                                                \\ \hline
-            Langes Schwert (2H) & 8 GK           & 3           & Knapp                  & Lang           & +STB+5           & Defensiv, Verwundend                     \\ \hline
-            Zweihandaxt (2H)    & 4 GK           & 3           & Knapp                  & Lang           & +STB+6           & Durchschlagend, Ermüdend, Wuchtig        \\ \hline
-            Kriegshacke (2H)    & 9 S            & 3           & Verbreitet             & Durchschnitt   & +STB+5           & Durchbohrend, Langsam, Verwundend        \\ \hline
-            Kriegshammer (2H)   & 3 GK           & 3           & Verbreitet             & Durchschnitt   & +STB+6           & Betäubend, Langsam, Verwundend           \\ \hline
-            Zweihänder (2H)     & 10 GK          & 3           & Knapp                  & Lang           & +STB+5           & Durchschlagend, Verwundend
-        \end{tabularx}%
-    \end{adjustbox}
+    \renewcommand{\arraystretch}{1.2}
+    \newcolumntype{R}{>{\raggedright\arraybackslash}X}%
+    \begin{tabularx}{\textwidth}{llllllR}
+        \hline
+        \textbf{Waffe}      & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} & \textbf{Länge} & \textbf{Schaden} & \textbf{Qualitäten und Markel}           \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Standard}}                                                                                                  \\ \hline
+        Handwaffe           & 1 GK           & 1           & Verbreitet             & Durchschnitt   & +STB+4           & -                                        \\ \hline
+        Improvisierte Waffe & Keiner         & -           & Keine                  & Verschieden    & +STB+1           & Stumpf                                   \\ \hline
+        Dolch               & 16 S           & 0           & Verbreitet             & Sehr kurz      & +STB+2           & -                                        \\ \hline
+        Messer              & 8 S            & 0           & Verbreitet             & Sehr kurz      & +STB+1           & -                                        \\ \hline
+        Schild (Buckler)    & 18 S, 2 G      & 0           & Verbreitet             & Persönlich     & +STB+1           & Defensiv, Schild 1, Stumpf               \\ \hline
+        Schild              & 2 GK           & 1           & Verbreitet             & Sehr kurz      & +STB+2           & Defensiv, Schild 2, Stumpf               \\ \hline
+        Schild (Groß)       & 3 GK           & 3           & Verbreitet             & Sehr kurz      & +STB+3           & Defensiv, Schild 3, Stumpf               \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Kavallerie}}                                                                                                \\ \hline
+        Reiterhammer (2H)   & 3 GK           & 3           & Knapp                  & Lang           & +STB+5           & Betäubend                                \\ \hline
+        Lanze               & 1 GK           & 3           & Selten                 & Sehr lang      & +STB+6*          & Durchbohrend, Wuchtig                    \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Fechten}  }                                                                                                 \\ \hline
+        Florett             & 5 GK           & 1           & Knapp                  & Durchschnitt   & +STB+3           & Durchbohrend, Präzise, Schnell, Stumpf   \\ \hline
+        Rapier              & 5 GK           & 1           & Knapp                  & Lang           & +STB+4           & Durchbohrend, Schnell                    \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Waffenlos}}                                                                                                 \\ \hline
+        Waffenlos           & Keiner         & 0           & Keine                  & Persönlich     & +STB+0           & Stumpf                                   \\ \hline
+        Schlagring          & 2 S, 6 G       & 0           & Verbreitet             & Persönlich     & +STB+2           & -                                        \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Flegel}}                                                                                                    \\ \hline
+        Dreschflegel        & 10 S           & 1           & Verbreitet             & Durchschnitt   & +STB+3           & Ablenkend, Umwickelnd, Unpräzise         \\ \hline
+        Flegel              & 2 GK           & 1           & Knapp                  & Durchschnitt   & +STB+5           & Ablenkend, Umwickelnd                    \\ \hline
+        Kriegsflegel (2H)   & 3 GK           & 2           & Selten                 & Lang           & +STB+6           & Ablenkend, Ermüdend, Umwickelnd, Wuchtig \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Parade}}                                                                                                    \\ \hline
+        Parierdolch         & 1 GK           & 0           & Selten                 & Sehr kurz      & +STB+2           & Defensiv                                 \\ \hline
+        Klingenbrecher      & 1 GK, 2 S, 6 G & 1           & Knapp                  & Kurz           & +STB+3           & Defensiv, Klingenfänger                  \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Stangenwaffe}}                                                                                              \\ \hline
+        Hellebarde (2H)     & 2 GK           & 3           & Verbreitet             & Lang           & +STB+4           & Defensiv, Durchbohrend, Durchschlagend   \\ \hline
+        Speer (2H)          & 15 S           & 2           & Verbreitet             & Sehr lang      & +STB+4           & Durchbohrend                             \\ \hline
+        Pike (2H)           & 18 S           & 4           & Selten                 & Gewaltig       & +STB+4           & Durchbohrend                             \\ \hline
+        Kampfstab (2H)      & 3 S            & 2           & Verbreitet             & Lang           & +STB+4           & Betäubend, Defensiv                      \\ \hline
+        \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Zweihändig}}                                                                                                \\ \hline
+        Langes Schwert (2H) & 8 GK           & 3           & Knapp                  & Lang           & +STB+5           & Defensiv, Verwundend                     \\ \hline
+        Zweihandaxt (2H)    & 4 GK           & 3           & Knapp                  & Lang           & +STB+6           & Durchschlagend, Ermüdend, Wuchtig        \\ \hline
+        Kriegshacke (2H)    & 9 S            & 3           & Verbreitet             & Durchschnitt   & +STB+5           & Durchbohrend, Langsam, Verwundend        \\ \hline
+        Kriegshammer (2H)   & 3 GK           & 3           & Verbreitet             & Durchschnitt   & +STB+6           & Betäubend, Langsam, Verwundend           \\ \hline
+        Zweihänder (2H)     & 10 GK          & 3           & Knapp                  & Lang           & +STB+5           & Durchschlagend, Verwundend
+    \end{tabularx}%
 
     \caption{*Lanzen zählen als Improvisierte Waffe, wenn sie in einer Runde eingesetzt werden, in der du keinen Sturmangriff durchgeführt hast.}
 
@@ -165,5 +163,127 @@
     \end{tabularx}%
 \end{table}
 
+\begin{table}[!ht]
+    \renewcommand{\arraystretch}{1.2}
+    \newcolumntype{R}{>{\raggedright\arraybackslash}X}%
+    \begin{tabular}{lllll}
+        \multicolumn{5}{c}{\cellcolor{gray!25}\textbf{Transport und Aufbewahrung}}                       \\
+        \textbf{Gegenstand}      & \textbf{Preis} & \textbf{TP} & \textbf{Last} & \textbf{Verfügbarkeit} \\ \hline
+        Beutel                   & 4 G            & 0           & 1             & Verbreitet             \\ \hline
+        Fass                     & 8 S            & 6           & 12            & Verbreitet             \\ \hline
+        Fässchen                 & 3 S            & 2           & 4             & Verbreitet             \\ \hline
+        Flasche                  & 5 S            & 0           & 0             & Verbreitet             \\ \hline
+        Großer Sack              & 1 S, 6 G       & 3           & 6             & Verbreitet             \\ \hline
+        Krug                     & 3 S, 2 G       & 1           & 1             & Verbreitet             \\ \hline
+        Lederrolle für Schriften & 16 S           & 0           & 0             & Knapp                  \\ \hline
+        Rucksack                 & 4 S, 10 G      & 2           & 4             & Verbreitet             \\ \hline
+        Sack                     & 1 S            & 2           & 4             & Verbreitet             \\ \hline
+        Satteltaschen            & 18 S           & 4           & 8             & Verbreitet             \\ \hline
+        Trinkschlauch            & 1 S, 8 G       & 1           & 1             & Verbreitet             \\ \hline
+        Umhängetasche            & 1 S            & 1           & 2             & Verbreitet             \\ \hline
+        Zinnbecher               & 4 S            & 0           & 0             & Verbreitet
+    \end{tabular}%
+\end{table}
+
+\begin{table}[!ht]
+    \renewcommand{\arraystretch}{1.2}
+    \newcolumntype{R}{>{\raggedright\arraybackslash}X}%
+    \begin{tabular}{llll}
+        \multicolumn{4}{c}{\cellcolor{gray!25}\textbf{Kleidung und Zubehör}}        \\
+        \textbf{Gegenstand} & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} \\ \hline
+        Amulett             & 2 G            & 0           & Verbreitet             \\ \hline
+        Gesichtspuder       & 10 S           & 0           & Verbreitet             \\ \hline
+        Gugel oder Maske    & 5 S            & 0           & Verbreitet             \\ \hline
+        Handschuhe          & 4 S            & 0           & Verbreitet             \\ \hline
+        Höfische Gewandung  & 12 GK          & 1           & Knapp                  \\ \hline
+        Hut                 & 4 S            & 0           & Verbreitet             \\ \hline
+        Kleidung            & 6 S            & 1           & Verbreitet             \\ \hline
+        Kostüm              & 1 GK           & 1           & Knapp                  \\ \hline
+        Mantel              & 18 S           & 1           & Verbreitet             \\ \hline
+        Parfum              & 10 S           & 0           & Verbreitet             \\ \hline
+        Religiöses Symbol   & 6 S, 8 G       & 0           & Verbreitet             \\ \hline
+        Robe                & 2 GK           & 1           & Verbreitet             \\ \hline
+        Schmuck             & Verschieden    & 0           & Verbreitet             \\ \hline
+        Schuhe              & 5 S            & 0           & Verbreitet             \\ \hline
+        Siegelring          & 5 GK           & 0           & Selten                 \\ \hline
+        Spazierstock        & 3 GK           & 1           & Verbreitet             \\ \hline
+        Stecknadeln (6)     & 10 S           & 0           & Knapp                  \\ \hline
+        Stiefel             & 5 S            & 1           & Verbreitet             \\ \hline
+        Tätowierung         & 4 S            & 0           & Knapp                  \\ \hline
+        Umhang              & 10             & 1           & Verbreitet             \\ \hline
+        Uniform             & 1 GK, 2 S      & 1           & Knapp                  \\ \hline
+        Zepter              & 8 GK           & 1           & Selten
+    \end{tabular}%
+\end{table}
+
+\begin{table}[!ht]
+    \renewcommand{\arraystretch}{1.2}
+    \newcolumntype{R}{>{\raggedright\arraybackslash}X}%
+    \begin{tabular}{llll}
+        \multicolumn{4}{c}{\cellcolor{gray!25}\textbf{Speisen, Getränke und Unterkünfte}}           \\
+        \textbf{Gegenstand}                 & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} \\
+        Bier (Humpen)                       & 3 G            & 0           & Verbreitet             \\ \hline
+        Bierfass                            & 3 S            & 2           & Verbreitet             \\ \hline
+        Bugmans XXXXXX                      & 9 G            & 0           & Exotisch               \\ \hline
+        Essen im Gasthaus                   & 1 S            & 0           & Verbreitet             \\ \hline
+        Gemeinschaftsunterkunft (pro Nacht) & 10 G           & -           & Verbreitet             \\ \hline
+        Lebensmittel (pro Tag)              & 10 G           & 1           & Verbreitet             \\ \hline
+        Rationen (pro Tag)                  & 2 S            & 0           & Verbreitet             \\ \hline
+        Schnaps (Krug)                      & 2 S            & 0           & Verbreitet             \\ \hline
+        Stall (pro Nacht)                   & 10 G           & -           & Verbreitet             \\ \hline
+        Wein \& Schnaps (Becher)            & 1 S            & 0           & Verbreitet             \\ \hline
+        Wein (Flasche)                      & 10 G           & 0           & Verbreitet             \\ \hline
+        Zimmer (pro Nacht)                  & 10 S           & -           & Verbreitet
+    \end{tabular}%
+\end{table}
+
+\begin{table}[!ht]
+    \renewcommand{\arraystretch}{1.2}
+    \newcolumntype{R}{>{\raggedright\arraybackslash}X}%
+    \begin{tabular}{llll}
+        \multicolumn{4}{c}{\cellcolor{gray!25}\textbf{Werkzeuge und Ausrüstung}}    \\
+        \textbf{Gegenstand} & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} \\ \hline
+        Abakus              & 3 S, 4 G       & 0           & Knapp                  \\ \hline
+        Angelhaken (12)     & 1 S            & 0           & Verbreitet             \\ \hline
+        Besen               & 1 S, 6 G       & 2           & Verbreitet             \\ \hline
+        Bootshaken          & 5 S            & 1           & Verbreitet             \\ \hline
+        Brecheisen          & 2 S, 6 G       & 1           & Verbreitet             \\ \hline
+        Dietriche           & 15 S           & 0           & Knapp                  \\ \hline
+        Eimer               & 2 S, 6 G       & 1           & Verbreitet             \\ \hline
+        Eisenbolzen         & 1 S            & 0           & Verbreitet             \\ \hline
+        Feldhacke           & 4 S            & 2           & Verbreitet             \\ \hline
+        Gegengiftset        & 3 GK           & 0           & Knapp                  \\ \hline
+        Gelenkeisen         & 18 S           & 0           & Knapp                  \\ \hline
+        Hammer              & 3 S            & 0           & Verbreitet             \\ \hline
+        Handspiegel         & 1 GK, 1 S, 6 G & 0           & Exotisch               \\ \hline
+        Kamm                & 10 G           & 0           & Verbreitet             \\ \hline
+        Krücke              & 3 S            & 2           & Verbreitet             \\ \hline
+        Leselinse           & 3 GK           & 0           & Selten                 \\ \hline
+        Malerpinsel         & 4 S            & 0           & Verbreitet             \\ \hline
+        Meißel              & 4 S, 2 G       & 0           & Verbreitet             \\ \hline
+        Messer              & 8 S            & 0           & Verbreitet             \\ \hline
+        Mörser \& Stößel    & 14 S           & 0           & Verbreitet             \\ \hline
+        Nägel (12)          & 2 G            & 0           & Verbreitet             \\ \hline
+        Ohrlöffel           & 2 S            & 0           & Knapp                  \\ \hline
+        Pinzette            & 1 S            & 0           & Knapp                  \\ \hline
+        Rechen              & 4 S, 6 G       & 2           & Verbreitet             \\ \hline
+        Reisigbesen         & 10 G           & 2           & Verbreitet             \\ \hline
+        Richterhammer       & 1 GK           & 0           & Knapp                  \\ \hline
+        Säge                & 6 S            & 1           & Verbreitet             \\ \hline
+        Schlüssel           & 1 S            & 0           & Verbreitet             \\ \hline
+        Schreibfeder        & 3 S            & 0           & Verbreitet             \\ \hline
+        Schreibzeug         & 2 GK           & 0           & Knapp                  \\ \hline
+        Schrubber           & 1 S            & 2           & Verbreitet             \\ \hline
+        Sichel              & 1 GK           & 1           & Verbreitet             \\ \hline
+        Spaten              & 8 S            & 2           & Verbreitet             \\ \hline
+        Spitzhacke          & 18 S           & 1           & Knapp                  \\ \hline
+        Stange (3 Meter)    & 8 S            & 3           & Verbreitet             \\ \hline
+        Stempel, graviert   & 5 GK           & 0           & Knapp                  \\ \hline
+        Teleskop            & 5 GK           & 0           & Selten                 \\ \hline
+        Tierfalle           & 2 S, 6 G       & 1           & Verbreitet             \\ \hline
+        Verkleidungsset     & 6 S, 6 G       & 0           & Knapp                  \\ \hline
+        Zange, Stahl        & 16 S           & 0           & Verbreitet
+    \end{tabular}%
+\end{table}
 
 \end{document}
