@@ -1,4 +1,4 @@
-\documentclass[a4paper, 9pt]{scrreprt}
+\documentclass[a4paper, 9pt]{scrartcl}
 
 \usepackage{adjustbox}
 \usepackage{multirow}
@@ -6,19 +6,19 @@
 \usepackage[graphicx]{realboxes}
 \usepackage{tabularx}
 \usepackage[table,xcdraw]{xcolor}
-\usepackage{multicol}
+\usepackage{float}
+\usepackage{parskip}
 
 \renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\arraystretch}{1.2}
+\newcolumntype{R}{>{\raggedright\arraybackslash}X}%
+
 
 \begin{document}
 %\pagestyle{empty} % remove page numbers
-\pagebreak
 
 \begin{table}[!ht]
-
     \centering
-    \renewcommand{\arraystretch}{1.2}
-    \newcolumntype{R}{>{\raggedright\arraybackslash}X}%
     \begin{tabularx}{\textwidth}{llllllR}
         \hline
         \textbf{Waffe}      & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} & \textbf{Länge} & \textbf{Schaden} & \textbf{Qualitäten und Markel}           \\ \hline
@@ -68,9 +68,6 @@
 
 \begin{table}[!ht]
     \centering
-
-    \renewcommand{\arraystretch}{1.2}
-    \newcolumntype{R}{>{\raggedright\arraybackslash}X}%
     \begin{tabularx}{\textwidth}{llllllR}
         \hline
         \textbf{Waffe}            & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} & \textbf{Reichweite} & \textbf{Schaden} & \textbf{Qualitäten und Makel}                   \\ \hline
@@ -115,8 +112,6 @@
 
 \begin{table}[!ht]
     \centering
-    \renewcommand{\arraystretch}{1.2}
-    \newcolumntype{R}{>{\raggedright\arraybackslash}X}%
     \begin{tabularx}{\textwidth}{XlllllR}
         \hline
         \textbf{Waffe}                          & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} & \textbf{Reichweite} & \textbf{Schaden} & \textbf{Qualitäten und Makel}                   \\ \hline
@@ -137,8 +132,6 @@
 
 \begin{table}[!ht]
     \centering
-    \renewcommand{\arraystretch}{1.2}
-    \newcolumntype{R}{>{\raggedright\arraybackslash}X}%
     \begin{tabularx}{\textwidth}{lllllllR}
         \hline
         \textbf{Rüstung} & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} & \textbf{Abzug}  & \textbf{Trefferzonen} & \textbf{RP} & \textbf{Qualitäten und Markel}  \\ \hline
@@ -163,127 +156,288 @@
     \end{tabularx}%
 \end{table}
 
-\begin{table}[!ht]
-    \renewcommand{\arraystretch}{1.2}
-    \newcolumntype{R}{>{\raggedright\arraybackslash}X}%
-    \begin{tabular}{lllll}
-        \multicolumn{5}{c}{\cellcolor{gray!25}\textbf{Transport und Aufbewahrung}}                       \\
-        \textbf{Gegenstand}      & \textbf{Preis} & \textbf{TP} & \textbf{Last} & \textbf{Verfügbarkeit} \\ \hline
-        Beutel                   & 4 G            & 0           & 1             & Verbreitet             \\ \hline
-        Fass                     & 8 S            & 6           & 12            & Verbreitet             \\ \hline
-        Fässchen                 & 3 S            & 2           & 4             & Verbreitet             \\ \hline
-        Flasche                  & 5 S            & 0           & 0             & Verbreitet             \\ \hline
-        Großer Sack              & 1 S, 6 G       & 3           & 6             & Verbreitet             \\ \hline
-        Krug                     & 3 S, 2 G       & 1           & 1             & Verbreitet             \\ \hline
-        Lederrolle für Schriften & 16 S           & 0           & 0             & Knapp                  \\ \hline
-        Rucksack                 & 4 S, 10 G      & 2           & 4             & Verbreitet             \\ \hline
-        Sack                     & 1 S            & 2           & 4             & Verbreitet             \\ \hline
-        Satteltaschen            & 18 S           & 4           & 8             & Verbreitet             \\ \hline
-        Trinkschlauch            & 1 S, 8 G       & 1           & 1             & Verbreitet             \\ \hline
-        Umhängetasche            & 1 S            & 1           & 2             & Verbreitet             \\ \hline
-        Zinnbecher               & 4 S            & 0           & 0             & Verbreitet
-    \end{tabular}%
+\clearpage
+
+\begin{table}[ht!]
+    \begin{minipage}{.5\linewidth}
+        \centering
+
+        \begin{tabularx}{0.95\linewidth}{Rllll}
+            \multicolumn{5}{c}{\cellcolor{gray!25}\textbf{Transport und Aufbewahrung}}               \\
+            \textbf{Gegenstand}      & \textbf{Preis} & \textbf{TP} & \textbf{Last} & \textbf{Verf.} \\ \hline
+            Beutel                   & 4 G            & 0           & 1             & Verbreitet     \\ \hline
+            Fass                     & 8 S            & 6           & 12            & Verbreitet     \\ \hline
+            Fässchen                 & 3 S            & 2           & 4             & Verbreitet     \\ \hline
+            Flasche                  & 5 S            & 0           & 0             & Verbreitet     \\ \hline
+            Großer Sack              & 1 S, 6 G       & 3           & 6             & Verbreitet     \\ \hline
+            Krug                     & 3 S, 2 G       & 1           & 1             & Verbreitet     \\ \hline
+            Lederrolle für Schriften & 16 S           & 0           & 0             & Knapp          \\ \hline
+            Rucksack                 & 4 S, 10 G      & 2           & 4             & Verbreitet     \\ \hline
+            Sack                     & 1 S            & 2           & 4             & Verbreitet     \\ \hline
+            Satteltaschen            & 18 S           & 4           & 8             & Verbreitet     \\ \hline
+            Trinkschlauch            & 1 S, 8 G       & 1           & 1             & Verbreitet     \\ \hline
+            Umhängetasche            & 1 S            & 1           & 2             & Verbreitet     \\ \hline
+            Zinnbecher               & 4 S            & 0           & 0             & Verbreitet
+        \end{tabularx}%
+
+        \vspace{2em}
+
+        \begin{tabularx}{0.95\linewidth}{Rlll}
+            \multicolumn{4}{c}{\cellcolor{gray!25}\textbf{Speisen, Getränke und Unterkünfte}}   \\
+            \textbf{Gegenstand}                 & \textbf{Preis} & \textbf{TP} & \textbf{Verf.} \\
+            Bier (Humpen)                       & 3 G            & 0           & Verbreitet     \\ \hline
+            Bierfass                            & 3 S            & 2           & Verbreitet     \\ \hline
+            Bugmans XXXXXX                      & 9 G            & 0           & Exotisch       \\ \hline
+            Essen im Gasthaus                   & 1 S            & 0           & Verbreitet     \\ \hline
+            Gemeinschaftsunterkunft (pro Nacht) & 10 G           & -           & Verbreitet     \\ \hline
+            Lebensmittel (pro Tag)              & 10 G           & 1           & Verbreitet     \\ \hline
+            Rationen (pro Tag)                  & 2 S            & 0           & Verbreitet     \\ \hline
+            Schnaps (Krug)                      & 2 S            & 0           & Verbreitet     \\ \hline
+            Stall (pro Nacht)                   & 10 G           & -           & Verbreitet     \\ \hline
+            Wein \& Schnaps (Becher)            & 1 S            & 0           & Verbreitet     \\ \hline
+            Wein (Flasche)                      & 10 G           & 0           & Verbreitet     \\ \hline
+            Zimmer (pro Nacht)                  & 10 S           & -           & Verbreitet
+        \end{tabularx}%
+
+        \vspace{2em}
+
+        \begin{tabularx}{0.95\linewidth}{Rlll}
+            \multicolumn{4}{c}{\cellcolor{gray!25}\textbf{Bücher und Dekomente}} \\ \hline
+            \textbf{Gegenstand}  & \textbf{Preis} & \textbf{TP} & \textbf{Verf.} \\ \hline
+            Amtliches Dokument   & 3 S            & 0           & Verbreitet     \\ \hline
+            Buch (Apotheker)     & 8 GK           & 1           & Knapp          \\ \hline
+            Buch (Gesetz)        & 15 GK          & 1           & Selten         \\ \hline
+            Buch (Kryptographie) & 8 GK           & 1           & Exotisch       \\ \hline
+            Buch (Kunst)         & 5 GK           & 1           & Knapp          \\ \hline
+            Buch (Magie)         & 20 GK          & 1           & Exotisch       \\ \hline
+            Buch (Medizin)       & 15 GK          & 1           & Selten         \\ \hline
+            Buch (Religion)      & 1 GK           & 1           & Verbreitet     \\ \hline
+            Buch (Technicus)     & 3 GK           & 1           & Knapp          \\ \hline
+            Flugblatt            & 1 S            & 0           & Verbreitet     \\ \hline
+            Gildenlizenz         & -              & 0           & -              \\ \hline
+            Karte                & 3 GK           & 0           & Knapp          \\ \hline
+            Pergament (Seite)    & 1 S            & 0           & Verbreitet
+        \end{tabularx}%
+
+    \end{minipage}%
+    \begin{minipage}{.5\linewidth}
+        \centering
+
+        \begin{tabularx}{0.95\linewidth}{Rlll}
+            \multicolumn{4}{c}{\cellcolor{gray!25}\textbf{Kleidung und Zubehör}} \\
+            \textbf{Gegenstand} & \textbf{Preis} & \textbf{TP} & \textbf{Verf.}  \\ \hline
+            Amulett             & 2 G            & 0           & Verbreitet      \\ \hline
+            Gesichtspuder       & 10 S           & 0           & Verbreitet      \\ \hline
+            Gugel oder Maske    & 5 S            & 0           & Verbreitet      \\ \hline
+            Handschuhe          & 4 S            & 0           & Verbreitet      \\ \hline
+            Höfische Gewandung  & 12 GK          & 1           & Knapp           \\ \hline
+            Hut                 & 4 S            & 0           & Verbreitet      \\ \hline
+            Kleidung            & 6 S            & 1           & Verbreitet      \\ \hline
+            Kostüm              & 1 GK           & 1           & Knapp           \\ \hline
+            Mantel              & 18 S           & 1           & Verbreitet      \\ \hline
+            Parfum              & 10 S           & 0           & Verbreitet      \\ \hline
+            Religiöses Symbol   & 6 S, 8 G       & 0           & Verbreitet      \\ \hline
+            Robe                & 2 GK           & 1           & Verbreitet      \\ \hline
+            Schmuck             & ~              & 0           & Verbreitet      \\ \hline
+            Schuhe              & 5 S            & 0           & Verbreitet      \\ \hline
+            Siegelring          & 5 GK           & 0           & Selten          \\ \hline
+            Spazierstock        & 3 GK           & 1           & Verbreitet      \\ \hline
+            Stecknadeln (6)     & 10 S           & 0           & Knapp           \\ \hline
+            Stiefel             & 5 S            & 1           & Verbreitet      \\ \hline
+            Tätowierung         & 4 S            & 0           & Knapp           \\ \hline
+            Umhang              & 10             & 1           & Verbreitet      \\ \hline
+            Uniform             & 1 GK, 2 S      & 1           & Knapp           \\ \hline
+            Zepter              & 8 GK           & 1           & Selten
+        \end{tabularx}%
+
+        \vspace{2em}
+
+        \begin{tabularx}{0.95\linewidth}{Rllll}
+            \multicolumn{5}{c}{\cellcolor{gray!25}\textbf{Tiere und Fahrzeuge}}                     \\ \hline
+            \textbf{Gegenstand}     & \textbf{Preis} & \textbf{TP} & \textbf{Last} & \textbf{Verf.} \\ \hline
+            Affe                    & 10 GK          & 2           & 1             & Selten         \\ \hline
+            Brieftaube              & 3 S            & 1           & 0             & Knapp          \\ \hline
+            Faltboot                & 2 GK           & 6           & 10            & Knapp          \\ \hline
+            Flussboot               & 225 GK         & -           & 300           & Selten         \\ \hline
+            Huhn                    & 5 G            & 1           & 0             & Verbreitet     \\ \hline
+            Hundehalsband mit Leine & 1 S, 7 G       & 0           & -             & Verbreitet     \\ \hline
+            Jagdhund                & 2 GK           & -           & 0             & Selten         \\ \hline
+            Karren                  & 20 GK          & -           & 25            & Verbreitet     \\ \hline
+            Kutsche                 & 150 GK         & -           & 80            & Selten         \\ \hline
+            Leichtes Schlachtross   & 70 GK          & -           & 18            & Verbreitet     \\ \hline
+            Maultier                & 5 GK           & -           & 14            & Verbreitet     \\ \hline
+            Pony                    & 10 GK          & -           & 14            & Verbreitet     \\ \hline
+            Reitpferd               & 15 GK          & -           & 16            & Verbreitet     \\ \hline
+            Ruderboot               & 6 GK           & -           & 60            & Knapp          \\ \hline
+            Sattel und Geschirr     & 6 GK           & 4           & -             & Verbreitet     \\ \hline
+            Schlachtross            & 230 GK         & -           & 20            & Knapp          \\ \hline
+            Wagen                   & 75 GK          & -           & 30            & Verbreitet     \\ \hline
+            Würmer (6)              & 1 G            & 0           & -             & Verbreitet     \\ \hline
+            Zugpferd                & 4 GK           & -           & 20            & Verbreitet
+        \end{tabularx}%
+
+    \end{minipage}
 \end{table}
 
-\begin{table}[!ht]
-    \renewcommand{\arraystretch}{1.2}
-    \newcolumntype{R}{>{\raggedright\arraybackslash}X}%
-    \begin{tabular}{llll}
-        \multicolumn{4}{c}{\cellcolor{gray!25}\textbf{Kleidung und Zubehör}}        \\
-        \textbf{Gegenstand} & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} \\ \hline
-        Amulett             & 2 G            & 0           & Verbreitet             \\ \hline
-        Gesichtspuder       & 10 S           & 0           & Verbreitet             \\ \hline
-        Gugel oder Maske    & 5 S            & 0           & Verbreitet             \\ \hline
-        Handschuhe          & 4 S            & 0           & Verbreitet             \\ \hline
-        Höfische Gewandung  & 12 GK          & 1           & Knapp                  \\ \hline
-        Hut                 & 4 S            & 0           & Verbreitet             \\ \hline
-        Kleidung            & 6 S            & 1           & Verbreitet             \\ \hline
-        Kostüm              & 1 GK           & 1           & Knapp                  \\ \hline
-        Mantel              & 18 S           & 1           & Verbreitet             \\ \hline
-        Parfum              & 10 S           & 0           & Verbreitet             \\ \hline
-        Religiöses Symbol   & 6 S, 8 G       & 0           & Verbreitet             \\ \hline
-        Robe                & 2 GK           & 1           & Verbreitet             \\ \hline
-        Schmuck             & Verschieden    & 0           & Verbreitet             \\ \hline
-        Schuhe              & 5 S            & 0           & Verbreitet             \\ \hline
-        Siegelring          & 5 GK           & 0           & Selten                 \\ \hline
-        Spazierstock        & 3 GK           & 1           & Verbreitet             \\ \hline
-        Stecknadeln (6)     & 10 S           & 0           & Knapp                  \\ \hline
-        Stiefel             & 5 S            & 1           & Verbreitet             \\ \hline
-        Tätowierung         & 4 S            & 0           & Knapp                  \\ \hline
-        Umhang              & 10             & 1           & Verbreitet             \\ \hline
-        Uniform             & 1 GK, 2 S      & 1           & Knapp                  \\ \hline
-        Zepter              & 8 GK           & 1           & Selten
-    \end{tabular}%
+\clearpage
+
+\begin{table}[]
+    \begin{minipage}{.5\linewidth}
+        \centering
+
+        \begin{tabularx}{0.95\linewidth}{RRll}
+            \multicolumn{4}{c}{\cellcolor{gray!25}\textbf{Werkzeuge und Ausrüstung}} \\
+            \textbf{Gegenstand} & \textbf{Preis} & \textbf{TP} & \textbf{Verf.}      \\ \hline
+            Abakus              & 3 S, 4 G       & 0           & Knapp               \\ \hline
+            Angelhaken (12)     & 1 S            & 0           & Verbreitet          \\ \hline
+            Besen               & 1 S, 6 G       & 2           & Verbreitet          \\ \hline
+            Bootshaken          & 5 S            & 1           & Verbreitet          \\ \hline
+            Brecheisen          & 2 S, 6 G       & 1           & Verbreitet          \\ \hline
+            Dietriche           & 15 S           & 0           & Knapp               \\ \hline
+            Eimer               & 2 S, 6 G       & 1           & Verbreitet          \\ \hline
+            Eisenbolzen         & 1 S            & 0           & Verbreitet          \\ \hline
+            Feldhacke           & 4 S            & 2           & Verbreitet          \\ \hline
+            Gegengiftset        & 3 GK           & 0           & Knapp               \\ \hline
+            Gelenkeisen         & 18 S           & 0           & Knapp               \\ \hline
+            Hammer              & 3 S            & 0           & Verbreitet          \\ \hline
+            Handspiegel         & 1 GK, 1 S, 6 G & 0           & Exotisch            \\ \hline
+            Kamm                & 10 G           & 0           & Verbreitet          \\ \hline
+            Krücke              & 3 S            & 2           & Verbreitet          \\ \hline
+            Leselinse           & 3 GK           & 0           & Selten              \\ \hline
+            Malerpinsel         & 4 S            & 0           & Verbreitet          \\ \hline
+            Meißel              & 4 S, 2 G       & 0           & Verbreitet          \\ \hline
+            Messer              & 8 S            & 0           & Verbreitet          \\ \hline
+            Mörser \& Stößel    & 14 S           & 0           & Verbreitet          \\ \hline
+            Nägel (12)          & 2 G            & 0           & Verbreitet          \\ \hline
+            Ohrlöffel           & 2 S            & 0           & Knapp               \\ \hline
+            Pinzette            & 1 S            & 0           & Knapp               \\ \hline
+            Rechen              & 4 S, 6 G       & 2           & Verbreitet          \\ \hline
+            Reisigbesen         & 10 G           & 2           & Verbreitet          \\ \hline
+            Richterhammer       & 1 GK           & 0           & Knapp               \\ \hline
+            Säge                & 6 S            & 1           & Verbreitet          \\ \hline
+            Schlüssel           & 1 S            & 0           & Verbreitet          \\ \hline
+            Schreibfeder        & 3 S            & 0           & Verbreitet          \\ \hline
+            Schreibzeug         & 2 GK           & 0           & Knapp               \\ \hline
+            Schrubber           & 1 S            & 2           & Verbreitet          \\ \hline
+            Sichel              & 1 GK           & 1           & Verbreitet          \\ \hline
+            Spaten              & 8 S            & 2           & Verbreitet          \\ \hline
+            Spitzhacke          & 18 S           & 1           & Knapp               \\ \hline
+            Stange (3 Meter)    & 8 S            & 3           & Verbreitet          \\ \hline
+            Stempel, graviert   & 5 GK           & 0           & Knapp               \\ \hline
+            Teleskop            & 5 GK           & 0           & Selten              \\ \hline
+            Tierfalle           & 2 S, 6 G       & 1           & Verbreitet          \\ \hline
+            Verkleidungsset     & 6 S, 6 G       & 0           & Knapp               \\ \hline
+            Zange, Stahl        & 16 S           & 0           & Verbreitet
+        \end{tabularx}%
+
+    \end{minipage}
+    \begin{minipage}{.5\linewidth}
+        \centering
+
+        \begin{tabularx}{0.95\linewidth}{Rlll}
+            \multicolumn{4}{c}{\cellcolor{gray!25}\textbf{Sonstige Ausrüstung}} \\ \hline
+            \textbf{Gegenstand} & \textbf{Preis} & \textbf{TP} & \textbf{Verf.} \\ \hline
+            Ball                & 5 G            & 0           & Verbreitet     \\ \hline
+            Besteck             & 3 S, 6 G       & 0           & Verbreitet     \\ \hline
+            Davrich-Laterne     & 2 GK           & 1           & Selten         \\ \hline
+            Decke               & 8 G            & 0           & Verbreitet     \\ \hline
+            Instrument          & 2 GK           & 1           & Selten         \\ \hline
+            Kerze (Dutzend)     & 1 S            & 0           & Verbreitet     \\ \hline
+            Kletterhaken        & 1 GK, 10 G     & 1           & Knapp          \\ \hline
+            Kochtopf            & 8 S            & 1           & Verbreitet     \\ \hline
+            Kohlestift          & 10 G           & 0           & Verbreitet     \\ \hline
+            Kreide              & 10 G           & 0           & Verbreitet     \\ \hline
+            Lampenöl            & 2 S            & 0           & Verbreitet     \\ \hline
+            Laterne             & 12 S           & 1           & Verbreitet     \\ \hline
+            Lumpen              & 1 G            & 0           & Verbreitet     \\ \hline
+            Pfanne              & 7 S, 6 G       & 1           & Verbreitet     \\ \hline
+            Pfeife und Tabak    & 3 S, 4 G       & 0           & Knapp          \\ \hline
+            Plakat              & 1 S            & 2           & Verbreitet     \\ \hline
+            Plane (Leinwand)    & 8 S            & 1           & Verbreitet     \\ \hline
+            Puppe               & 2 S            & 0           & Verbreitet     \\ \hline
+            Schlafrolle         & 6 S            & 1           & Verbreitet     \\ \hline
+            Schüssel            & 1 S            & 0           & Verbreitet     \\ \hline
+            Seil (10 Meter)     & 8 S, 4 G       & 1           & Verbreitet     \\ \hline
+            Spielkarten (Satz)  & 1 S            & 0           & Verbreitet     \\ \hline
+            Stock               & 1 S            & 0           & Verbreitet     \\ \hline
+            Sturmlaterne        & 1 GK           & 1           & Knapp          \\ \hline
+            Tasse               & 8 G            & 0           & Verbreitet     \\ \hline
+            Teller              & 1 S            & 0           & Verbreitet     \\ \hline
+            Verband             & 4 G            & 0           & Verbreitet     \\ \hline
+            Würfel              & 10 G           & 0           & Verbreitet     \\ \hline
+            Zelt                & 12 S           & 2           & Knapp          \\ \hline
+            Zunderkästchen      & 4 S, 2 G       & 0           & Verbreitet     \\ \hline
+            Zündholz            & 1 G            & 0           & Verbreitet
+        \end{tabularx}
+
+        \vspace{2em}
+
+        \begin{tabularx}{0.95\linewidth}{Rlll}
+            \multicolumn{4}{c}{\cellcolor{gray!25}\textbf{Drogen und Gifte}}              \\ \hline
+            \textbf{Gegenstand}   & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} \\ \hline
+            Alraunwurzel          & 1 GK           & 0           & Selten                 \\ \hline
+            Grünkappiger Wahnpilz & 5 GK           & 0           & Exotisch               \\ \hline
+            Herztod               & 40 GK          & 0           & Exotisch               \\ \hline
+            Hexenwurzel           & 4 S            & 0           & Selten                 \\ \hline
+            Mondblume             & 5 GK           & 0           & Knapp                  \\ \hline
+            Ranalds Entzücken     & 18 S           & 0           & Knapp                  \\ \hline
+            Schwarzer Lotus       & 20 GK          & 0           & Exotisch               \\ \hline
+            Spucke                & 1 GK, 5 S      & 0           & Selten
+        \end{tabularx}%
+
+    \end{minipage}
 \end{table}
 
-\begin{table}[!ht]
-    \renewcommand{\arraystretch}{1.2}
-    \newcolumntype{R}{>{\raggedright\arraybackslash}X}%
-    \begin{tabular}{llll}
-        \multicolumn{4}{c}{\cellcolor{gray!25}\textbf{Speisen, Getränke und Unterkünfte}}           \\
-        \textbf{Gegenstand}                 & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} \\
-        Bier (Humpen)                       & 3 G            & 0           & Verbreitet             \\ \hline
-        Bierfass                            & 3 S            & 2           & Verbreitet             \\ \hline
-        Bugmans XXXXXX                      & 9 G            & 0           & Exotisch               \\ \hline
-        Essen im Gasthaus                   & 1 S            & 0           & Verbreitet             \\ \hline
-        Gemeinschaftsunterkunft (pro Nacht) & 10 G           & -           & Verbreitet             \\ \hline
-        Lebensmittel (pro Tag)              & 10 G           & 1           & Verbreitet             \\ \hline
-        Rationen (pro Tag)                  & 2 S            & 0           & Verbreitet             \\ \hline
-        Schnaps (Krug)                      & 2 S            & 0           & Verbreitet             \\ \hline
-        Stall (pro Nacht)                   & 10 G           & -           & Verbreitet             \\ \hline
-        Wein \& Schnaps (Becher)            & 1 S            & 0           & Verbreitet             \\ \hline
-        Wein (Flasche)                      & 10 G           & 0           & Verbreitet             \\ \hline
-        Zimmer (pro Nacht)                  & 10 S           & -           & Verbreitet
-    \end{tabular}%
+\clearpage
+
+\begin{table}[ht!]
+    \begin{minipage}{.5\linewidth}
+        \centering
+
+        \begin{tabularx}{0.95\linewidth}{Rlll}
+            \multicolumn{4}{c}{\cellcolor{gray!25}\textbf{Kräuter und Tränke}}  \\ \hline
+            \textbf{Gegenstand} & \textbf{Preis} & \textbf{TP} & \textbf{Verf.} \\ \hline
+            Belebender Trank    & 18 S           & 0           & Knapp          \\ \hline
+            Erdwurzel           & 5 GK           & 0           & Knapp          \\ \hline
+            Faxtoryll           & 15 S           & 0           & Exotisch       \\ \hline
+            Heilender Umschlag  & 12 S           & 0           & Verbreitet     \\ \hline
+            Heiltrank           & 10 S           & 0           & Knapp          \\ \hline
+            Nachtschatten       & 3 GK           & 0           & Selten         \\ \hline
+            Salwort             & 12 S           & 0           & Verbreitet     \\ \hline
+            Verdauungstonikum   & 3 S            & 0           & Verbreitet
+        \end{tabularx}%
+
+    \end{minipage}
+    \begin{minipage}{.5\linewidth}
+        \centering
+
+        \begin{tabularx}{0.95\linewidth}{Rlll}
+            \multicolumn{4}{c}{\cellcolor{gray!25}\textbf{Prothesen}}            \\ \hline
+            \textbf{Gegenstand}  & \textbf{Preis} & \textbf{TP} & \textbf{Verf.} \\ \hline
+            Augenklappe          & 6 G            & 0           & Verbreitet     \\ \hline
+            Falsches Auge        & 1 GK           & 0           & Selten         \\ \hline
+            Falsches Bein        & 16 S           & 2           & Knapp          \\ \hline
+            Güldene Nase         & 18 S           & 0           & Knapp          \\ \hline
+            Haken                & 3 S, 4 G       & 1           & Verbreitet     \\ \hline
+            Holzzähne            & 10 S           & 0           & Selten         \\ \hline
+            Technicus-Wunderwerk & 20 GK          & 1           & Exotisch
+        \end{tabularx}%
+
+    \end{minipage}
 \end{table}
 
+
 \begin{table}[!ht]
-    \renewcommand{\arraystretch}{1.2}
-    \newcolumntype{R}{>{\raggedright\arraybackslash}X}%
-    \begin{tabular}{llll}
-        \multicolumn{4}{c}{\cellcolor{gray!25}\textbf{Werkzeuge und Ausrüstung}}    \\
-        \textbf{Gegenstand} & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} \\ \hline
-        Abakus              & 3 S, 4 G       & 0           & Knapp                  \\ \hline
-        Angelhaken (12)     & 1 S            & 0           & Verbreitet             \\ \hline
-        Besen               & 1 S, 6 G       & 2           & Verbreitet             \\ \hline
-        Bootshaken          & 5 S            & 1           & Verbreitet             \\ \hline
-        Brecheisen          & 2 S, 6 G       & 1           & Verbreitet             \\ \hline
-        Dietriche           & 15 S           & 0           & Knapp                  \\ \hline
-        Eimer               & 2 S, 6 G       & 1           & Verbreitet             \\ \hline
-        Eisenbolzen         & 1 S            & 0           & Verbreitet             \\ \hline
-        Feldhacke           & 4 S            & 2           & Verbreitet             \\ \hline
-        Gegengiftset        & 3 GK           & 0           & Knapp                  \\ \hline
-        Gelenkeisen         & 18 S           & 0           & Knapp                  \\ \hline
-        Hammer              & 3 S            & 0           & Verbreitet             \\ \hline
-        Handspiegel         & 1 GK, 1 S, 6 G & 0           & Exotisch               \\ \hline
-        Kamm                & 10 G           & 0           & Verbreitet             \\ \hline
-        Krücke              & 3 S            & 2           & Verbreitet             \\ \hline
-        Leselinse           & 3 GK           & 0           & Selten                 \\ \hline
-        Malerpinsel         & 4 S            & 0           & Verbreitet             \\ \hline
-        Meißel              & 4 S, 2 G       & 0           & Verbreitet             \\ \hline
-        Messer              & 8 S            & 0           & Verbreitet             \\ \hline
-        Mörser \& Stößel    & 14 S           & 0           & Verbreitet             \\ \hline
-        Nägel (12)          & 2 G            & 0           & Verbreitet             \\ \hline
-        Ohrlöffel           & 2 S            & 0           & Knapp                  \\ \hline
-        Pinzette            & 1 S            & 0           & Knapp                  \\ \hline
-        Rechen              & 4 S, 6 G       & 2           & Verbreitet             \\ \hline
-        Reisigbesen         & 10 G           & 2           & Verbreitet             \\ \hline
-        Richterhammer       & 1 GK           & 0           & Knapp                  \\ \hline
-        Säge                & 6 S            & 1           & Verbreitet             \\ \hline
-        Schlüssel           & 1 S            & 0           & Verbreitet             \\ \hline
-        Schreibfeder        & 3 S            & 0           & Verbreitet             \\ \hline
-        Schreibzeug         & 2 GK           & 0           & Knapp                  \\ \hline
-        Schrubber           & 1 S            & 2           & Verbreitet             \\ \hline
-        Sichel              & 1 GK           & 1           & Verbreitet             \\ \hline
-        Spaten              & 8 S            & 2           & Verbreitet             \\ \hline
-        Spitzhacke          & 18 S           & 1           & Knapp                  \\ \hline
-        Stange (3 Meter)    & 8 S            & 3           & Verbreitet             \\ \hline
-        Stempel, graviert   & 5 GK           & 0           & Knapp                  \\ \hline
-        Teleskop            & 5 GK           & 0           & Selten                 \\ \hline
-        Tierfalle           & 2 S, 6 G       & 1           & Verbreitet             \\ \hline
-        Verkleidungsset     & 6 S, 6 G       & 0           & Knapp                  \\ \hline
-        Zange, Stahl        & 16 S           & 0           & Verbreitet
-    \end{tabular}%
+    \begin{tabularx}{0.95\linewidth}{llllR}
+        \multicolumn{5}{c}{\cellcolor{gray!25}\textbf{Mietlinge}}                                                                                              \\ \hline
+        \textbf{Mietling}   & \textbf{Kurze Aufgabe} & \textbf{Tag} & \textbf{Woche} & \textbf{Anmerkungen}                                                    \\ \hline
+        Ortskundiger Führer & 5 G                    & 15 G         & 10 S           & Arbeitet unabhängig, ohne Anführen-Würfe                                \\ \hline
+        Abgebrühter Söldner & 3 S                    & 9 S          & 3 GK, 12 S     & Erwartet als Gefahrenzulage einen Anteil der Beute                      \\ \hline
+        Advokat             & 3 S                    & 9 S          & 3 GK, 12 S     & Ein einzelnes Dokument zu erstellen kostet 2-4 Schillinge               \\ \hline
+        Lastenträger        & 1 S                    & 3 S          & 1 GK, 4 S      & Trägt 10 Lastenpunkte                                                   \\ \hline
+        Schreiber           & 2 S                    & 6 S          & 2 GK, 8 S      & Kann auch 1-2 gebräuchliche Sprachen übersetzen                         \\ \hline
+        Doktor              & 5 S                    & 15 S         & 5 GK           & Eine einzelne Visite zur medizinischen Versorgung kostet 4-6 Schillinge
+    \end{tabularx}
 \end{table}
 
 \end{document}
