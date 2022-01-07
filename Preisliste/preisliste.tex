@@ -1,27 +1,27 @@
-\documentclass[a4paper, 9pt]{scrartcl}
+\documentclass[a4paper, fontsize=9pt]{scrartcl}
 
-\usepackage{adjustbox}
 \usepackage{multirow}
 \usepackage[margin=20mm]{geometry}
 \usepackage[graphicx]{realboxes}
 \usepackage{tabularx}
 \usepackage[table,xcdraw]{xcolor}
-\usepackage{float}
-\usepackage{parskip}
+\usepackage{times}
+\usepackage[labelformat=empty]{caption} % remove caption
 
-\renewcommand{\familydefault}{\sfdefault}
+%\renewcommand{\familydefault}{\sfdefault}
 \renewcommand{\arraystretch}{1.2}
 \newcolumntype{R}{>{\raggedright\arraybackslash}X}%
 
 
 \begin{document}
+
 %\pagestyle{empty} % remove page numbers
 
 \begin{table}[!ht]
     \centering
     \begin{tabularx}{\textwidth}{llllllR}
         \hline
-        \textbf{Waffe}      & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} & \textbf{Länge} & \textbf{Schaden} & \textbf{Qualitäten und Markel}           \\ \hline
+        \textbf{Waffe}      & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} & \textbf{Länge} & \textbf{Schaden} & \textbf{Qualitäten und Makel}            \\ \hline
         \multicolumn{7}{c}{\cellcolor{gray!25} \textbf{Standard}}                                                                                                  \\ \hline
         Handwaffe           & 1 GK           & 1           & Verbreitet             & Durchschnitt   & +STB+4           & -                                        \\ \hline
         Improvisierte Waffe & Keiner         & -           & Keine                  & Verschieden    & +STB+1           & Stumpf                                   \\ \hline
@@ -64,7 +64,7 @@
 \end{table}
 
 
-\newpage
+\clearpage
 
 \begin{table}[!ht]
     \centering
@@ -110,6 +110,8 @@
         *** Eine Brandflasche verursacht bei jedem betroffenen Ziel 1+EG Brennend-Zustände.}
 \end{table}
 
+\clearpage
+
 \begin{table}[!ht]
     \centering
     \begin{tabularx}{\textwidth}{XlllllR}
@@ -129,6 +131,8 @@
         Steinkugel (12)                         & 2 G            & 0           & Verbreitet             & Wie Waffe           & -                & Betäubend                                       \\
     \end{tabularx}%
 \end{table}
+
+\vspace{4em}
 
 \begin{table}[!ht]
     \centering
@@ -154,14 +158,14 @@
         Plattenbeine     & 10 GK          & 3           & Selten                 & -10 Schleichen  & Beine                 & 2           & Schwachpunkte, Undurchdringlich \\ \hline
         Helm             & 3 GK           & 2           & Selten                 & -20 Wahrnehmung & Kopf                  & 2           & Schwachpunkte, Undurchdringlich
     \end{tabularx}%
+    \caption{* Weiches Leder kann ohne Abzüge unter jeder anderen Rüstung getragen werden.\newline
+        ** Irgendwelche Kette oder Platte zu tragen verursacht jeweils einen Abzug von -10 auf Schleichen.}
 \end{table}
 
 \clearpage
 
 \begin{table}[ht!]
-    \begin{minipage}{.5\linewidth}
-        \centering
-
+    \begin{minipage}[c][\textheight][t]{.5\linewidth}
         \begin{tabularx}{0.95\linewidth}{Rllll}
             \multicolumn{5}{c}{\cellcolor{gray!25}\textbf{Transport und Aufbewahrung}}               \\
             \textbf{Gegenstand}      & \textbf{Preis} & \textbf{TP} & \textbf{Last} & \textbf{Verf.} \\ \hline
@@ -220,7 +224,7 @@
         \end{tabularx}%
 
     \end{minipage}%
-    \begin{minipage}{.5\linewidth}
+    \begin{minipage}[c][\textheight][t]{.5\linewidth}
         \centering
 
         \begin{tabularx}{0.95\linewidth}{Rlll}
@@ -281,12 +285,11 @@
 
 \clearpage
 
-\begin{table}[]
-    \begin{minipage}{.5\linewidth}
+\begin{table}[ht!]
+    \begin{minipage}[c][\textheight][t]{.5\linewidth}
         \centering
-
-        \begin{tabularx}{0.95\linewidth}{RRll}
-            \multicolumn{4}{c}{\cellcolor{gray!25}\textbf{Werkzeuge und Ausrüstung}} \\
+        \begin{tabularx}{0.95\linewidth}{Rlll}
+            \multicolumn{4}{c}{\cellcolor{gray!25}\textbf{Werkzeuge und Ausrüstung}} \\ \hline
             \textbf{Gegenstand} & \textbf{Preis} & \textbf{TP} & \textbf{Verf.}      \\ \hline
             Abakus              & 3 S, 4 G       & 0           & Knapp               \\ \hline
             Angelhaken (12)     & 1 S            & 0           & Verbreitet          \\ \hline
@@ -327,12 +330,27 @@
             Teleskop            & 5 GK           & 0           & Selten              \\ \hline
             Tierfalle           & 2 S, 6 G       & 1           & Verbreitet          \\ \hline
             Verkleidungsset     & 6 S, 6 G       & 0           & Knapp               \\ \hline
-            Zange, Stahl        & 16 S           & 0           & Verbreitet
+            Zange, Stahl        & 16 S           & 0           & Verbreitet          \\
+        \end{tabularx}%
+        % don't know, but for some reason the table gets vertically centered without it
+    \end{minipage}
+    \begin{minipage}[c][\textheight][t]{.5\linewidth}
+        \centering
+
+        \begin{tabularx}{0.95\linewidth}{Rlll}
+            \multicolumn{4}{c}{\cellcolor{gray!25}\textbf{Drogen und Gifte}}              \\ \hline
+            \textbf{Gegenstand}   & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} \\ \hline
+            Alraunwurzel          & 1 GK           & 0           & Selten                 \\ \hline
+            Grünkappiger Wahnpilz & 5 GK           & 0           & Exotisch               \\ \hline
+            Herztod               & 40 GK          & 0           & Exotisch               \\ \hline
+            Hexenwurzel           & 4 S            & 0           & Selten                 \\ \hline
+            Mondblume             & 5 GK           & 0           & Knapp                  \\ \hline
+            Ranalds Entzücken     & 18 S           & 0           & Knapp                  \\ \hline
+            Schwarzer Lotus       & 20 GK          & 0           & Exotisch               \\ \hline
+            Spucke                & 1 GK, 5 S      & 0           & Selten
         \end{tabularx}%
 
-    \end{minipage}
-    \begin{minipage}{.5\linewidth}
-        \centering
+        \vspace{2em}
 
         \begin{tabularx}{0.95\linewidth}{Rlll}
             \multicolumn{4}{c}{\cellcolor{gray!25}\textbf{Sonstige Ausrüstung}} \\ \hline
@@ -369,29 +387,13 @@
             Zunderkästchen      & 4 S, 2 G       & 0           & Verbreitet     \\ \hline
             Zündholz            & 1 G            & 0           & Verbreitet
         \end{tabularx}
-
-        \vspace{2em}
-
-        \begin{tabularx}{0.95\linewidth}{Rlll}
-            \multicolumn{4}{c}{\cellcolor{gray!25}\textbf{Drogen und Gifte}}              \\ \hline
-            \textbf{Gegenstand}   & \textbf{Preis} & \textbf{TP} & \textbf{Verfügbarkeit} \\ \hline
-            Alraunwurzel          & 1 GK           & 0           & Selten                 \\ \hline
-            Grünkappiger Wahnpilz & 5 GK           & 0           & Exotisch               \\ \hline
-            Herztod               & 40 GK          & 0           & Exotisch               \\ \hline
-            Hexenwurzel           & 4 S            & 0           & Selten                 \\ \hline
-            Mondblume             & 5 GK           & 0           & Knapp                  \\ \hline
-            Ranalds Entzücken     & 18 S           & 0           & Knapp                  \\ \hline
-            Schwarzer Lotus       & 20 GK          & 0           & Exotisch               \\ \hline
-            Spucke                & 1 GK, 5 S      & 0           & Selten
-        \end{tabularx}%
-
     \end{minipage}
 \end{table}
 
 \clearpage
 
 \begin{table}[ht!]
-    \begin{minipage}{.5\linewidth}
+    \begin{minipage}[c][0.2\textheight][t]{.5\linewidth}
         \centering
 
         \begin{tabularx}{0.95\linewidth}{Rlll}
@@ -408,7 +410,7 @@
         \end{tabularx}%
 
     \end{minipage}
-    \begin{minipage}{.5\linewidth}
+    \begin{minipage}[c][0.2\textheight][t]{.5\linewidth}
         \centering
 
         \begin{tabularx}{0.95\linewidth}{Rlll}
@@ -420,12 +422,11 @@
             Güldene Nase         & 18 S           & 0           & Knapp          \\ \hline
             Haken                & 3 S, 4 G       & 1           & Verbreitet     \\ \hline
             Holzzähne            & 10 S           & 0           & Selten         \\ \hline
-            Technicus-Wunderwerk & 20 GK          & 1           & Exotisch
+            Technicus-Wunderwerk & 20 GK          & 1           & Exotisch       \\
         \end{tabularx}%
 
     \end{minipage}
 \end{table}
-
 
 \begin{table}[!ht]
     \begin{tabularx}{0.95\linewidth}{llllR}
