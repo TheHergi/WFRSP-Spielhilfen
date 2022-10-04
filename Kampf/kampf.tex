@@ -1,0 +1,111 @@
+\documentclass[a4paper, fontsize=10pt twocolumn]{scrartcl}
+
+\usepackage[margin=20mm]{geometry}
+\usepackage{times}
+\usepackage[labelformat=empty]{caption} % remove caption
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage[table,xcdraw]{xcolor}
+\renewcommand{\arraystretch}{1.2}
+\newcolumntype{R}{>{\raggedright\arraybackslash}X}%
+
+\setlength{\columnsep}{1cm}
+
+\begin{document}
+\section{Heldenpunkte}
+\begin{multicols}{2}
+    \subsection{Schicksal}
+    Verdient durch extrem heldenhaften Taten oder von großer Bedeutung.
+    \begin{itemize}
+        \item Statt zu sterben geht dein Charakter besinnungslos zu Boden und wird aus dem Geschehen genommen; dein SC überlebt, ganz egal wie extrem die Umstände.
+        \item Ignoriere den Schaden einer einzelnen Quelle.
+    \end{itemize}
+
+    \subsection{Glück}
+    Wird am Beginn des Spieleabends auf die Anzhal der Schicksalpunkte gesetzt.
+    \begin{itemize}
+        \item Wiederhole einen misslungenen Wurf.
+        \item Addiere bei einem Wurf nach dem Würfeln $+1$ EG.
+        \item Entscheide am Anfang der Runde, wann du in der Runde am Zug sein möchtest, unabhängig von der Initiative-Reihenfolge.
+    \end{itemize}
+
+    \vfill\null
+    \columnbreak
+
+    \subsection{Zähigkeit}
+    Verdient wenn man etwas im Sinne deiner Motivation extrem Bedeutsames gemacht hast.
+    \begin{itemize}
+        \item Du entscheidest dich, nicht für eine Mutation zu würfeln. Da du nicht mutierst, verlierst du auch keine Korrumpierungspunkte.
+        \item  Statt für einen Wurf zu würfeln, wählst du dein Wurfergebnis aus. Bei Vergleichenden Würfen gewinnst du stets mit mindestens +1 EG. Du kannst dies auch wählen, wenn du den Wurf bereits durchgeführt hast und gescheitert bist.
+    \end{itemize}
+
+    \subsection{Mut}
+    Mutpunkte erhältst du zurück, wann immer du dich gemäß deiner Motivation verhältst.
+    \begin{itemize}
+        \item Werde bis zum Ende der nächsten Runde immun gegen Psychologie.
+        \item Ignoriere bis zum Beginn der nächsten Runde alle Modifikatoren für eine Kritische Verletzung.
+        \item 1 Zustand entfernen; wenn du auf diese Weise den Zustand Niedergestreckt beseitigst, erhältst du zusätzlich 1 LP zurück, während du zurück auf die Beine kommst.
+    \end{itemize}
+
+\end{multicols}
+
+\section{Kampf}
+\begin{table}[!ht]
+    \centering
+    \begin{tabularx}{\textwidth}{l|l|l}
+        \multicolumn{3}{c}{\cellcolor{gray!25} \textbf{Fernkampf Reichweite}} \\ \cline{1-3}
+                           & Reichweite & Modifikator                         \\ \cline{1-3}
+        Kernschussweite    & $1/10$     & +40                                 \\
+        Kurze Reichweite   & 1/2        & +20                                 \\
+        Standard           & 1          & 0                                   \\
+        Lange Reichweite   & 2          & -10                                 \\
+        Extreme Reichweite & 3          & -30
+    \end{tabularx}
+\end{table}
+
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabularx}{\textwidth}{l|l}
+        \multicolumn{2}{c}{\cellcolor{gray!25} \textbf{Treffertabelle}} \\ \cline{1-2}
+        Wurf  & Zone                                                    \\ \cline{1-2}
+        01-09 & Kopf                                                    \\
+        10-24 & Linker Arm                                              \\
+        24-44 & Rechter Arm                                             \\
+        45-79 & Körper                                                  \\
+        80-89 & Linkes Bein                                             \\
+        90-00 & Rechtes Bein
+    \end{tabularx}
+\end{table}
+
+\clearpage
+\section{Reisen}
+\begin{table}[!ht]
+    \centering
+    \begin{tabularx}{\textwidth}{l|l|l|l}
+        \multicolumn{4}{c}{\cellcolor{gray!25} \textbf{Reisekosten}} \\ \cline{1-4}
+        Transport & Bewegung & Kosten & Distanz                      \\ \cline{1-4}
+        Kutsche   & 6        &        &                              \\
+        -Innen    &          & 2G     & pro 1.6 km                   \\
+        -Außen    &          & 1G     & pro 1.6 km                   \\
+        Barke     & 8        &        &                              \\
+        -Kabine   &          & 5G     & pro 1.6 km                   \\
+        -Deck     &          & 2G     & pro 1.6 km                   \\
+        Droschke  & 6        & 3G     & pro 250m                     \\
+        Fähre     & 4        & 1G     & pro 20m
+    \end{tabularx}
+\end{table}
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabularx}{\textwidth}{l|l|l|l}
+        \multicolumn{4}{c}{\cellcolor{gray!25} \textbf{Verfügbarkeit}} \\ \cline{1-4}
+                   & Dorf  & Kleinstadt & Stadt                        \\ \cline{1-4}
+        Verbreitet & 100\% & 100\%      & 100\%                        \\
+        Knapp      & 30\%  & 60\%       & 90\%                         \\
+        Selten     & 15\%  & 30\%       & 45\%                         \\
+        Exotisch   & -     & -          & -
+    \end{tabularx}
+\end{table}
+
+\end{document}
