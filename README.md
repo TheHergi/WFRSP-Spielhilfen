@@ -9,7 +9,7 @@ Ein Rework des 4e Charakterbogens erstellt mit dem Open Source Tool [Scribus](ht
 ## Hausregeln
 
 Hausregeln zur Vereinfachung des Spieles:
- - Zähigkeit, Mut und Schicksal wurden entfernt.
+ - Zähigkeit, Mut und Motivation wurden entfernt.
  - Rebalancing von Völkern (vor allem Elfen).
  - Talente in der Charaktererstellung werden nicht mehr ausgewürfelt.
  - Regeln für Talente und Fähigkeiten bezüglich Karrierefortschritt wurden angepasst.
