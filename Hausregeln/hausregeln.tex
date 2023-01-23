@@ -1,0 +1,133 @@
+\documentclass[letterpaper,twocolumn,nodeprecatedcode]{article}
+
+\usepackage[bg=none]{dnd}
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{shortvrb}
+\usepackage{stfloats}
+
+\captionsetup[table]{labelformat=empty,font={sf,sc,bf,},skip=0pt}
+
+\MakeShortVerb{|}
+
+\lstset{%
+  basicstyle=\ttfamily,
+  language=[LaTeX]{TeX},
+  breaklines=true,
+}
+
+\title{Warhammer Fantasy Rollenspiel\\Hausregeln}
+\author{Patrick H.}
+\date{\today}
+
+\begin{document}
+
+% \frontmatter
+
+\maketitle
+% \tableofcontents
+
+% \mainmatter%
+\section{Charaktere}
+
+\subsection{Zähigkeit, Mut und Motivation}
+Die Meta-Heldenpunkte Zähigkeit und Mut werden aus dem Spiel entfernt. 
+Damit entfällt auch die Notwendigkeit einer regeltechnischen Motivation. 
+Für gutes Rollenspiel sollte der Spieler aber natürliche eine Motivation finden die den Charakter antreibt.
+
+\begin{DndComment}{Begründung}
+  Diese beiden Punkte tragen unnötig zur Komplexität des Spieles bei und können weitestgehend von Glück und Schicksal abgedeckt werden.
+\end{DndComment}
+
+\subsection{Glück und Schicksal}
+Diese beiden Meta-Heldenpunkte bleiben soweit gleich und können wie folgt vergeben werden:
+\DndItemHeader{Glück}{}
+\begin{itemize}
+  \item Einen Würfelwurf neu würfeln. Das Ergebnis des zweiten Wurfes ist bindend.
+  \item Einen Erfolgsgrad von +1 zu einem Wurf hinzufügen.
+\end{itemize}
+Glückspunkte werden zu Beginn jeder Session auf die Anzahl an Schicksalspunkten aufgefüllt.
+
+\DndItemHeader{Schicksal}{}
+\begin{itemize}
+  \item Durch eine Fügung des Schicksals überlebt dein Charakter den Kampf und stirbt nicht.
+  \item Der Charakter entgeht auf eine absurde Weise jedwedem Schaden der ihn getroffen hätte.
+\end{itemize}
+Schicksalspunkte werden nur bei Abschluss großer Ziele, oder nach bedeutsamen Ereignissen auf Entscheidung des Meisters vergeben.
+
+\subsection{Charaktererstellung}
+\subsubsection{Attribute}
+Der Unterschied in den Attributswerten bei der Erstellung eines Charakters sind teilweise sehr groß. 
+\begin{DndTable}[header=Attributsboni Alt]{XXXX}
+  \textbf{Volk}  & \textbf{Attributs-Offset} & \textbf{Heldenpunkte}\\
+  Mensch  & $\pm 0$ & 6  \\
+  Zwerg  & $+30$ & 4 \\
+  Halblinge  & $+20$ & 5  \\
+  Elfen  & $+80$ & 2 
+\end{DndTable}
+Als Heldenpunkte wird dabei die Summe aus Schicksalpunkten, Zähigkeitspunkten und die darüber verteilen Zusatzpunkte bezeichnet.
+Um das etwas auszugleichen werden die Attributsboni von Elfen und Zwerge gesenkt. Durch den Wegfall von Zähigkeit werden die Heldenpunkte (in diesem Fall gibt es nur mehr Schicksalspunkte) um etwa die Hälfte gesenkt. 
+\begin{DndTable}[header=Attribute Neu]{XXXXX}
+  & \textbf{Mensch} & \textbf{Zwerg} & \textbf{Halbling} & \textbf{Elf} \\
+  KG & $+20$     & $+30$    & $+10$       & $+20$  \\
+  BF & $+20$     & $+20$    & $+30$       & $+30$  \\
+  ST & $+20$     & $+20$    & $+10$       & $+20$  \\
+  WI & $+20$     & $+30$    & $+20$       & $+20$  \\
+  I  & $+20$     & $+20$    & $+20$       & $+30$  \\
+  GW & $+20$     & $+10$    & $+20$       & $+30$  \\
+  GS & $+20$     & $+30$    & $+30$       & $+20$  \\
+  IN & $+20$     & $+20$    & $+20$       & $+30$  \\
+  WK & $+20$     & $+30$    & $+30$       & $+20$  \\
+  CH & $+20$     & $+10$    & $+30$       & $+20$  \\
+  SP & $3$      & $2$     & $2$        & $1$  
+\end{DndTable}
+Der Unterschied in den Attributen ist damit wesentlich geringer, und die Schicksalpunkte (SP) wurden auch angepasst.
+\begin{DndTable}[header=Attributsboni Neu]{lllll}
+  \textbf{Volk}  & \textbf{Attribute Alt} & \textbf{Attribute Neu} & \textbf{SP Alt} & \textbf{SP Neu}\\
+  Mensch  & $\pm 0$ & $\pm 0$ & 6 & 3  \\
+  Zwerg  & $+30$ & $+20$ & 4 & 2  \\
+  Halbling  & $+20$ & $+20$ & 5 & 2  \\
+  Elf  & $+80$ & $+40$ & 2 & 1  \\
+\end{DndTable}
+Elfen sind den Menschen noch immer stark überlegen, Zwerge und Halblinge nur leicht. Die Schicksalpunkte dienen (wie im Regelwerk erläutert) zur Kompensierung der Attributswerte. In diesem Fall entspricht ein Attributsbonus von $+20$ einem Schicksalspunkt.
+
+\begin{DndComment}{Begründung}
+  Vor allem Elfen waren Super-Meschen die von Beginn an extrem mächtig waren. Mit diesen Änderungen wird der Unterschied der Rassen etwas minimiert. Der Fakt dass Menschen den anderen Rassen unterlegen sind bleibt erhalten und wird durch die höhere Anzahl an Schicksalpuntken kompensiert.
+\end{DndComment}
+
+\subsubsection{Talente}
+Bei der Erstellung eines neuen Charakters muss man bis jetzt bei Menschen und Halblingen auf einer Zufallstabelle einige Talente auswürfeln.
+Diese Regelung wird entfernt, und der Spieler kann stattdessen frei aus der Tabelle auswählen. Wenn z.B. 3 zufällige Talente ausgewählt werden sollten, kann der Spieler stattdessen 3 Talente seiner Wahl aus der Tabelle nehmen.
+
+\begin{DndComment}{Begründung}
+  Die Zufallstabelle kann das Charakterkonzept ziemlich zerstören. So ergibt es keinen Sinn, wenn man einen Gelehrten spielt und dann das Zufallstalent \textit{Geborener Krieger} erhält.
+\end{DndComment}
+
+\subsection{Karriere}
+\subsubsection{Talente}
+Talente in einer unteren Karrierestufe sind dem Spieler auch verfügbar und können gewählt werden. 
+Laut GRW waren diese nicht mehr verfügbar, sobald man in die höhere Karrierestufe ging.
+
+Grundsätzlich stehen dem Spieler alle Talente offen, jedoch ist eine Entscheidung ein Talent außerhalb der Karriere zu nehmen zu begründen und mit dem Meister im Vorhinein abzuklären.
+
+\begin{DndComment}{Begründung}
+  Auch wenn ich die Spieltechnische Entscheidung verstehe, dass man mit dem Aufstieg nicht nur Vorteile bekommt, macht es logisch keinen Sinn diese Regelung beizubehalten.
+\end{DndComment}
+
+\subsubsection{Aufstieg}
+Zum Aufstieg in die höhere Karrierestufe wird eine bestimmte Anzahl an Steigerungen benötigt die innerhalb der Karriere sein müssen.
+Dass sie innerhalb der Karriere sein müssen wird entfernt, und es zählen alle Steigerungen in allen Fähigkeiten.
+
+Beispiel: Ein Handwerkslehrling besitzt die Fähigkeit \textit{Zechen} die er auch steigern muss, wenn er zum Handwerker aufsteigen will. Nicht jeder will einen Charakter spielen der viel trinkt, und vielleicht stattdessen jemanden lieber spielen der künstlerisch begabt ist. In der neuen Regelung zählen die Steigerungen in \textit{Kunst} somit auch zum Fortschritt ein Handwerker zu werden.
+
+\begin{DndComment}{Begründung}
+  Diese Restriktion ist ziemlich streng, und zwingt den Charakter auf Schienen. Damit, dass Fähigkeitssteigerungen außerhalb der Karriere noch immer das doppelte kosten, bleibt weiterhin genügend Anreiz den gewählten Pfad zu gehen, ohne das komplette System umzuwerfen.
+\end{DndComment}
+
+\newpage
+\section{Kampf}
+
+\end{document}
