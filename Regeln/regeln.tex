@@ -1,4 +1,4 @@
-\documentclass[letterpaper,twocolumn,nodeprecatedcode]{article}
+\documentclass[a4paper]{article}
 
 \usepackage[bg=none]{dnd}
 \usepackage[german]{babel}
@@ -6,20 +6,10 @@
 \usepackage[singlelinecheck=false]{caption}
 \usepackage{lipsum}
 \usepackage{listings}
-\usepackage{shortvrb}
 \usepackage{stfloats}
+\usepackage{multicol}
 
-\captionsetup[table]{labelformat=empty,font={sf,sc,bf,},skip=0pt}
-
-\MakeShortVerb{|}
-
-\lstset{%
-  basicstyle=\ttfamily,
-  language=[LaTeX]{TeX},
-  breaklines=true,
-}
-
-\title{Warhammer Fantasy Rollenspiel\\Hausregeln}
+\title{Warhammer Fantasy Rollenspiel\\Regelwerk}
 \author{Patrick H.}
 \date{\today}
 
@@ -28,9 +18,18 @@
 % \frontmatter
 
 \maketitle
-% \tableofcontents
+\tableofcontents
 
+\vspace{1em}
 % \mainmatter%
+
+\begin{multicols}{2}
+  
+
+\part{Hausregeln}
+Abänderungen der Regeln aus dem Grundregelwerk.
+
+
 \section{Charaktere}
 
 \subsection{Zähigkeit, Mut und Motivation}
@@ -85,7 +84,7 @@ Um das etwas auszugleichen werden die Attributsboni von Elfen und Zwerge gesenkt
   SP & $3$      & $2$     & $2$        & $1$  
 \end{DndTable}
 Der Unterschied in den Attributen ist damit wesentlich geringer, und die Schicksalpunkte (SP) wurden auch angepasst.
-\begin{DndTable}[header=Attributsboni Neu]{lllll}
+\begin{DndTable}[header=Attributsboni Neu]{lXXll}
   \textbf{Volk}  & \textbf{Attribute Alt} & \textbf{Attribute Neu} & \textbf{SP Alt} & \textbf{SP Neu}\\
   Mensch  & $\pm 0$ & $\pm 0$ & 6 & 3  \\
   Zwerg  & $+30$ & $+20$ & 4 & 2  \\
@@ -130,4 +129,9 @@ Beispiel: Ein Handwerkslehrling besitzt die Fähigkeit \textit{Zechen} die er au
 \newpage
 \section{Kampf}
 
+\part{Magie}
+
+Für Magie existieren sowohl in \textit{Winds of Magic} als auch in \textit{Archives of the Empire 3} optionale Regeln die die im Grundregelwerk ersetzen.
+
+\end{multicols}
 \end{document}
