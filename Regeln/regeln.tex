@@ -139,17 +139,53 @@ Beispiel: Ein Handwerkslehrling besitzt die Fähigkeit \textit{Zechen} die er au
 \clearpage
 \section{Magie}
 
-Für Magie existieren sowohl in \textit{Winds of Magic} als auch in \textit{Archives of the Empire 3} optionale und überarbeitete Regeln.
+Für Magie existieren sowohl in \textit{WoM} (\textit{Winds of Magic}) als auch in \textit{AotE3} (\textit{Archives of the Empire 3}) optionale und überarbeitete Regeln.
 Dieses Kapitel stellt eine Zusammenfassung über die verwendeten Regeln dar.
+
 \subsection{Zaubern}
-Der Zauberer muss einen \textbf{Sprache: Magick} Test machen, wobei er EG in Höhe des ZW des Zaubers benötigt.
-Kritischer Erfolg: Würfel auf der Tabelle für Leichte Kontrollverluste. Weiters kann einer der folgenden Effekte gewählt werden:
+Der Zauberer muss einen \textbf{Sprache: Magick} Test machen, wobei er EG in Höhe des ZW des Zaubers benötigt.\\
+\textbf{Kritischer Erfolg}: Würfel auf der Tabelle für Leichte Kontrollverluste. (Ausgenommen der Zauberer besitzt das Talent „Instinktive Aussprache“) Der Zauberer kann sich einen der folgenden Effekte aussuchen:
 \begin{itemize}
-  \item 
+  \item \textbf{Kritischer Zauber}: Wenn der Zauber Schaden verursacht, verursacht er zudem eine kritische Wunde.
+  \item \textbf{Totale Macht}: Der Zauber kann gewirkt werden, obwohl möglicherweise nicht genug EG erzielt wurden.
+  \item \textbf{Unaufhaltsame Kraft}: Der Zauber kann nicht aufgelöst („dispelled“) werden.
 \end{itemize}
+\textbf{Kritischer Misserfolg}: Würfel auf der Tabelle für Leichte Kontrollverluste.
 
 \subsection{Kanalisieren}
+Bei einem erfolgreichen \textbf{Kanalisieren}-Wurf erhält der Zauberer Willenskraft-Bonus EG. Diese EG werden vom ZW des Zaubers abgezogen und können den ZW maximal auf 0 reduzieren.
+Jede Runde, in der der Zauberer nicht kanalisiert oder zaubert, verliert er einen EG.
+Es ist nicht notwendig beim Kanalisieren den Zauber bereits „auszuwählen“.\\
+\textbf{Kritischer Erfolg}: Der Zauberer erhält zusätzlich die EG des Kanalisations-Tests. Würfel auf der Tabelle für Leichte Kontrollverluste (ausgenommen der Spieler besitzt das Talent "Äthergespür").\\
+\textbf{Kritischer Misserfolg}: Alle EG, die der Zauberer hält, sind verloren. Wenn die EG, die der Zauberer dadurch verloren hat, größer sind als sein Willenskraft-Bonus, würfel auf der Tabelle für Schwere Kontrollverluste, ansonsten auf der Tabelle für Leichte Kontrollverluste.
 
+\subsection{Unterbrechung}
+Wenn der Zauberer während dem Kanalisieren unterbrochen wird (z. B. er nimmt Schaden), dann muss er einen schwierigen (-20) \textbf{Besonnenheits}-Wurf ablegen. Wenn dieser nicht gelingt, verliert er alle EG und muss auf der Tabelle für Leichte Kontrollverluste würfeln.
+
+\subsection{Magische Geschosse}
+Die Trefferzone des Geschosses ergibt sich aus dem umgedrehten Würfelergebnis.\\
+Der Schaden des Geschosses ergibt sich aus dem Schaden des Zaubers plus dem \textbf{Willenskraft-Bonus} des Zauberers. 
+Der Zauber kann auch noch, wie folgt, zusätzlich verstärkt werden.
+
+\subsection{Zauber verstärken - Overcasting}
+Wenn beim Zaubern (\textbf{Sprache: Magick}-Wurf) mehr SL als benötigt erreicht wurden, können diese wie folgt ausgegeben werden:
+
+\begin{DndTable}[header=Zauber verstärken\\\small{AoE: Wirkungsbereich}\\\small{RW: Reichweite}]{XXXXXX}
+\textbf{EG}   & \textbf{Ziele}  & \textbf{Schaden}  & \textbf{RW} & \textbf{AoE}  & \textbf{Dauer}  \\
+$1$           & $+1$            & $+1$              & $\times 2$  & -             & -               \\
+$2$           & $+1$            & $+2$              & $\times 2$  & -             & $\times 2$      \\
+$3$           & $+1$            & $+3$              & $\times 2$  & $\times 2$    & $\times 2$      \\
+$5$           & $+2$            & $+4$              & $\times 3$  & $\times 2$    & $\times 2$      \\
+$8$           & $+2$            & $+5$              & $\times 3$  & $\times 2$    & $\times 3$      \\
+$13$          & $+2$            & $+6$              & $\times 3$  & $\times 2$    & $\times 2$      \\
+$21+$         & $+3$            & $+7$              & $\times 4$  & $\times 3$    & $\times 2$
+\end{DndTable}
+Jede Spalte kann dabei nur ein Mal ausgewählt werden.
+\begin{DndComment}{Beispiel}
+  Der Zauberer zaubert ein magisches Geschoss und erzielt dabei +4 EG.
+  Er gibt +1 EG aus, um ein zusätzliches Ziel zu treffen; es verbleiben ihm +3 EG.
+  Diese verbleibenden +3 EG gibt er für +3 Schaden aus.
+\end{DndComment}
 
 \end{multicols}
 \end{document}
