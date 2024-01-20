@@ -1,46 +1,34 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper,10pt,twoside,twocolumn,openany,nodeprecatedcode,bg=print]{dndbook}
 
-\usepackage[bg=none]{dnd}
 \usepackage[german]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[singlelinecheck=false]{caption}
-\usepackage{lipsum}
-\usepackage{listings}
-\usepackage{stfloats}
-\usepackage{multicol}
+\usepackage{enumitem}
 
-\captionsetup[table]{labelformat=empty,font={sf,sc,bf,},skip=0pt}
-
-\title{%
-  Warhammer Fantasy Rollenspiel\\
-  \large Abänderungen und Ergänzungen zum Regelwerk}
-% \title{%
-%   Simulating Modelling Practice and Theory \\
-%   \large Common Simulation of a SCARA robot \\
-%     with PD and learning controller}
+\title{
+  Warhammer Fantasy Rollenspiel\newline
+  \large Abänderungen und Ergänzungen zum Regelwerk
+  }
 \author{Patrick H.}
-\date{\today}
+\date{}
+
 
 \begin{document}
 
 % \frontmatter
 
-\maketitle
-% \tableofcontents
 
+% \maketitle
+\part*{Warhammer Fantasy Rollenspiel\newline
+        \large{Abänderungen und Ergänzungen zum Regelwerk}\newline
+}
 \vspace{1em}
+
 % \mainmatter%
 
-\begin{multicols}{2}
-  
 
-% \part{Hausregeln}
-% Abänderungen der Regeln aus dem Grundregelwerk.
-
-
-\section{Charaktere}
-
-\subsection{Zähigkeit, Mut und Motivation}
+\chapter{Allgemeine Regeln}
+\section{Heldenpunkte}
+\subsection{Zähigkeit und Mut}
 Die Meta-Heldenpunkte Zähigkeit und Mut werden aus dem Spiel entfernt. 
 Damit entfällt auch die Notwendigkeit einer regeltechnischen Motivation. 
 Für gutes Rollenspiel sollte der Spieler aber natürliche eine Motivation finden die den Charakter antreibt.
@@ -49,90 +37,110 @@ Für gutes Rollenspiel sollte der Spieler aber natürliche eine Motivation finde
   Diese beiden Punkte tragen unnötig zur Komplexität des Spieles bei und können weitestgehend von Glück und Schicksal abgedeckt werden.
 \end{DndComment}
 
-\subsection{Glück und Schicksal}
+\subsection{Glück}
 Diese beiden Meta-Heldenpunkte bleiben soweit gleich und können wie folgt vergeben werden:
-\DndItemHeader{Glück}{}
+% \DndItemHeader{Glück}{}
 \begin{itemize}
   \item Einen Würfelwurf neu würfeln. Das Ergebnis des zweiten Wurfes ist bindend.
   \item Einen Erfolgsgrad von +1 zu einem Wurf hinzufügen.
 \end{itemize}
 Glückspunkte werden zu Beginn jeder Session auf die Anzahl an Schicksalspunkten aufgefüllt.
 
-\DndItemHeader{Schicksal}{}
+\subsection{Schicksal}
 \begin{itemize}
   \item Durch eine Fügung des Schicksals überlebt dein Charakter den Kampf und stirbt nicht.
   \item Der Charakter entgeht auf eine absurde Weise jedwedem Schaden der ihn getroffen hätte.
 \end{itemize}
 Schicksalspunkte werden nur bei Abschluss großer Ziele, oder nach bedeutsamen Ereignissen auf Entscheidung des Meisters vergeben.
 
-\subsection{Charaktererstellung}
-\subsubsection{Attribute}
-Der Unterschied in den Attributswerten bei der Erstellung eines Charakters sind teilweise sehr groß. 
-\begin{DndTable}[header=Attributsboni Alt]{XXXX}
-  \textbf{Volk}  & \textbf{Attributs-Offset} & \textbf{Heldenpunkte}\\
-  Mensch  & $\pm 0$ & 6  \\
-  Zwerg  & $+30$ & 4 \\
-  Halblinge  & $+20$ & 5  \\
-  Elfen  & $+80$ & 2 
+\begin{DndTable}[]{lXXXX}
+   & Mensch                         &     Zwerg                    & Halbling                        & Elf \\
+   Schicksalspunkte & $3$                              & $2$                            & $2$                               & $1$  
 \end{DndTable}
-Als Heldenpunkte wird dabei die Summe aus Schicksalpunkten, Zähigkeitspunkten und die darüber verteilen Zusatzpunkte bezeichnet.
-Um das etwas auszugleichen werden die Attributsboni von Elfen und Zwerge gesenkt. Durch den Wegfall von Zähigkeit werden die Heldenpunkte (in diesem Fall gibt es nur mehr Schicksalspunkte) um etwa die Hälfte gesenkt. 
-\begin{DndTable}[header=Attribute Neu]{XXXXX}
-  & \textbf{Mensch} & \textbf{Zwerg} & \textbf{Halbling} & \textbf{Elf} \\
-  KG & $+20$     & $+30$    & $+10$       & $+20$  \\
-  BF & $+20$     & $+20$    & $+30$       & $+30$  \\
-  ST & $+20$     & $+20$    & $+10$       & $+20$  \\
-  WI & $+20$     & $+30$    & $+20$       & $+20$  \\
-  I  & $+20$     & $+20$    & $+20$       & $+30$  \\
-  GW & $+20$     & $+10$    & $+20$       & $+30$  \\
-  GS & $+20$     & $+30$    & $+30$       & $+20$  \\
-  IN & $+20$     & $+20$    & $+20$       & $+30$  \\
-  WK & $+20$     & $+30$    & $+30$       & $+20$  \\
-  CH & $+20$     & $+10$    & $+30$       & $+20$  \\
-  SP & $3$      & $2$     & $2$        & $1$  
-\end{DndTable}
-Der Unterschied in den Attributen ist damit wesentlich geringer, und die Schicksalpunkte (SP) wurden auch angepasst.
-\begin{DndTable}[header=Attributsboni Neu]{lXXll}
-  \textbf{Volk}  & \textbf{Attribute Alt} & \textbf{Attribute Neu} & \textbf{SP Alt} & \textbf{SP Neu}\\
-  Mensch  & $\pm 0$ & $\pm 0$ & 6 & 3  \\
-  Zwerg  & $+30$ & $+20$ & 4 & 2  \\
-  Halbling  & $+20$ & $+20$ & 5 & 2  \\
-  Elf  & $+80$ & $+40$ & 2 & 1  \\
-\end{DndTable}
-Elfen sind den Menschen noch immer stark überlegen, Zwerge und Halblinge nur leicht. Die Schicksalpunkte dienen (wie im Regelwerk erläutert) zur Kompensierung der Attributswerte. In diesem Fall entspricht ein Attributsbonus von $+20$ einem Schicksalspunkt.
+
+% \vspace{\fill}
+% \pagebreak
+
+% \section{Attribute}
+% Der Unterschied in den Attributwerten bei der Erstellung eines Charakters ist teilweise sehr groß. 
+% \begin{DndTable}[header=Attributsboni Alt]{XXXX}
+%   \textbf{Volk}  & \textbf{Attributs-Offset} & \textbf{Heldenpunkte}\\
+%   Mensch     & $\pm 0$ & 6  \\
+%   Zwerg      & $+30$ & 4 \\
+%   Halblinge  & $+20$ & 5  \\
+%   Elfen  & $+80$ & 2 
+% \end{DndTable}
+% \begin{DndTable}[header=Attribute Alt]{XXXXXX}
+%   & \textbf{Mensch} & \textbf{Zwerg} & \textbf{Halbling} & \textbf{Elf} & \textbf{Elf alt} \\
+%   KG & $+20$     & $+30$    & $+10$       & $+30$  \\
+%   BF & $+20$     & $+20$    & $+30$       & $+30$  \\
+%   ST & $+20$     & $+20$    & $+10$       & $+20$  \\
+%   WI & $+20$     & $+30$    & $+20$       & $+20$  \\
+%   I  & $+20$     & $+20$    & $+20$       & $+40$  \\
+%   GW & $+20$     & $+10$    & $+20$       & $+30$  \\
+%   GS & $+20$     & $+30$    & $+30$       & $+40$  \\
+%   IN & $+20$     & $+20$    & $+20$       & $+30$  \\
+%   WK & $+20$     & $+40$    & $+30$       & $+30$  \\
+%   CH & $+20$     & $+10$    & $+30$       & $+20$  \\
+%   SP & $3$      & $2$     & $2$        & $1$  
+% \end{DndTable}
+% Als Heldenpunkte wird dabei die Summe aus Schicksalpunkten, Zähigkeitspunkten und die darüber verteilen Zusatzpunkte bezeichnet.
+% Um das etwas auszugleichen werden die Attributsboni von Elfen und Zwerge gesenkt. Durch den Wegfall von Zähigkeit werden die Heldenpunkte (in diesem Fall gibt es nur mehr Schicksalspunkte) um etwa die Hälfte gesenkt. 
+% \begin{DndTable}[header=Attributsboni]{lXXXX}
+%      & {Mensch}                         &     {Zwerg}                    & {Halbling}                        & {Elf} \\
+%   KG & $20 \rightarrow \textbf{20}$     & $30 \rightarrow \textbf{30}$   & $10 \rightarrow \textbf{10}$      & $20 \rightarrow \textbf{30}$  \\
+%   BF & $20 \rightarrow \textbf{20}$     & $20 \rightarrow \textbf{20}$   & $30 \rightarrow \textbf{30}$      & $30 \rightarrow \textbf{30}$  \\
+%   ST & $20 \rightarrow \textbf{20}$     & $20 \rightarrow \textbf{20}$   & $10 \rightarrow \textbf{10}$      & $20 \rightarrow \textbf{20}$  \\
+%   WI & $20 \rightarrow \textbf{20}$     & $30 \rightarrow \textbf{30}$   & $20 \rightarrow \textbf{20}$      & $20 \rightarrow \textbf{20}$  \\
+%   I  & $20 \rightarrow \textbf{20}$     & $20 \rightarrow \textbf{20}$   & $20 \rightarrow \textbf{20}$      & $30 \rightarrow \textbf{40}$  \\
+%   GW & $20 \rightarrow \textbf{20}$     & $10 \rightarrow \textbf{10}$   & $20 \rightarrow \textbf{20}$      & $30 \rightarrow \textbf{30}$  \\
+%   GS & $20 \rightarrow \textbf{20}$     & $30 \rightarrow \textbf{30}$   & $30 \rightarrow \textbf{30}$      & $20 \rightarrow \textbf{40}$  \\
+%   IN & $20 \rightarrow \textbf{20}$     & $20 \rightarrow \textbf{20}$   & $20 \rightarrow \textbf{20}$      & $30 \rightarrow \textbf{30}$  \\
+%   WK & $20 \rightarrow \textbf{20}$     & $40 \rightarrow \textbf{30}$   & $30 \rightarrow \textbf{30}$      & $20 \rightarrow \textbf{30}$  \\
+%   CH & $20 \rightarrow \textbf{20}$     & $10 \rightarrow \textbf{10}$   & $30 \rightarrow \textbf{30}$      & $20 \rightarrow \textbf{20}$  \\
+%   SP & $3$                              & $2$                            & $2$                               & $1$  
+% \end{DndTable}
+% Der Unterschied in den Attributen ist damit wesentlich geringer, und die Schicksalspunkte (SP) wurden mit angepasst.
+% \begin{DndTable}[header=Attributsboni Neu]{lXXll}
+%   \textbf{Volk}  & \textbf{Attribute Alt} & \textbf{Attribute Neu} & \textbf{SP Alt} & \textbf{SP Neu}\\
+%   Mensch  & $\pm 0$ & $\pm 0$ & 6 & 3  \\
+%   Zwerg  & $+30$ & $+20$ & 4 & 2  \\
+%   Halbling  & $+20$ & $+20$ & 5 & 2  \\
+%   Elf  & $+80$ & $+40$ & 2 & 1  \\
+% \end{DndTable}
+% Elfen sind den Menschen noch immer stark überlegen, Zwerge und Halblinge nur leicht. Die Schicksalspunkte dienen (wie im Regelwerk erläutert) zur Kompensierung der Attributswerte. In diesem Fall entspricht ein Attributsbonus von $+20$ einem Schicksalspunkt.
+
+% \begin{DndComment}{Begründung}
+%   Vor allem Elfen waren Super-Meschen die von Beginn an extrem mächtig waren. Mit diesen Änderungen wird der Unterschied der Rassen etwas minimiert. Der Fakt dass Menschen den anderen Rassen unterlegen sind bleibt erhalten und wird durch die höhere Anzahl an Schicksalpuntken kompensiert.
+% \end{DndComment}
+
+\section{Vorteil}
+Die bestehenden Regeln aus dem \textit{GRW} werden verworfen.
+Stattdessen wird die Vorteilsregelung von \textit{Andy Law} verwendet: Der SC bekommt eine Erleichterung von $+20$ auf den Test, wenn er sich dafür mehr Zeit nehmen kann. Heißt, der SC bekommt immer einen $+20$ Vorteil, außer er ist in einer Stresssituation.
 
 \begin{DndComment}{Begründung}
-  Vor allem Elfen waren Super-Meschen die von Beginn an extrem mächtig waren. Mit diesen Änderungen wird der Unterschied der Rassen etwas minimiert. Der Fakt dass Menschen den anderen Rassen unterlegen sind bleibt erhalten und wird durch die höhere Anzahl an Schicksalpuntken kompensiert.
+  Diese Regelung vereinfacht den Vorteil auf ein simples „Kann ich mir dafür mehr Zeit nehmen? Ja oder Nein.“. Die vielen Regeln, die für Vorteil existieren, werden dadurch durch eine einzige simple Regel ersetzt.
 \end{DndComment}
 
-\subsubsection{Talente}
-Bei der Erstellung eines neuen Charakters muss man bis jetzt bei Menschen und Halblingen auf einer Zufallstabelle einige Talente auswürfeln.
-Diese Regelung wird entfernt, und der Spieler kann stattdessen frei aus der Tabelle auswählen. Wenn z.B. 3 zufällige Talente ausgewählt werden sollten, kann der Spieler stattdessen 3 Talente seiner Wahl aus der Tabelle nehmen.
 
-\begin{DndComment}{Begründung}
-  Die Zufallstabelle kann das Charakterkonzept ziemlich zerstören. So ergibt es keinen Sinn, wenn man einen Gelehrten spielt und dann das Zufallstalent \textit{Geborener Krieger} erhält.
-\end{DndComment}
+\vspace{\fill}
+\pagebreak
 
-Weiters wird das Talent \textit{Unkenruf} entfernt. 
-Menschen bekommen weiterhin einen Unkenruf beim Erstellen, jedoch hat er keinen regeltechnischen Einfluss auf das Spiel.
+\section{Karriere}
+\subsection{Talente}
+Talente in vorhergehenden Karrierestufen sind dem Spieler ohne Einschränkungen verfügbar und können frei gewählt werden.
+Laut GRW sind diese nicht mehr verfügbar, sobald man in die Karriere verlässt.
 
-\begin{DndComment}{Begründung}
-  Dieses Talent ist mehr Fluff als eigentliches Talent und bietet abgesehen von einem Meta-Vorteil (Charakter stirbt) keine Vorteile beim Spielen mit dem Charakter.
-\end{DndComment}
-
-\subsection{Karriere}
-\subsubsection{Talente}
-Talente in einer unteren Karrierestufe sind dem Spieler auch verfügbar und können gewählt werden. 
-Laut GRW waren diese nicht mehr verfügbar, sobald man in die höhere Karrierestufe ging.
-
-Grundsätzlich stehen dem Spieler alle Talente offen, jedoch ist eine Entscheidung ein Talent außerhalb der Karriere zu nehmen zu begründen und mit dem Meister im Vorhinein abzuklären.
+Grundsätzlich stehen dem Spieler alle Talente aus den offiziellen Büchern offen. 
+Wird ein Talent außerhalb des Karriereweges gewählt, sollte das im Vorhinein mit dem Meister abgeklärt werden.
 
 \begin{DndComment}{Begründung}
   Auch wenn ich die Spieltechnische Entscheidung verstehe, dass man mit dem Aufstieg nicht nur Vorteile bekommt, macht es logisch keinen Sinn diese Regelung beizubehalten.
 \end{DndComment}
 
-\subsubsection{Aufstieg}
-Zum Aufstieg in die höhere Karrierestufe wird eine bestimmte Anzahl an Steigerungen benötigt die innerhalb der Karriere sein müssen.
+
+\subsection{Aufstieg}
+Zum Aufstieg in die höhere Karrierestufe wird eine bestimmte Anzahl an Steigerungen in Fähigkeiten und Talenten benötigt. die innerhalb der Karriere sein müssen.
 Dass sie innerhalb der Karriere sein müssen wird entfernt, und es zählen alle Steigerungen in allen Fähigkeiten.
 
 Beispiel: Ein Handwerkslehrling besitzt die Fähigkeit \textit{Zechen} die er auch steigern muss, wenn er zum Handwerker aufsteigen will. Nicht jeder will einen Charakter spielen der viel trinkt, und vielleicht stattdessen jemanden lieber spielen der künstlerisch begabt ist. In der neuen Regelung zählen die Steigerungen in \textit{Kunst} somit auch zum Fortschritt ein Handwerker zu werden.
@@ -141,13 +149,6 @@ Beispiel: Ein Handwerkslehrling besitzt die Fähigkeit \textit{Zechen} die er au
   Diese Restriktion ist ziemlich streng, und zwingt den Charakter auf Schienen. Damit, dass Fähigkeitssteigerungen außerhalb der Karriere noch immer das doppelte kosten, bleibt weiterhin genügend Anreiz den gewählten Pfad zu gehen, ohne das komplette System umzuwerfen.
 \end{DndComment}
 
-\subsubsection{Vorteil}
-Die bestehenden Regeln aus dem \textit{GRW} werden verworfen.
-Stattdessen wird die Vorteilsregelung von \textit{Andy Law} verwendet: Der SC bekommt eine Erleichterung von $+20$ auf den Test, wenn er sich dafür mehr Zeit nehmen kann. Heißt, der SC bekommt immer einen $+20$ Vorteil, außer er ist in einer Stresssituation.
-
-\begin{DndComment}{Begründung}
-  Diese Regelung vereinfacht den Vorteil auf ein simples „Kann ich mir dafür mehr Zeit nehmen? Ja oder Nein.“. Die vielen Regeln, die für Vorteil existieren, werden dadurch durch eine einzige simple Regel ersetzt.
-\end{DndComment}
 
 \clearpage
 \section{Magie}
@@ -211,5 +212,85 @@ Wenn der Zauberer einen \textbf{kritischen Misserfolg} beim Zaubern aus dem Grim
   $96-00$           & \textbf{Verbrennung} Das Grimoire ist zerstört.          
 \end{DndTable}
 
-\end{multicols}
+
+\chapter{Charaktererstellung}
+
+\subsection{1. Volk}
+Wähle ein Volk aus:
+\begin{itemize}[noitemsep]
+  \item Mensch
+  \item Halbling
+  \item Zwerg
+\end{itemize}
+Andere Völker (Elfen, Gnome, Oger und Echsenmenschen) stehen vorerst nicht zur verfügung.
+
+\subsection{2. Karriere}
+Wähle eine Karriere für deinen Charakter.
+Dein Charakter beginnt in der ersten Karrierestufe der Karriere. Wählt man z.B. als Karriere \textit{Zauberer}, so beginnt man das Spiel als \textit{Zauberlehrling}.
+
+Eine Übersicht gibt es im GRW auf Seite 30-31, mit einer detailierten Beshreibung ab Seite 53.
+Beachte das nicht jede Karriere jedem Volk zur verfügung steht. Die Verfügbaren Völker sind in der Detailbeschreibung unter dem Karrieretitel zu finden.
+
+\subsection{3. Spielwerte}
+\begin{enumerate}[leftmargin=0.7cm, noitemsep]
+  \item Würfle 12 Mal 2W10 und notiere dir die Ergebnisse. Damit erhältst du 12 Werte zwischen 2 und 20.
+  \item Streiche das höchste und niedrigste Ergebnis.
+  \item Verteile die restlichen 10 Werte auf deine Spielwerte in der Reihe \textit{Anfagngswert}.
+  \item Addiere die Basiswerte für dein Volk aus der Tabelle 'Basiswerte' auf den \textit{Anfagngswert} auf.
+  \item Trage dir deine Schicksalspunkte aus der Tabelle 'Basiswerte' am Charakterblatt ein. Deine Glückspunkte sind gleich deiner Schicksalspunkte.
+\end{enumerate}
+\begin{DndTable}[header=Basiswerte]{lXXXXX}
+                   & \textbf{Mensch} & \textbf{Zwerg} & \textbf{Halbling} \\
+  KG               & $20$           & $30$          & $10$                \\
+  BF               & $20$           & $20$          & $30$                \\
+  ST               & $20$           & $20$          & $10$                \\
+  WI               & $20$           & $30$          & $20$                \\
+  I                & $20$           & $20$          & $20$                \\
+  GW               & $20$           & $10$          & $20$                \\
+  GS               & $20$           & $30$          & $30$                \\
+  IN               & $20$           & $20$          & $20$                \\
+  WK               & $20$           & $40$          & $30$                \\
+  CH               & $20$           & $10$          & $30$                \\
+  Schicksalspunkte & $3$            & $2$            & $2$           
+\end{DndTable}
+
+\subsection[]{4. Volks-Talente}
+Bestimme die fünf Talente deines Volkes. Diese sind im Grundregelwerk auf Seite 36 gelistet.
+
+\begin{DndComment}{Zufällige Talente}
+  Anstatt zufällige Talente zu würfeln, kann der Spieler diese auch selbst aus der Tabelle auswählen.
+\end{DndComment}
+
+\begin{DndComment}{Unkenruf}
+  Dieses Talent ist mehr Fluff als eigentliches Talent und bietet abgesehen von einem Meta-Vorteil (Charakter stirbt) keine Vorteile beim Spielen.
+  Der Spieler sucht anstatt Unkenruf ein anderes Talent aus.
+\end{DndComment}
+
+\subsection[]{5. Volks-Fähigkeiten}
+Entscheide dich für 6 Fähigkeiten von deinem Volk (GRW Seite 36). 
+Vergieb für 3 Fähigkeiten 5 Steigerungen, und für die restlichen 3 Fähigkeiten 3 Steigerungen.
+
+\subsection[]{6. Karriere-Talent}
+Wähle ein Talente in deiner Karrierestufe. 
+
+\subsection[]{7. Karriere-Fähigkeiten}
+Verteile 40 Steigerungen in die Fähigkeiten deiner Karrierestufe.
+Pro Fähigkeite dürfen in diesem Schritt maximal 10 Punkte vergeben werden.
+
+\chapter[short]{Backup}
+
+Bei der Erstellung eines neuen Charakters muss man bis jetzt bei Menschen und Halblingen auf einer Zufallstabelle einige Talente auswürfeln.
+Diese Regelung wird entfernt, und der Spieler kann stattdessen frei aus der Tabelle auswählen. Wenn z.B. 3 zufällige Talente ausgewählt werden sollten, kann der Spieler stattdessen 3 Talente seiner Wahl aus der Tabelle nehmen.
+
+\begin{DndComment}{Begründung}
+  Die Zufallstabelle kann das Charakterkonzept ziemlich zerstören. So ergibt es keinen Sinn, wenn man einen Gelehrten spielt und dann das Zufallstalent \textit{Geborener Krieger} erhält.
+\end{DndComment}
+
+Weiters wird das Talent \textit{Unkenruf} entfernt. 
+Menschen bekommen weiterhin einen Unkenruf beim Erstellen, jedoch hat er keinen regeltechnischen Einfluss auf das Spiel.
+
+\begin{DndComment}{Begründung}
+  Dieses Talent ist mehr Fluff als eigentliches Talent und bietet abgesehen von einem Meta-Vorteil (Charakter stirbt) keine Vorteile beim Spielen mit dem Charakter.
+\end{DndComment}
+
 \end{document}
