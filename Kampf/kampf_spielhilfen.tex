@@ -1,0 +1,63 @@
+\documentclass[a4paper, fontsize=11pt]{scrartcl}
+
+\usepackage{multirow}
+\usepackage[margin=20mm]{geometry}
+\usepackage[graphicx]{realboxes}
+\usepackage{tabularx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{times}
+\usepackage[labelformat=empty]{caption} % remove caption
+\usepackage{multicol}
+%\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\arraystretch}{1.2}
+
+\newcolumntype{R}{>{\raggedright\arraybackslash}X}%
+
+\begin{document}
+
+%\renewcommand\tabularxcolumn[1]{m{#1}}
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabularx}{\textwidth}{R|R}
+        \multicolumn{2}{c}{\cellcolor{gray!25} \textbf{Schwierigkeit im Kampf}}                                                  \\ \hline
+        +60 & Fernkampfattacke auf ein Monströses Ziel (Riesen-Größe)                                                            \\ \cline{2-2}
+            & Fernkampfattacke in eine Menge (13+ Ziele)                                                                         \\ \hline
+        +40 & Fernkampfattacke auf ein Ziel in Kernschussweite (siehe Seite 297)                                                 \\ \cline{2-2}
+            & Fernkampfattacke auf ein Enormes Ziel (Greifen-Größe)                                                              \\ \cline{2-2}
+            & Nahkampfattacke auf einen Gegner, bei dem man 3 zu 1 in der Überzahl ist                                           \\ \cline{2-2}
+            & Fernkampfattacke auf eine große Gruppe (7-12 Ziele)                                                                \\ \hline
+        +20 & Fernkampfattacke auf ein Großes Ziel (Oger-Größe)                                                                  \\ \cline{2-2}
+            & Fernkampfattacke bei kurzer Reichweite (weniger als halbe Reichweite der Waffe)                                    \\ \cline{2-2}
+            & Fernkampfattacke auf eine kleine Gruppe (3-6 Ziele)                                                                \\ \cline{2-2}
+            & Fernkampfattacke, bei der es deine letzte Handlung war, zu zielen (für das Zielen ist kein Wurf erforderlich)      \\ \cline{2-2}
+            & Nahkampfattacke in den Rücken oder die Seite eines Gegners, der Gebunden ist                                       \\ \cline{2-2}
+            & Nahkampfattacke auf einen Gegner, bei dem man 2 zu 1 in der Überzahl ist                                           \\ \cline{2-2}
+            & Nahkampfattacke auf einen Gegner, der den Zustand Niedergestreckt hat                                              \\ \hline
+        0  & Eine Standardattacke                                                                                               \\ \cline{2-2}
+            & Fernkampfattacke auf ein Normales Ziel (Menschen-Größe)                                                            \\ \hline
+        -10 & Nahkampfattacke, während man den Zustand Niedergestreckt hat                                                       \\ \cline{2-2}
+            & Nahkampfattacke inmitten von Schlamm, dichtem Regen oder schwierigem Gelände                                       \\ \cline{2-2}
+            & Fernkampfattacke bei langer Reichweite (bis zu doppelter Reichweite der Waffe)                                     \\ \cline{2-2}
+            & Fernkampfattacke in einer Runde, in der du auch eine Bewegungsaktion durchführst                                   \\ \cline{2-2}
+            & Fernkampfattacke auf ein Zierliches Ziel (Halbling-Größe)                                                          \\ \cline{2-2}
+            & Gegner in leichter Deckung (zum Beispiel hinter einer Hecke)                                                       \\ \hline
+        -20 & Gezielte Attacke auf eine bestimmte Trefferzone; wenn du Erfolg hast, triffst du diese Trefferzone.                \\ \cline{2-2}
+            & Kampf in beengtem Raum mit einer Waffe, die eine größere Länge als Durchschnitt hat                                \\ \cline{2-2}
+            & Fernkampfattacke auf Ziele, die von Nebel oder Dunkelheit verborgen werden                                         \\ \cline{2-2}
+            & Nahkampfattacke inmitten eines Sturzregens, Orkans, Schneesturms oder Extremwetters anderer Art                    \\ \cline{2-2}
+            & Ausweichen, während man den Zustand Niedergestreckt hat                                                            \\ \cline{2-2}
+            & Nahkampf bei Dunkelheit                                                                                            \\ \cline{2-2}
+            & Fernkampfattacke auf ein kleines Ziel (Katzen-Größe)                                                               \\ \cline{2-2}
+            & Einsatz einer Waffe mit der nichtdominanten Hand                                                                   \\ \cline{2-2}
+            & Gegner in mittlerer Deckung (zum Beispiel hinter einem Holzzaun)                                                   \\ \hline
+        -30 & Nahkampfattacke oder Ausweichen in tiefem Schnee, Wasser oder anderer, die Bewegung stark einschränkender Umgebung \\ \cline{2-2}
+            & Fernkampfattacke auf ein Winziges Ziel (Mäuse-Größe)                                                               \\ \cline{2-2}
+            & Fernkampfattacke bei extremer Reichweite (bis zur dreifachen Reichweite der Waffe)                                 \\ \cline{2-2}
+            & Fernkampfattacke bei Dunkelheit                                                                                    \\ \cline{2-2}
+            & Gegner in schwerer Deckung (zum Beispiel hinter einer Steinmauer)
+    \end{tabularx}
+\end{table}
+
+
+\end{document}
