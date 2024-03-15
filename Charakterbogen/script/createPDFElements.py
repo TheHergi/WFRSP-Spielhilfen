@@ -52,9 +52,9 @@ scribus.createPdfAnnotation(PDFTEXTFIELD, 75, 36, 27.5, 5, prefix + "augen")
 # Karriere
 scribus.createPdfAnnotation(PDFTEXTFIELD, 130, 21, 65, 5, prefix + "karriere")
 scribus.createPdfAnnotation(PDFTEXTFIELD, 130, 26, 65, 5, prefix + "karriereweg_0")
-scribus.createPdfAnnotation(PDFTEXTFIELD, 110, 31, 85, 5, prefix + "karriereweg_1")
-scribus.createPdfAnnotation(PDFTEXTFIELD, 125, 36, 25, 5, prefix + "status")
-scribus.createPdfAnnotation(PDFTEXTFIELD, 165, 36, 30, 5, prefix + "klasse")
+scribus.createPdfAnnotation(PDFTEXTFIELD, 107.5, 31, 87.5, 5, prefix + "karriereweg_1")
+scribus.createPdfAnnotation(PDFTEXTFIELD, 125, 36, 25, 5, prefix + "rang")
+scribus.createPdfAnnotation(PDFTEXTFIELD, 170, 36, 25, 5, prefix + "ansehen")
 
 # Schicksal & Zaehigkeit
 scribus.createPdfAnnotation(PDFTEXTFIELD, 175, 51, 20, 5, prefix + "schicksal")
@@ -93,16 +93,16 @@ for name, sw in GRUNDFAEHIGKEITEN.items():
 
     ###### advances #####
     if y < 175:
-        scribus.createPdfAnnotation(PDFCHECKBOX, 108.3, y + 1, 3, 3, prefix + name + "_adv_skill_isCarreer")
+        scribus.createPdfAnnotation(PDFCHECKBOX, 108.3, y + 1, 3, 3, prefix + str(idx) + "_adv_skill_isCarreer")
         x = 115
-        scribus.createPdfAnnotation(PDFTEXTFIELD, x, y, 40, 5, prefix + name + "_adv_skill_name")
+        scribus.createPdfAnnotation(PDFTEXTFIELD, x, y, 40, 5, prefix + str(idx) + "_adv_skill_name")
 
-        scribus.createPdfAnnotation(PDFTEXTFIELD, x+40, y, 10, 5, prefix + name + "_adv_skill_sw_type")
-        textf = scribus.createPdfAnnotation(PDFTEXTFIELD, x+50, y, 10, 5, prefix + name + "_adv_skill_sw_total")
+        scribus.createPdfAnnotation(PDFTEXTFIELD, x+40, y, 10, 5, prefix + str(idx) + "_adv_skill_sw_type")
+        textf = scribus.createPdfAnnotation(PDFTEXTFIELD, x+50, y, 10, 5, prefix + str(idx) + "_adv_skill_sw_total")
         # scribus.setJSActionScript(9, create_js_adv_skill_sw_script(prefix + name + "_adv_skill_sw_type", textf), textf)
 
-        scribus.createPdfAnnotation(PDFTEXTFIELD, x+60, y, 10, 5, prefix + name + "_adv_skill_inc")
-        scribus.createPdfAnnotation(PDFTEXTFIELD, x+70, y, 10, 5, prefix + name + "_adv_skill_total")
+        scribus.createPdfAnnotation(PDFTEXTFIELD, x+60, y, 10, 5, prefix + str(idx) + "_adv_skill_inc")
+        scribus.createPdfAnnotation(PDFTEXTFIELD, x+70, y, 10, 5, prefix + str(idx) + "_adv_skill_total")
 
     idx = idx + 1
 
