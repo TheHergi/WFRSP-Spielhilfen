@@ -3,6 +3,7 @@
 \usepackage[german]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{enumitem}
+\usepackage{multirow}
 
 \title{
   Warhammer Fantasy Rollenspiel\newline
@@ -18,10 +19,10 @@
 
 
 % \maketitle
-% \part*{Warhammer Fantasy Rollenspiel\newline
-%   \large{Abänderungen und Ergänzungen zum Regelwerk}\newline
-% }
-% \vspace{1em}
+\part*{Warhammer Fantasy Rollenspiel\newline
+  \large{Abänderungen und Ergänzungen zum Regelwerk}\newline
+}
+\vspace{1em}
 
 % \mainmatter%
 
@@ -50,7 +51,7 @@ asd
 \begin{itemize}
   \item Durch eine Fügung des Schicksals überlebt dein Charakter den Kampf und stirbt nicht.
   \item Dein Charakter korrumpiert nicht. Dadurch verlierst du keine Korrumpierungspunkte.
-  % \item Der Charakter entgeht auf eine absurde Weise jedwedem Schaden der ihn getroffen hätte.
+        % \item Der Charakter entgeht auf eine absurde Weise jedwedem Schaden der ihn getroffen hätte.
 \end{itemize}
 Schicksalspunkte werden nur bei Abschluss großer Ziele, oder nach bedeutsamen Ereignissen auf Entscheidung des Meisters vergeben.
 
@@ -128,26 +129,75 @@ Stattdessen wird die Vorteilsregelung von \textit{Lawhammer} verwendet: Der SC b
 \pagebreak
 
 \section{Karriere}
-\subsection{Talente}
-Talente in vorhergehenden Karrierestufen sind dem Spieler ohne Einschränkungen verfügbar und können frei gewählt werden.
-Laut GRW sind diese nicht mehr verfügbar, sobald man in die Karriere verlässt.
+Mit dem Erwerb von Erfahrungspunkten (EP) können
+\begin{itemize}
+  \item Steigerungen in Attribute (Spielwerte)
+  \item Steigerungen in Fähigkeiten
+  \item Talente
+\end{itemize}
+gekauft werden.
 
-Grundsätzlich stehen dem Spieler alle Talente aus den offiziellen Büchern offen.
-Wird ein Talent außerhalb des Karriereweges gewählt, sollte das im Vorhinein mit dem Meister abgeklärt werden.
+\subsection[short]{Attribute und Fähigkeiten}
+
+Die Kosten zum Steigern eines Attributes (Spielwert) oder einer Fähigkeit sind in der folgenden Tabelle ersichtlich. Die Tabelle listet dabei die Kosten um ein Attribut oder eine Fähigkeit um 1 zu steigern.
+
+Der angegebene Preis gilt für Attribute und Fähigkeiten die dem Charakter durch die Karriere oder dem Volk zugeordnet worden sind. (Auf dem Charakterblatt wurden diese extra markiert)
+Möchte man eine Steigerung außerhalb der Karriere oder des Volkes vornehmen, so verdoppeln sich die angegebenen Kosten.
+\begin{DndTable}[header=EP-Kosten]{XXX}
+  \textbf{Steigerungen}                              & \textbf{Attribut}             & \textbf{Fähigkeit}             \\
+  0-5                           & 25                   & 10                    \\
+  6-10                          & 30                   & 15                    \\
+  11-15                         & 40                   & 20                    \\
+  16-20                         & 50                   & 30                    \\
+  21-25                         & 70                   & 40                    \\
+  26-30                         & 90                   & 60                    \\
+  31-35                         & 120                  & 80                    \\
+  36-40                         & 150                  & 110                   \\
+  41-45                         & 190                  & 140                   \\
+  46-50                         & 230                  & 180
+\end{DndTable}
+
+
+\textbf{Beispiel 1}: Du hast bereits 8 Steigerungen im Attribut \textit{Kampfgeschick}. Die Steigerung von 8 auf 9 Steigerungen kostet dich 30 EP.\newline
+\textbf{Beispiel 2}: Du hast 15 Steigerungen in der Fähigkeit \textit{Ausweichen}. Die Steigerung von 15 auf 16 kostet dich 20 EP.\\
+\textbf{Beispiel 3}: Du spielst einen Laienpriester (Kriegerpriester) und möchtest die Fähigkeit \textit{Bestechen} steigern in der du 0 Steigerungen hast. Diese Fähigkeit ist weder Teil deiner Karriere noch deines Volkes, also musst du 20, statt 10 EP zahlen um die Fähigkeit von 0 auf 1 zu steigern.
+
+\begin{DndComment}{}
+  Laut GRW kosten auch die Steigerungen der Fähigkeiten deines Volkes doppelt. Diese Restriktion wurde für mehr Freiheit fallen gelassen.
+\end{DndComment}
+
+\subsection{Talente}
+Ein neues Talent zu erlernen kostet 100 EP. Bei einigen Talenten ist es möglich dieses mehrere Male zu kaufen/steigern. In diesem Fall kostet die Steigerung des Talentes 100 EP + 100 EP für jedes Mal, dass dieses Talent bereits gelernt wurde.\\
+
+Talente in der aktuellen, und der vorhergehenden Karrierestufen sind dem Spieler ohne Einschränkungen verfügbar und können frei gewählt werden.
+Grundsätzlich stehen dem Spieler alle Talente aus den Büchern offen, sofern sie Sinnvoll für den Charakter sind.
+Talente können eine äußerst starke Auswirkungen auf das Spiel haben, oder können nur über längere Ingame-Zeit erlernt werden (z.B. das Erlernen einer Sprache). 
+Deswegen wird vor Erwerb eines Talentes um eine kurze Rücksprache mit dem Spielleiter gebeten.
 
 \begin{DndComment}{Begründung}
-  Auch wenn ich die Spieltechnische Entscheidung verstehe, dass man mit dem Aufstieg nicht nur Vorteile bekommt, macht es logisch keinen Sinn diese Regelung beizubehalten.
+  Laut GRW sind nur Talente in der aktuellen Karrierestufen verfügbar. Diese Einschränkung ist sehr restriktiv und wird fallen gelassen.
 \end{DndComment}
 
 
-\subsection{Aufstieg}
-Zum Aufstieg in die höhere Karrierestufe wird eine bestimmte Anzahl an Steigerungen in Fähigkeiten und Talenten benötigt. die innerhalb der Karriere sein müssen.
-Dass sie innerhalb der Karriere sein müssen wird entfernt, und es zählen alle Steigerungen in allen Fähigkeiten.
+\subsection{Karriere-Aufstieg}
+Um in der Karriereleiter aufzusteigen, muss zuerst die vorherige Karrierestufe abgeschlossen werden. Dafür wird eine Mindestanzahl an Steigerungen in Fähigkeiten und Attributen, sowie eine Mindestanzahl an Talenten benötigt.
 
-Beispiel: Ein Handwerkslehrling besitzt die Fähigkeit \textit{Zechen} die er auch steigern muss, wenn er zum Handwerker aufsteigen will. Nicht jeder will einen Charakter spielen der viel trinkt, und vielleicht stattdessen jemanden lieber spielen der künstlerisch begabt ist. In der neuen Regelung zählen die Steigerungen in \textit{Kunst} somit auch zum Fortschritt ein Handwerker zu werden.
+\begin{DndTable}[header=Abschließen einer Karrierestufe]{llXXX}
+  \multicolumn{2}{c}{Karrierestufe} & \multicolumn{2}{c}{Steigerungen} &         \\
+  Stufe      & Beispiel             & Attribute      & Fähigkeiten     & Talente \\
+  1     & Laienpriester                                                       & 15        & 40          & 1       \\
+  2     & Kriegerpriester                                                     & 40        & 80          & 2       \\
+  3     & Feldpriester                                                        & 75        & 120         & 3       \\
+  4     & Priestergeneral                                                     & 120       & 160         & 4      
+\end{DndTable}
+
+Die Steigerungen können dabei in beliebigen Attributen oder Fähigkeiten sein; Steigerungen und Talente aus der Charaktererstellung zählen damit auch mit hinein.
+Laut GRW gibt es auch EP-Kosten für das Abschließen und Starten einer neuen Karrierestufe. Auf diese zusätzlichen Kosten wird verzichtet.\\
+
+\textbf{Beispiel}: Um die Karrierestufe Laienpriester abzuschließen und die Karrierestufe Kriegerpriester zu starten werden insgesamt 15 Steigerungen in Attributen, 40 Steigerungen in Fähigkeiten, und mindestens 1 Talent benötigt.
 
 \begin{DndComment}{Begründung}
-  Diese Restriktion ist ziemlich streng, und zwingt den Charakter auf Schienen. Damit, dass Fähigkeitssteigerungen außerhalb der Karriere noch immer das doppelte kosten, bleibt weiterhin genügend Anreiz den gewählten Pfad zu gehen, ohne das komplette System umzuwerfen.
+  Laut GRW werden zählen nur Steigerungen deiner aktuellen Karrierestufe, diese Restriktion ist ziemlich streng, und zwingt den Charakter sehr auf Schienen. Damit, dass Steigerungen außerhalb der Karriere noch immer das doppelte kosten, bleibt weiterhin genügend Anreiz den gewählten Pfad zu gehen, ohne das komplette System umzuwerfen.
 \end{DndComment}
 
 
@@ -224,7 +274,7 @@ Andere Völker (Elfen, Gnome, Oger und Echsenmenschen) stehen vorerst nicht zur 
 
 \subsection{2. Karriere}
 Wähle eine Karriere für deinen Charakter und fülle die Kategorie \textit{Karriere} am Charakterblatt aus.
-Dein Charakter beginnt in der ersten Karrierestufe der Karriere. 
+Dein Charakter beginnt in der ersten Karrierestufe der Karriere.
 Trage den Rang und das Ansehen deiner Karrierestufe ein.
 
 

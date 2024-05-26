@@ -3,3 +3,4 @@ Halblinge
 Meta-Heldenpunkte
 Halbling
 Oger
+Kriegerpriester
