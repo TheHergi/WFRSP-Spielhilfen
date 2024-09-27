@@ -4,39 +4,66 @@
 \usepackage[utf8]{inputenc}
 \usepackage{enumitem}
 \usepackage{multirow}
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{shortvrb}
+\usepackage{stfloats}
+
+\MakeShortVerb{|}
+
+\lstset{%
+  basicstyle=\ttfamily,
+  language=[LaTeX]{TeX},
+  breaklines=true,
+}
 
 \title{
   Warhammer Fantasy Rollenspiel\newline
-  \large Abänderungen und Ergänzungen zum Regelwerk
+  \large Ergänzungen und Erweiterungen zum Regelwerk
   }
 \author{Patrick H.}
 \date{}
 
 
+\definecolor {WhiteColor}  {HTML} {FFFFFF} % DMG Part 3
+\definecolor {bgtan}    {HTML} {FFFFFF}	% DndReadAloud background
+\definecolor {bgtan2018}{HTML} {FFFFFF} % lighter version of bgtan from the 2018 Basic Rules
+\definecolor {PhbLightGreen} {HTML} {FFFFFF} % PHB Part 1
+
 \begin{document}
 
-% \frontmatter
+
+\frontmatter
+
+\maketitle
+% \part*{Warhammer Fantasy Rollenspiel\newline
+%   \large{Zusammenfassung und Ergänzung zum Regelwerk}}
+% \vspace{1em}
 
 
-% \maketitle
-\part*{Warhammer Fantasy Rollenspiel\newline
-  \large{Abänderungen und Ergänzungen zum Regelwerk}\newline
-}
-\vspace{1em}
 
-% \mainmatter%
+% \mainmatter
 
 
-\chapter{Allgemeine Regeln}
+
+\chapter{Charaktere}
 \section{Heldenpunkte}
-\subsection{Zähigkeit und Mut}
-Die Meta-Heldenpunkte Zähigkeit und Mut werden aus dem Spiel entfernt.
-Damit entfällt auch die Notwendigkeit einer regeltechnischen Motivation.
-% Der Spieler sollte aber natürliche eine Motivation finden die den Charakter antreibt.
+Als Heldenpunkte werden die Meta-Spielwerte Zähigkeit, Mut, Schicksal und Glück bezeichnet.
 
-\begin{DndComment}{Begründung}
-  Diese beiden Punkte tragen unnötig zur Komplexität des Spieles bei und können weitestgehend von Glück und Schicksal abgedeckt werden.
-\end{DndComment}
+% \subsection{Zähigkeit und Mut}
+\begin{DndReadAloud}[color=WhiteColor]
+  Die Meta-Heldenpunkte Zähigkeit und Mut werden aus dem Spiel entfernt.
+  \begin{DndComment}{Begründung}
+    Diese beiden Punkte tragen unnötig zur Komplexität des Spieles bei und können weitestgehend von Glück und Schicksal abgedeckt werden.
+  \end{DndComment}
+\end{DndReadAloud}
+
+\noindent
+Damit entfällt auch die Notwendigkeit einer regeltechnischen Motivation.
+Der Spieler sollte aber natürliche eine Motivation finden die den Charakter antreibt.
+
+
 
 \subsection{Schicksal und Glück}
 Diese beiden Meta-Heldenpunkte bleiben soweit gleich und können wie folgt vergeben werden:
@@ -46,82 +73,21 @@ Diese beiden Meta-Heldenpunkte bleiben soweit gleich und können wie folgt verge
   \item Einen Erfolgsgrad von +1 zu einem Wurf hinzufügen.
 \end{itemize}
 Glückspunkte werden zu Beginn jeder Session auf die Anzahl an Schicksalspunkten aufgefüllt.
-asd
+
 \subsubsection{Schicksal}
 \begin{itemize}
   \item Durch eine Fügung des Schicksals überlebt dein Charakter den Kampf und stirbt nicht.
   \item Dein Charakter korrumpiert nicht. Dadurch verlierst du keine Korrumpierungspunkte.
         % \item Der Charakter entgeht auf eine absurde Weise jedwedem Schaden der ihn getroffen hätte.
 \end{itemize}
-Schicksalspunkte werden nur bei Abschluss großer Ziele, oder nach bedeutsamen Ereignissen auf Entscheidung des Meisters vergeben.
-
-% \begin{DndTable}[]{lXXXX}
-%   & Mensch                         &     Zwerg                    & Halbling                        & Elf \\
-%   Schicksalspunkte & $3$                              & $2$                            & $2$                               & $1$
-% \end{DndTable}
-
-% \vspace{\fill}
-% \pagebreak
-
-% \section{Attribute}
-% Der Unterschied in den Attributwerten bei der Erstellung eines Charakters ist teilweise sehr groß. 
-% \begin{DndTable}[header=Attributsboni Alt]{XXXX}
-%   \textbf{Volk}  & \textbf{Attributs-Offset} & \textbf{Heldenpunkte}\\
-%   Mensch     & $\pm 0$ & 6  \\
-%   Zwerg      & $+30$ & 4 \\
-%   Halblinge  & $+20$ & 5  \\
-%   Elfen  & $+80$ & 2 
-% \end{DndTable}
-% \begin{DndTable}[header=Attribute Alt]{XXXXXX}
-%   & \textbf{Mensch} & \textbf{Zwerg} & \textbf{Halbling} & \textbf{Elf} & \textbf{Elf alt} \\
-%   KG & $+20$     & $+30$    & $+10$       & $+30$  \\
-%   BF & $+20$     & $+20$    & $+30$       & $+30$  \\
-%   ST & $+20$     & $+20$    & $+10$       & $+20$  \\
-%   WI & $+20$     & $+30$    & $+20$       & $+20$  \\
-%   I  & $+20$     & $+20$    & $+20$       & $+40$  \\
-%   GW & $+20$     & $+10$    & $+20$       & $+30$  \\
-%   GS & $+20$     & $+30$    & $+30$       & $+40$  \\
-%   IN & $+20$     & $+20$    & $+20$       & $+30$  \\
-%   WK & $+20$     & $+40$    & $+30$       & $+30$  \\
-%   CH & $+20$     & $+10$    & $+30$       & $+20$  \\
-%   SP & $3$      & $2$     & $2$        & $1$  
-% \end{DndTable}
-% Als Heldenpunkte wird dabei die Summe aus Schicksalpunkten, Zähigkeitspunkten und die darüber verteilen Zusatzpunkte bezeichnet.
-% Um das etwas auszugleichen werden die Attributsboni von Elfen und Zwerge gesenkt. Durch den Wegfall von Zähigkeit werden die Heldenpunkte (in diesem Fall gibt es nur mehr Schicksalspunkte) um etwa die Hälfte gesenkt. 
-% \begin{DndTable}[header=Attributsboni]{lXXXX}
-%      & {Mensch}                         &     {Zwerg}                    & {Halbling}                        & {Elf} \\
-%   KG & $20 \rightarrow \textbf{20}$     & $30 \rightarrow \textbf{30}$   & $10 \rightarrow \textbf{10}$      & $20 \rightarrow \textbf{30}$  \\
-%   BF & $20 \rightarrow \textbf{20}$     & $20 \rightarrow \textbf{20}$   & $30 \rightarrow \textbf{30}$      & $30 \rightarrow \textbf{30}$  \\
-%   ST & $20 \rightarrow \textbf{20}$     & $20 \rightarrow \textbf{20}$   & $10 \rightarrow \textbf{10}$      & $20 \rightarrow \textbf{20}$  \\
-%   WI & $20 \rightarrow \textbf{20}$     & $30 \rightarrow \textbf{30}$   & $20 \rightarrow \textbf{20}$      & $20 \rightarrow \textbf{20}$  \\
-%   I  & $20 \rightarrow \textbf{20}$     & $20 \rightarrow \textbf{20}$   & $20 \rightarrow \textbf{20}$      & $30 \rightarrow \textbf{40}$  \\
-%   GW & $20 \rightarrow \textbf{20}$     & $10 \rightarrow \textbf{10}$   & $20 \rightarrow \textbf{20}$      & $30 \rightarrow \textbf{30}$  \\
-%   GS & $20 \rightarrow \textbf{20}$     & $30 \rightarrow \textbf{30}$   & $30 \rightarrow \textbf{30}$      & $20 \rightarrow \textbf{40}$  \\
-%   IN & $20 \rightarrow \textbf{20}$     & $20 \rightarrow \textbf{20}$   & $20 \rightarrow \textbf{20}$      & $30 \rightarrow \textbf{30}$  \\
-%   WK & $20 \rightarrow \textbf{20}$     & $40 \rightarrow \textbf{30}$   & $30 \rightarrow \textbf{30}$      & $20 \rightarrow \textbf{30}$  \\
-%   CH & $20 \rightarrow \textbf{20}$     & $10 \rightarrow \textbf{10}$   & $30 \rightarrow \textbf{30}$      & $20 \rightarrow \textbf{20}$  \\
-%   SP & $3$                              & $2$                            & $2$                               & $1$  
-% \end{DndTable}
-% Der Unterschied in den Attributen ist damit wesentlich geringer, und die Schicksalspunkte (SP) wurden mit angepasst.
-% \begin{DndTable}[header=Attributsboni Neu]{lXXll}
-%   \textbf{Volk}  & \textbf{Attribute Alt} & \textbf{Attribute Neu} & \textbf{SP Alt} & \textbf{SP Neu}\\
-%   Mensch  & $\pm 0$ & $\pm 0$ & 6 & 3  \\
-%   Zwerg  & $+30$ & $+20$ & 4 & 2  \\
-%   Halbling  & $+20$ & $+20$ & 5 & 2  \\
-%   Elf  & $+80$ & $+40$ & 2 & 1  \\
-% \end{DndTable}
-% Elfen sind den Menschen noch immer stark überlegen, Zwerge und Halblinge nur leicht. Die Schicksalspunkte dienen (wie im Regelwerk erläutert) zur Kompensierung der Attributswerte. In diesem Fall entspricht ein Attributsbonus von $+20$ einem Schicksalspunkt.
-
-% \begin{DndComment}{Begründung}
-%   Vor allem Elfen waren Super-Meschen die von Beginn an extrem mächtig waren. Mit diesen Änderungen wird der Unterschied der Rassen etwas minimiert. Der Fakt dass Menschen den anderen Rassen unterlegen sind bleibt erhalten und wird durch die höhere Anzahl an Schicksalpuntken kompensiert.
-% \end{DndComment}
+Schicksalspunkte werden nur bei Abschluss großer Ziele, oder nach bedeutsamen Ereignissen vergeben.
 
 \section{Vorteil}
 Die bestehenden Regeln aus dem \textit{GRW} werden verworfen.
 Stattdessen wird die Vorteilsregelung von \textit{Lawhammer} verwendet: Der SC bekommt eine Erleichterung von $+20$ auf den Test, wenn er sich dafür mehr Zeit nehmen kann. Heißt, der SC bekommt immer einen $+20$ Vorteil, außer er ist in einer Stresssituation.
 
 \begin{DndComment}{Begründung}
-  Diese Regelung vereinfacht den Vorteil auf ein simples „Kann ich mir dafür mehr Zeit nehmen? Ja oder Nein.“. Die vielen Regeln, die für Vorteil existieren, werden dadurch durch eine einzige simple Regel ersetzt.
+  Diese Regelung vereinfacht den Vorteil auf ein simples „Kann ich mir dafür mehr Zeit nehmen? Ja oder Nein“. Die vielen Regeln, die für Vorteil existieren, werden dadurch durch eine einzige simple Regel ersetzt.
 \end{DndComment}
 
 
@@ -131,20 +97,18 @@ Stattdessen wird die Vorteilsregelung von \textit{Lawhammer} verwendet: Der SC b
 \section{Karriere}
 Mit dem Erwerb von Erfahrungspunkten (EP) können
 \begin{itemize}
-  \item Steigerungen in Attribute (Spielwerte)
+  \item Steigerungen in Spielwerte (Attribute)
   \item Steigerungen in Fähigkeiten
   \item Talente
 \end{itemize}
 gekauft werden.
 
-\subsection[short]{Attribute und Fähigkeiten}
+\subsection[short]{Spielwerte und Fähigkeiten}
 
-Die Kosten zum Steigern eines Attributes (Spielwert) oder einer Fähigkeit sind in der folgenden Tabelle ersichtlich. Die Tabelle listet dabei die Kosten um ein Attribut oder eine Fähigkeit um 1 zu steigern.
+Die Kosten zum Steigern eines Spielwertes oder einer Fähigkeit sind in der folgenden Tabelle ersichtlich. Die Tabelle listet dabei die Kosten um ein Attribut oder eine Fähigkeit um 1 zu steigern.
 
-Der angegebene Preis gilt für Attribute und Fähigkeiten die dem Charakter durch die Karriere oder dem Volk zugeordnet worden sind. (Auf dem Charakterblatt wurden diese extra markiert)
-Möchte man eine Steigerung außerhalb der Karriere oder des Volkes vornehmen, so verdoppeln sich die angegebenen Kosten.
-\begin{DndTable}[header=EP-Kosten]{XXX}
-  \textbf{Steigerungen}                              & \textbf{Attribut}             & \textbf{Fähigkeit}             \\
+\begin{DndTable}[header=\centerline{EP-Kosten beim Steigern}]{XXX}
+  \textbf{Aktuelle Anzahl an Steigerungen}                              & \textbf{EP-Kosten für Spielwerte}             & \textbf{EP-Kosten für Fähigkeiten}             \\
   0-5                           & 25                   & 10                    \\
   6-10                          & 30                   & 15                    \\
   11-15                         & 40                   & 20                    \\
@@ -157,49 +121,50 @@ Möchte man eine Steigerung außerhalb der Karriere oder des Volkes vornehmen, s
   46-50                         & 230                  & 180
 \end{DndTable}
 
+\noindent
+Steigerungen von Spielwerten und Fähigkeiten außerhalb der Karriere kosten
+die doppelte Zahl an angeführten EP-Kosten.
 
-\textbf{Beispiel 1}: Du hast bereits 8 Steigerungen im Attribut \textit{Kampfgeschick}. Die Steigerung von 8 auf 9 Steigerungen kostet dich 30 EP.\newline
-\textbf{Beispiel 2}: Du hast 15 Steigerungen in der Fähigkeit \textit{Ausweichen}. Die Steigerung von 15 auf 16 kostet dich 20 EP.\\
-\textbf{Beispiel 3}: Du spielst einen Laienpriester (Kriegerpriester) und möchtest die Fähigkeit \textit{Bestechen} steigern in der du 0 Steigerungen hast. Diese Fähigkeit ist weder Teil deiner Karriere noch deines Volkes, also musst du 20, statt 10 EP zahlen um die Fähigkeit von 0 auf 1 zu steigern.
-
-\begin{DndComment}{}
-  Laut GRW kosten auch die Steigerungen der Fähigkeiten deines Volkes doppelt. Diese Restriktion wurde für mehr Freiheit fallen gelassen.
-\end{DndComment}
 
 \subsection{Talente}
-Ein neues Talent zu erlernen kostet 100 EP. Bei einigen Talenten ist es möglich dieses mehrere Male zu kaufen/steigern. In diesem Fall kostet die Steigerung des Talentes 100 EP + 100 EP für jedes Mal, dass dieses Talent bereits gelernt wurde.\\
 
-Talente in der aktuellen, und der vorhergehenden Karrierestufen sind dem Spieler ohne Einschränkungen verfügbar und können frei gewählt werden.
-Grundsätzlich stehen dem Spieler alle Talente aus den Büchern offen, sofern sie Sinnvoll für den Charakter sind.
-Talente können eine äußerst starke Auswirkungen auf das Spiel haben, oder können nur über längere Ingame-Zeit erlernt werden (z.B. das Erlernen einer Sprache). 
-Deswegen wird vor Erwerb eines Talentes um eine kurze Rücksprache mit dem Spielleiter gebeten.
+Das Erlernen eines neuen Talentes aus seiner aktuellen, oder vorherigen Karrierestufe kostet 100 EP.
+Bei einigen Talenten ist es möglich dieses mehrere Male zu kaufen/steigern. In diesem Fall kostet die Steigerung des Talentes 100 EP + 100 EP für jedes Mal, dass dieses Talent bereits gelernt wurde.
 
 \begin{DndComment}{Begründung}
   Laut GRW sind nur Talente in der aktuellen Karrierestufen verfügbar. Diese Einschränkung ist sehr restriktiv und wird fallen gelassen.
 \end{DndComment}
 
+\noindent
+Grundsätzlich kann jeder Spieler jedes Talent (auch jene außerhalb der Karrierestufe) erlernen, sofern es sinnvoll für seinen Charakter ist. Zu beachten ist, dass wie bei den Fähigkeiten und Spielwerten, sich die EP-Kosten für das Talent verdoppeln!
+
+\vspace{1ex}
+\noindent
+Talente können eine äußerst starke Auswirkungen auf das Spiel haben, oder können nur über längere Ingame-Zeit erlernt werden (z.B. das Erlernen einer Sprache). 
+Deswegen wird vor Erwerb eines Talentes um eine kurze Rücksprache mit der Spielleitung gebeten.
 
 \subsection{Karriere-Aufstieg}
-Um in der Karriereleiter aufzusteigen, muss zuerst die vorherige Karrierestufe abgeschlossen werden. Dafür wird eine Mindestanzahl an Steigerungen in Fähigkeiten und Attributen, sowie eine Mindestanzahl an Talenten benötigt.
+Um in der Karriereleiter aufzusteigen, musst du in jedem der in deiner Karrierestufe steigerbaren Spielwert und in acht der auf deiner Karrierestufe zur Verfügung stehenden Fähigkeiten eine bestimmte Anzahl von Steigerungen haben.
 
-\begin{DndTable}[header=Abschließen einer Karrierestufe]{llXXX}
-  \multicolumn{2}{c}{Karrierestufe} & \multicolumn{2}{c}{Steigerungen} &         \\
-  Stufe      & Beispiel             & Attribute      & Fähigkeiten     & Talente \\
-  1     & Laienpriester                                                       & 15        & 40          & 1       \\
-  2     & Kriegerpriester                                                     & 40        & 80          & 2       \\
-  3     & Feldpriester                                                        & 75        & 120         & 3       \\
-  4     & Priestergeneral                                                     & 120       & 160         & 4      
+Zusätzlich musst du mindestens ein Talent deiner gegenwärtigen Karrierestufe gelernt haben. Bei alldem zählen auch Fähigkeiten und Talente, die du vor dem Eintritt in die gegenwärtige Karriere erworben hast, sofern es dieselben sind.
+
+\begin{DndTable}[header=Abschließen einer Karrierestufe]{lXX}
+  \multicolumn{2}{c}{Karrierestufe} & Anzahl an Steigerungen  \\
+  Stufe     & Beispiel              & \\
+  1         & Laienpriester         & 5             \\
+  2         & Kriegerpriester       & 10            \\
+  3         & Feldpriester          & 15            \\
+  4         & Priestergeneral       & 20            
 \end{DndTable}
 
-Die Steigerungen können dabei in beliebigen Attributen oder Fähigkeiten sein; Steigerungen und Talente aus der Charaktererstellung zählen damit auch mit hinein.
-Laut GRW gibt es auch EP-Kosten für das Abschließen und Starten einer neuen Karrierestufe. Auf diese zusätzlichen Kosten wird verzichtet.\\
+\vspace{\fill}
+\pagebreak
 
-\textbf{Beispiel}: Um die Karrierestufe Laienpriester abzuschließen und die Karrierestufe Kriegerpriester zu starten werden insgesamt 15 Steigerungen in Attributen, 40 Steigerungen in Fähigkeiten, und mindestens 1 Talent benötigt.
-
-\begin{DndComment}{Begründung}
-  Laut GRW werden zählen nur Steigerungen deiner aktuellen Karrierestufe, diese Restriktion ist ziemlich streng, und zwingt den Charakter sehr auf Schienen. Damit, dass Steigerungen außerhalb der Karriere noch immer das doppelte kosten, bleibt weiterhin genügend Anreiz den gewählten Pfad zu gehen, ohne das komplette System umzuwerfen.
-\end{DndComment}
-
+\section{Regeln}
+\subsection{}
+\subsection{Kampf}
+\subsubsection{Trefferzone}
+\subsubsection{Kritische Treffer}
 
 \clearpage
 % \section{Magie}
