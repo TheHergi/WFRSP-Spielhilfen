@@ -1,0 +1,152 @@
+\documentclass{article}
+
+\usepackage[landscape, margin=1cm, a4paper]{geometry}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{blindtext}
+\usepackage{tabularx}
+\usepackage{environ}
+\usepackage{tcolorbox}
+
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+
+% \usepackage{showframe}
+
+\setlength{\columnsep}{-0.2cm}
+
+\NewEnviron{slsframe}[2][0.85\linewidth]
+{
+    \begin{tikzpicture}
+        \hspace{-0.25cm}
+        \node [draw=black, fill=white, very thick,
+        rectangle, rounded corners, inner sep=1em, inner ysep=0.5em] (box) 
+                {
+                    % \noindent
+                    
+                    \begin{minipage}[t]{#1}
+                        
+                    % \noindent
+                    % \begin{flushleft}
+                    \BODY
+                    % \end{flushleft}
+                    \end{minipage}
+                    };
+        \node[fill=black, text=white, font=\bfseries, yshift=0.6em] at (box.north) {#2};
+    \end{tikzpicture}
+}
+
+
+\begin{document}
+
+
+\begin{multicols*}{3}
+    
+    \begin{slsframe}{Ups-Tabelle}        
+            \begin{tabularx}{\linewidth}{@{}>{\bfseries}l@{\hspace{.5em}}X@{}}
+                01-20 & Du triffst einen Teil der eigenen Anatomie (wir empfehlen, dies auf amüsante Weise auszuspielen). Du verlierst 1 LP, wobei Widerstands-Bonus und Rüstungspunkte ignoriert werden.  \\ \hline
+
+                21-40 & Deine Nahkampfwaffe verkantet sich unglücklich oder deine Fernkampfwaffe hat eine Fehlfunktion und irgendetwas bricht ab. Deine Waffe erleidet 1 Punkt Schaden. In der nächsten Runde bist du als Letzter dran, unabhängig von der Initiative-Reihenfolge, Talenten oder Sonderregeln, da du dich erholen musst (siehe Seite 156).\\ \hline
+
+                41-60 & Dein Manöver lief ins Leere und bringt dich aus dem Tritt oder du verlierst den Halt an deiner Fernkampfwaffe. In der nächsten Runde hast du bei deiner Handlung einen Abzug von –10.\\ \hline
+
+                61-70 & Du stolperst und brauchst einen Moment, um wieder richtig in Position zu kommen. Du verlierst deine nächste Bewegungsaktion.  \\ \hline
+
+                71-80 & Du greifst deine Waffe falsch oder verlierst deine Munition. Du verlierst deine nächste Handlung.  \\ \hline
+
+                81-90 & Du überstreckst dich oder stolperst und verdrehst deinen Knöchel. Du erleidest eine Muskelriss (leicht)-Verletzung (siehe Seite 179). Dies gilt als Kritische Verletzung. \\ \hline
+
+                91-00 & Du verhaust es komplett und triffst einen zufälligen Verbündeten in Reichweite, wobei dein geworfener Würfel für die Einerstelle über die EG des Treffers entscheidet. Wenn das nicht möglich ist, schlägst du dir irgendwie selbst ins Gesicht und erhältst einen Betäubt-Zustand (siehe Seite 167).
+
+            \end{tabularx}        
+    \end{slsframe}
+    
+
+    % \begin{multicols*}{2}
+        
+    %     \begin{slsframe}[0.75\linewidth]{Trefferzonen2}
+    %             \begin{tabularx}{\linewidth}{@{}>{\bfseries}l@{\hspace{.5em}}X@{}}
+    %                 01-09 & Kopf \\
+    %                 10-24 & Linker Arm \\
+    %                 25-44 & Rechter Arm \\
+    %                 45-79 & Körper \\
+    %                 80-89 & Linker Fuß \\
+    %                 90-00 & Rechter Fuß \\
+    %             \end{tabularx}
+    %     \end{slsframe}
+
+    %     \begin{slsframe}[0.75\linewidth]{Test}
+    %         Test
+    %     \end{slsframe}
+
+    
+    % \end{multicols*}
+    \begin{slsframe}[0.4\linewidth]{Trefferzonen2}
+        \begin{tabularx}{\linewidth}{@{}>{\bfseries}l@{\hspace{.5em}}X@{}}
+            01-09 & Kopf \\
+            10-24 & Linker Arm \\
+            25-44 & Rechter Arm \\
+            45-79 & Körper \\
+            80-89 & Linker Fuß \\
+            90-00 & Rechter Fuß \\
+        \end{tabularx}
+    \end{slsframe}
+
+\end{multicols*}
+%    \hspace{-4.5cm}
+\pagebreak
+    \begin{multicols*}{2}
+
+    \begin{slsframe}[0.9\linewidth]{Fernkampfattacke}
+        \begin{tabularx}{\linewidth}{@{}>{\bfseries}l@{\hspace{.5em}}X@{}}
+            \multirow{2}{*}{+60}    & ... auf ein Monströses Ziel (Riesen-Größe)                                                       \\
+                                    & ... in eine Menge (13+ Ziele)                                                                    \\ \hline
+            \multirow{4}{*}{+40}    & ... auf ein Ziel in Kernschussweite (siehe Seite 297)                                            \\
+                                    & ... auf ein Enormes Ziel (Greifen-Größe)                                                         \\
+                                    & ... auf eine große Gruppe (7-12 Ziele)                                                           \\ \hline
+            \multirow{4}{*}{+20}    & ... auf ein Großes Ziel (Oger-Größe)                                                             \\
+                                    & ... bei kurzer Reichweite (weniger als halbe Reichweite der Waffe)                               \\
+                                    & ... auf eine kleine Gruppe (3-6 Ziele)                                                           \\
+                                    & ... bei der es deine letzte Handlung war, zu zielen  \\ \hline
+            +0                      & ... auf ein Normales Ziel (Menschen-Größe)                                                       \\ \hline
+            \multirow{4}{*}{-10}    & ... bei langer Reichweite (bis zu doppelter Reichweite der Waffe)                                \\
+                                    & ... in einer Runde, in der du auch eine Bewegungsaktion durchführst                              \\
+                                    & ... auf ein Zierliches Ziel (Halbling-Größe)                                                     \\
+                                    & ... auf Gegner in leichter Deckung (zum Beispiel hinter einer Hecke)                                                  \\ \hline
+            \multirow{4}{*}{-20}    & ... auf eine bestimmte Trefferzone           \\
+                                    & ... auf Ziele, die von Nebel oder Dunkelheit verborgen werden                                    \\
+                                    & ... auf ein kleines Ziel (Katzen-Größe)                                                          \\
+                                    & ... auf Gegner in mittlerer Deckung (zum Beispiel hinter einem Holzzaun)                                              \\ \hline
+            \multirow{4}{*}{-30}    & ... auf ein Winziges Ziel (Mäuse-Größe)                                                          \\
+                                    & ... bei extremer Reichweite (bis zur dreifachen Reichweite der Waffe)                            \\
+                                    & ... bei Dunkelheit                                                                               \\
+                                    & ... auf Gegner in schwerer Deckung (zum Beispiel hinter einer Steinmauer)                                                                    
+        \end{tabularx}
+    
+    \end{slsframe}
+
+    \begin{slsframe}[0.9\linewidth]{Nahkampfattacke}
+        \begin{tabularx}{\linewidth}{@{}>{\bfseries}l@{\hspace{.5em}}X@{}}
+            +40                  & ... auf einen Gegner, bei dem man 3 zu 1 in der Überzahl ist                                           \\ \hline
+            \multirow{3}{*}{+20} & ... in den Rücken oder die Seite eines Gegners, der Gebunden ist                                       \\
+                                 & ... auf einen Gegner, bei dem man 2 zu 1 in der Überzahl ist                                           \\
+                                 & ... auf einen Gegner, der den Zustand Niedergestreckt hat                                              \\ \hline
+            +0                   & ... Standard                                                                                               \\ \hline
+            \multirow{2}{*}{-10} & ... während man den Zustand Niedergestreckt hat                                                       \\
+                                 & ... inmitten von Schlamm, dichtem Regen oder schwierigem Gelände                                       \\ \hline
+            \multirow{6}{*}{-20} & ... auf eine bestimmte Trefferzone                \\
+                                 & ... in beengtem Raum mit einer überdurchschnittlich langen Waffe     \\
+                                 & ... inmitten eines Sturzregens, Schneesturms oder Extremwetters anderer Art                    \\
+                                 & ... oder Ausweichen, während man den Zustand Niedergestreckt hat                                                            \\
+                                 & ... bei Dunkelheit                                                                                            \\
+                                 & ... mit einer Waffe in der nichtdominanten Hand                                                                   \\ \hline
+            -30                  & ... oder Ausweichen in tiefem Schnee, Wasser oder anderer, die Bewegung stark einschränkender Umgebung
+        \end{tabularx}    
+    \end{slsframe}
+
+
+\end{multicols*}
+\end{document}
