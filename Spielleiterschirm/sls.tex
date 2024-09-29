@@ -22,8 +22,7 @@
 {
     \begin{tikzpicture}
         \hspace{-0.25cm}
-        \node [draw=black, fill=white, very thick,
-        rectangle, rounded corners, inner sep=1em, inner ysep=0.5em] (box) 
+        \node [draw=black, fill=white, very thick, rectangle, rounded corners, inner xsep=0.5em, inner ysep=0.5em] (box) 
                 {
                     % \noindent
                     
@@ -38,6 +37,7 @@
         \node[fill=black, text=white, font=\bfseries, yshift=0.6em] at (box.north) {#2};
     \end{tikzpicture}
 }
+\renewcommand\tabularxcolumn[1]{m{#1}}% for vertical centering text in X column
 
 
 \begin{document}
@@ -46,7 +46,8 @@
 \begin{multicols*}{3}
     
     \begin{slsframe}{Ups-Tabelle}        
-            \begin{tabularx}{\linewidth}{@{}>{\bfseries}l@{\hspace{.5em}}X@{}}
+            \begin{tabularx}{\linewidth}{lX}
+            % \begin{tabularx}{\linewidth}{@{}>{\bfseries}l@{\hspace{.5em}}X@{}}
                 01-20 & Du triffst einen Teil der eigenen Anatomie (wir empfehlen, dies auf amüsante Weise auszuspielen). Du verlierst 1 LP, wobei Widerstands-Bonus und Rüstungspunkte ignoriert werden.  \\ \hline
 
                 21-40 & Deine Nahkampfwaffe verkantet sich unglücklich oder deine Fernkampfwaffe hat eine Fehlfunktion und irgendetwas bricht ab. Deine Waffe erleidet 1 Punkt Schaden. In der nächsten Runde bist du als Letzter dran, unabhängig von der Initiative-Reihenfolge, Talenten oder Sonderregeln, da du dich erholen musst (siehe Seite 156).\\ \hline
@@ -65,62 +66,27 @@
     \end{slsframe}
     
 
-    % \begin{multicols*}{2}
-        
-    %     \begin{slsframe}[0.75\linewidth]{Trefferzonen2}
-    %             \begin{tabularx}{\linewidth}{@{}>{\bfseries}l@{\hspace{.5em}}X@{}}
-    %                 01-09 & Kopf \\
-    %                 10-24 & Linker Arm \\
-    %                 25-44 & Rechter Arm \\
-    %                 45-79 & Körper \\
-    %                 80-89 & Linker Fuß \\
-    %                 90-00 & Rechter Fuß \\
-    %             \end{tabularx}
-    %     \end{slsframe}
-
-    %     \begin{slsframe}[0.75\linewidth]{Test}
-    %         Test
-    %     \end{slsframe}
-
-    
-    % \end{multicols*}
-    \begin{slsframe}[0.4\linewidth]{Trefferzonen2}
-        \begin{tabularx}{\linewidth}{@{}>{\bfseries}l@{\hspace{.5em}}X@{}}
-            01-09 & Kopf \\
-            10-24 & Linker Arm \\
-            25-44 & Rechter Arm \\
-            45-79 & Körper \\
-            80-89 & Linker Fuß \\
-            90-00 & Rechter Fuß \\
-        \end{tabularx}
-    \end{slsframe}
-
-\end{multicols*}
-%    \hspace{-4.5cm}
-\pagebreak
-    \begin{multicols*}{2}
-
-    \begin{slsframe}[0.9\linewidth]{Fernkampfattacke}
+    \begin{slsframe}[1.3\linewidth]{Fernkampfattacke}
         \begin{tabularx}{\linewidth}{@{}>{\bfseries}l@{\hspace{.5em}}X@{}}
             \multirow{2}{*}{+60}    & ... auf ein Monströses Ziel (Riesen-Größe)                                                       \\
                                     & ... in eine Menge (13+ Ziele)                                                                    \\ \hline
-            \multirow{4}{*}{+40}    & ... auf ein Ziel in Kernschussweite (siehe Seite 297)                                            \\
-                                    & ... auf ein Enormes Ziel (Greifen-Größe)                                                         \\
+            \multirow{4}{*}{+40}    & ... auf ein Ziel in Kernschussweite (Reichweite / 10)                                            \\
+                                    & ... auf ein enormes Ziel (Greifen-Größe)                                                         \\
                                     & ... auf eine große Gruppe (7-12 Ziele)                                                           \\ \hline
-            \multirow{4}{*}{+20}    & ... auf ein Großes Ziel (Oger-Größe)                                                             \\
+            \multirow{4}{*}{+20}    & ... auf ein großes Ziel (Oger-Größe)                                                             \\
                                     & ... bei kurzer Reichweite (weniger als halbe Reichweite der Waffe)                               \\
                                     & ... auf eine kleine Gruppe (3-6 Ziele)                                                           \\
                                     & ... bei der es deine letzte Handlung war, zu zielen  \\ \hline
-            +0                      & ... auf ein Normales Ziel (Menschen-Größe)                                                       \\ \hline
+            +0                      & ... auf ein normales Ziel (Menschen-Größe)                                                       \\ \hline
             \multirow{4}{*}{-10}    & ... bei langer Reichweite (bis zu doppelter Reichweite der Waffe)                                \\
                                     & ... in einer Runde, in der du auch eine Bewegungsaktion durchführst                              \\
-                                    & ... auf ein Zierliches Ziel (Halbling-Größe)                                                     \\
+                                    & ... auf ein zierliches Ziel (Halbling-Größe)                                                     \\
                                     & ... auf Gegner in leichter Deckung (zum Beispiel hinter einer Hecke)                                                  \\ \hline
             \multirow{4}{*}{-20}    & ... auf eine bestimmte Trefferzone           \\
                                     & ... auf Ziele, die von Nebel oder Dunkelheit verborgen werden                                    \\
                                     & ... auf ein kleines Ziel (Katzen-Größe)                                                          \\
                                     & ... auf Gegner in mittlerer Deckung (zum Beispiel hinter einem Holzzaun)                                              \\ \hline
-            \multirow{4}{*}{-30}    & ... auf ein Winziges Ziel (Mäuse-Größe)                                                          \\
+            \multirow{4}{*}{-30}    & ... auf ein winziges Ziel (Mäuse-Größe)                                                          \\
                                     & ... bei extremer Reichweite (bis zur dreifachen Reichweite der Waffe)                            \\
                                     & ... bei Dunkelheit                                                                               \\
                                     & ... auf Gegner in schwerer Deckung (zum Beispiel hinter einer Steinmauer)                                                                    
@@ -128,7 +94,7 @@
     
     \end{slsframe}
 
-    \begin{slsframe}[0.9\linewidth]{Nahkampfattacke}
+    \begin{slsframe}[1.3\linewidth]{Nahkampfattacke}
         \begin{tabularx}{\linewidth}{@{}>{\bfseries}l@{\hspace{.5em}}X@{}}
             +40                  & ... auf einen Gegner, bei dem man 3 zu 1 in der Überzahl ist                                           \\ \hline
             \multirow{3}{*}{+20} & ... in den Rücken oder die Seite eines Gegners, der Gebunden ist                                       \\
@@ -147,6 +113,219 @@
         \end{tabularx}    
     \end{slsframe}
 
+    \hspace{4cm}
+    \begin{slsframe}[0.45\linewidth]{Trefferzonen}
+        \begin{tabularx}{\linewidth}{@{}>{\bfseries}l@{\hspace{.5em}}X@{}}
+            01-09 & Kopf \\ 
+            10-24 & Linker Arm \\ 
+            25-44 & Rechter Arm \\ 
+            45-79 & Körper \\ 
+            80-89 & Linker Fuß \\ 
+            90-00 & Rechter Fuß \\
+        \end{tabularx}
+    \end{slsframe}
+
+    \hspace{4cm}
+    \begin{slsframe}[0.45\linewidth]{Größe}
+        \begin{tabularx}{\linewidth}{Xrr}
+            \textbf{Größe}    & \textbf{Höhe}   & \textbf{Mod.} \\
+            Winzig   & $<30cm$  & -30  \\
+            Klein    & $<60cm$  & -20  \\
+            Zierlich & $<1,2m$  & -10  \\
+            Normal   & $<2,1m$  & 0    \\
+            Groß     & $<4m  $  & +20  \\
+            Enorm    & $<6m  $  & +40  \\
+            Monströs & $>6m $ & +60 
+        \end{tabularx}
+    \end{slsframe}
+
+    % \hspace{4cm}
+    % \begin{slsframe}[0.45\linewidth]{Größenmodifikationen}
+    %     \begin{itemize}
+    %         \item Wenn die Kreatur 1 Stufe größer ist, erhalten ihre Waffen die Qualität Verwundend; wenn die Kreatur 2 oder mehr Stufe größer ist, erhalten ihre Waffen die Qualität Wuchtig.
+    %     \end{itemize}
+    % \end{slsframe}
 
 \end{multicols*}
+
+\pagebreak
+
+\begin{multicols*}{3}
+
+    \begin{slsframe}{Geld}
+        \begin{tabularx}{\linewidth}{Xr}
+            1 Goldkrone & 20 Silberschillinge   \\
+            1 Goldkrone    & 240 Messinggroschen   \\
+            1 Silberschilling    & 12 Messinggroschen   
+        \end{tabularx}
+    \end{slsframe}
+
+    \begin{slsframe}{Speißen \& Getränke}
+        \begin{tabularx}{0.95\linewidth}{Xl}
+            Bier (Humpen)                       & 3 G            \\ 
+            Bierfass                            & 3 S            \\ 
+            Bugmans XXXXXX                      & 9 G            \\ 
+            Essen im Gasthaus                   & 1 S            \\ 
+            Gemeinschaftsunterkunft (pro Nacht) & 10 G           \\ 
+            Lebensmittel (pro Tag)              & 10 G           \\ 
+            Rationen (pro Tag)                  & 2 S            \\ 
+            Schnaps (Krug)                      & 2 S            \\ 
+            Stall (pro Nacht)                   & 10 G           \\ 
+            Wein \& Schnaps (Becher)            & 1 S            \\ 
+            Wein (Flasche)                      & 10 G           \\ 
+            Zimmer (pro Nacht)                  & 10 S               
+        \end{tabularx}%
+    \end{slsframe}
+
+    \begin{slsframe}{Reisekosten}
+        \begin{tabularx}{\linewidth}{Xrrl}
+            \textbf{Transport} & \textbf{M} & \textbf{Kosten} & \textbf{Distanz} \\
+            Kutsche (innen) & 6 & 2 G & pro IM  \\
+            Kutsche (außen) & 6 & 1 G & pro IM  \\
+            Barke (Kabine) & 8  & 5 G & pro IM  \\
+            Barke (Deck) & 8    & 2 G & pro IM  \\
+            Droschke & 6        & 3 G & pro Viertel  \\
+            Fähre & 4           & 1 G & pro $20m$  
+        \end{tabularx}
+    \end{slsframe}
+
+
+    \begin{slsframe}{Fähigkeiten}
+        \begin{tabularx}{\linewidth}{llll}
+            \multicolumn{2}{c}{\textbf{Grundfähigkeiten}} & \multicolumn{2}{c}{\textbf{Ausbaufähigkeiten}} \\
+            Anführen                & CH & Abrichten \ldots & IN\\
+            Athletik                & GW & Artistik \ldots & GW\\
+            Ausdauer                & WI & Beruf \ldots & GS\\
+            Ausweichen              & GW & Beten & CH \\
+            Besonnenheit            & WK & Fallen stellen & GS \\
+            Bestechen               & CH & Fernkampf \ldots & BF\\
+            Charme                  & CH & Geheimzeichen \ldots & IN\\
+            Einschüchtern           & ST & Heilen & IN \\
+            Fahren                  & GW & Kanalisieren \ldots & WK  \\
+            Feilschen               & CH & Kunst \ldots & GS\\
+            Fingerfertigkeit        & GS & Musizieren \ldots & GS\\
+            Glücksspiel             & IN & Nachforschen & IN \\
+            Intuition               & I  & Schätzen & IN \\
+            Klatsch                 & CH & Schlösser öffnen & GS \\
+            Klettern                & ST & Schwimmen & ST \\
+            Nahkampf \ldots         & KG & Segeln \ldots & GW\\
+            Navigation              & I  & Sprache \ldots & IN\\
+            Reiten \ldots           & GW & Spurenlesen & I \\
+            Rudern                  & ST & Tierpflege & IN \\
+            Schleichen \ldots       & GW & Wissen \ldots & IN  \\
+            Tiere bezirzen          & WK &                       &  \\
+            Überleben               & IN &                       &  \\
+            Unterhalten \ldots      & CH &                       &  \\
+            Wahrnehmung             & I  &                       &   \\
+            Zechen                  & WI &                       &  
+        
+        \end{tabularx}
+        \end{slsframe}
+
+
+\end{multicols*}
+
+\pagebreak
+
+\begin{multicols*}{3}
+    
+    \begin{slsframe}{Größenmodifikationen als Angreifer}
+        \begin{tabularx}{\linewidth}{rX}
+            \textbf{$\Delta$}       & \textbf{Effekt} \\ \hline
+            $<0$                    & +10 auf Treffer \\ \hline
+            \multirow{2}{*}{$=1$}   & Qualität \textit{Verwundend} \\ 
+                                    & Verursacht \textit{Angst}(1) \\ \hline
+            \multirow{3}{*}{$>1$}   & Qualität \textit{Wuchtig}. \\
+                                    & Schaden wird mit $\Delta$ multipliziert.  \\
+                                    & Verursacht \textit{Angst}(2) \\ \hline
+            $>2$                    & Verursacht \textit{Entsetzen} ($\Delta$)
+        \end{tabularx}
+
+        
+        \begin{itemize}
+            \item Verteidigung: Für jede Stufe, die dein Gegner größer ist, erhältst du -2 EG auf parieren.
+        \end{itemize}
+
+    \end{slsframe}
+
+    \begin{slsframe}{Psychologie}
+
+        \subsubsection*{Angst}
+        \begin{itemize}
+            \setlength\itemsep{0.1em}
+            \item SC muss bei einem erweiterten \textit{Besonnenheits}-Wurf $\Delta$ EG erreichen.
+            \item Gewürfelt wird am Ende jeder Runde.
+            \item -10 bei allen Würfen gegen die Quelle dieser Angst.
+            \item Näherung mit \textit{Besonnenheits}-Wurf.
+            \item Auf einem zukommt: \textit{Besonnenheits}-Wurf, sonst \textit{Demoralisiert}.  
+        \end{itemize}
+        
+        \subsubsection*{Entsetzen}
+        \begin{itemize}
+            \setlength\itemsep{0.1em}
+            \item \textit{Besonnenheits}-Wurf, sonst $\Delta$ \textit{Demoralisiert}-Zustände. 
+            \item Kreatur verursacht \textit{Angst} ($\Delta$).
+        \end{itemize}
+
+    \end{slsframe}
+
+    \begin{slsframe}{Qualitäten}
+        \subsubsection*{Durchbohrend}
+        Eine durchbohrende Waffe verursacht bei jeder Zahl, die durch 10 teilbar ist sowie bei jedem Pasch einen Kritischen Treffer.
+
+        \subsubsection*{Rüstungsbrechend}
+        RP durch nichtmetallische Rüstteile werden ignoriert und bei jeder anderen Rüstung wird der erste Punkt ignoriert.
+
+        \subsubsection*{Schießpulver}
+        Wenn du das Ziel einer Schießpulver-Waffe bist, dann musst du einen (+20) \textit{Besonnenheits}-Wurf bestehen, oder du erhältst den Zustand Demoralisiert, selbst wenn der Schuss verfehlt.
+
+        \subsubsection*{Verwundend}
+        Eine verwundende Waffe kann zur Bestimmung des Schadens entweder die Einerstelle des Würfelwurfes oder die EG verwenden werden.
+        
+        \subsubsection*{Wuchtig}
+        Wenn du einen Gegner triffst, addierst du das Resultat des Würfels für die Einerstelle zu jedem Schaden hinzu.
+
+    \end{slsframe}
+
+    \begin{slsframe}{Makel}
+        \subsubsection*{Gefährlich}
+        Jeder fehlgeschlagene Wurf, bei dem der Würfel für die Einerstelle 9 oder eine 10 zeigt, führt zu einem Patzer.
+
+        \subsubsection*{Nachladen (Wert)}
+        Eine nicht geladene Waffe mit diesem Makel zu laden erfordert einen Erweiterten Fernkampf-Wurf für die jeweilige Waffengruppe, der (Wert) EG benötigt.
+
+    \end{slsframe}
+
+    \begin{slsframe}{Gesundheit}
+        \subsubsection*{Verwundung}
+
+    \end{slsframe}
+
+    \begin{slsframe}{Zustände}
+        \subsubsection*{Betäubt}
+        Du bist nicht imstande, in deinem Zug eine Handlung durchzuführen, doch du darfst dich mit der Hälfte deiner normalen Bewegung bewegen. Zudem erleidest du einen Abzug von -10 auf alle Würfe. Wenn du irgendeinen Betäubt-Zustand hast, bekommt jeder Gegner, der dich im Nahkampf attackiert, vor dem Trefferwurf +1 Vorteil.\\
+        
+        Am Ende jeder Runde kannst du einen \textit{Ausdauer}-Wurf versuchen, wobei EG-Betäubt-Zustand entfernt werden.\\
+        
+        Sobald alle Betäubt-Zustände entfernt wurden, erhältst du einen Erschöpft-Zustand, sofern du noch keinen hast.
+
+        \subsubsection*{Blutend}
+        Am Ende jeder Runde verlierst du 1 LP, unabhängig von deinen Modifikatoren. Wenn du 0 LP erreichst, verlierst du nicht länger LP, erhältst aber den Zustand Bewusstlos). Zudem hast du nun am Ende der Runde für jeden Blutend-Zustand eine Chance von 10\% zu sterben. Wenn du bei diesem Wurf einen Pasch würfelst verlierst du 1 Blutend-Zustand. Du kannst nicht wieder zu Bewusstsein kommen, solange nicht alle Blutend-Zustände beseitigt wurden.\\
+
+        Ein Blutend-Zustand kann durch einen gelungenen Heilen-Wurf entfernt werden, wobei jeder EG einen zusätzlichen Blutend-Zustand beseitigt.\\
+        
+        Sobald alle Blutend-Zustände beseitigt wurden, erhältst du einen Erschöpft-Zustand.
+
+        \subsubsection*{Erschöpft}
+        Dadurch erleidest du einen Abzug von -10 auf alle Würfe.
+
+        \subsubsection*{Überrascht}
+        Du kannst in deinem Zug weder eine Bewegungsaktion noch eine Handlung durchführen und dich bei Vergleichenden Würfen auch nicht verteidigen. Jeder Gegner, der dich im Nahkampf attackiert, erhält +20 auf den Trefferwurf.
+
+        \subsubsection*{Verwundung}
+        In deinem Zug kannst du deine Bewegungsaktion nur zum Aufstehen oder dazu verwenden, die Hälfte deines Bewegungs-Wertes in Metern weit zu kriechen (Beachte, dass du mit 0 LP nur noch kriechen kannst). Du erhältst einen Abzug von -20 auf alle Würfe, bei denen es um Bewegung irgendwelcher Art geht, und jeder Gegner, der dich im Nahkampf attackiert, erhält einen Bonus von +20 auf den Trefferwurf
+    \end{slsframe}
+
+\end{multicols*}
+
 \end{document}
