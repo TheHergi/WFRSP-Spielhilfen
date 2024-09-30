@@ -34,7 +34,7 @@
                     % \end{flushleft}
                     \end{minipage}
                     };
-        \node[fill=black, text=white, font=\bfseries, yshift=0.6em] at (box.north) {#2};
+        \node[fill=black, text=white, font=\bfseries, yshift=0.68em] at (box.north) {#2};
     \end{tikzpicture}
 }
 \renewcommand\tabularxcolumn[1]{m{#1}}% for vertical centering text in X column
@@ -160,7 +160,7 @@
         \end{tabularx}
     \end{slsframe}
 
-    \begin{slsframe}{Speißen \& Getränke}
+    \begin{slsframe}{Speisen \& Getränke}
         \begin{tabularx}{0.95\linewidth}{Xl}
             Bier (Humpen)                       & 3 G            \\ 
             Bierfass                            & 3 S            \\ 
@@ -269,6 +269,11 @@
 
     \end{slsframe}
 
+    \begin{slsframe}{Gesundheit}
+        \subsubsection*{Verwundung}
+
+    \end{slsframe}
+
     \begin{slsframe}{Qualitäten}
         \subsubsection*{Durchbohrend}
         Eine durchbohrende Waffe verursacht bei jeder Zahl, die durch 10 teilbar ist sowie bei jedem Pasch einen Kritischen Treffer.
@@ -296,35 +301,116 @@
 
     \end{slsframe}
 
-    \begin{slsframe}{Gesundheit}
-        \subsubsection*{Verwundung}
 
+
+    % \begin{slsframe}{Zustände}
+    %     \subsubsection*{Betäubt}
+    %     % \textbf{Betäubt}
+    %     \begin{itemize}
+    %         \setlength\itemsep{-0.2em}
+    %         \item Keine Handlung (nur Bewegung mit Hälfte)
+    %         \item -10 auf alle Würfe (Gegner +1 SL)
+    %         \item Ende jeder Runde \textit{Ausdauer}-Wurf, wobei EG-Betäubt-Zustand entfernt werden.
+    %         \item Wenn alle Betäubt-Zustände entfernt wurden, erhältst du Erschöpft-Zustand.
+    %     \end{itemize}
+
+    %     \subsubsection*{Blutend}
+    %     \begin{itemize}
+    %         \setlength\itemsep{-0.2em}
+    %         \item Ende jeder Runde -1 LP (bis zu 0 LP; unabhängig von Modifikatoren)
+    %         \item Bei 0 LP: Bewusstlos, dann pro Blutend-Zustand eine Chance von 10\% zu sterben. Bei Pasch: -1 Blutend-Zustand
+    %         \item Bewusstsein nur wenn alle Blutend-Zustände entfernt wurden, dann Erschöpft-Zustand
+    %         \item \textit{Heilen}: $1 + EG$-\textit{Heilen} Blutend-Zustand entfernt
+    %     \end{itemize}        
+
+    %     \subsubsection*{Erschöpft}
+    %     \begin{itemize}
+    %         \setlength\itemsep{-0.2em}
+    %         \item -10 auf alle Würfe
+    %     \end{itemize}        
+
+    %     \subsubsection*{Überrascht}
+    %     \begin{itemize}
+    %         \setlength\itemsep{-0.2em}
+    %         \item Keine (Bewegung-)Aktion 
+    %         \item Bei Vergleichenden Würfen nicht verteidigen
+    %         \item +20 auf Nahkampf-Trefferwurf.
+    %     \end{itemize}        
+
+    %     \subsubsection*{Niedergestreckt}
+    %     \begin{itemize}
+    %         \setlength\itemsep{-0.2em}
+    %         \item Bewegungsaktion nur zum Aufstehen oder kriechen 
+    %         \item Mit 0 LP nur noch kriechen (Hälfte deines Bewegungs-Wertes in Metern)
+    %         \item -20 auf Bewegungsabhängige Würfe.
+    %         \item Gegner erhält +20 auf Nahkampf-Trefferwurf
+
+    %     \end{itemize}    
+        
+
+    %     \subsubsection*{Demoralisiert}
+    % \end{slsframe}
+
+    \begin{slsframe}{Erschöpft-Zustand}
+        \begin{itemize}
+            \setlength\itemsep{-0.2em}
+            \item -10 auf alle Würfe
+        \end{itemize}        
     \end{slsframe}
 
-    \begin{slsframe}{Zustände}
-        \subsubsection*{Betäubt}
-        Du bist nicht imstande, in deinem Zug eine Handlung durchzuführen, doch du darfst dich mit der Hälfte deiner normalen Bewegung bewegen. Zudem erleidest du einen Abzug von -10 auf alle Würfe. Wenn du irgendeinen Betäubt-Zustand hast, bekommt jeder Gegner, der dich im Nahkampf attackiert, vor dem Trefferwurf +1 Vorteil.\\
-        
-        Am Ende jeder Runde kannst du einen \textit{Ausdauer}-Wurf versuchen, wobei EG-Betäubt-Zustand entfernt werden.\\
-        
-        Sobald alle Betäubt-Zustände entfernt wurden, erhältst du einen Erschöpft-Zustand, sofern du noch keinen hast.
-
-        \subsubsection*{Blutend}
-        Am Ende jeder Runde verlierst du 1 LP, unabhängig von deinen Modifikatoren. Wenn du 0 LP erreichst, verlierst du nicht länger LP, erhältst aber den Zustand Bewusstlos). Zudem hast du nun am Ende der Runde für jeden Blutend-Zustand eine Chance von 10\% zu sterben. Wenn du bei diesem Wurf einen Pasch würfelst verlierst du 1 Blutend-Zustand. Du kannst nicht wieder zu Bewusstsein kommen, solange nicht alle Blutend-Zustände beseitigt wurden.\\
-
-        Ein Blutend-Zustand kann durch einen gelungenen Heilen-Wurf entfernt werden, wobei jeder EG einen zusätzlichen Blutend-Zustand beseitigt.\\
-        
-        Sobald alle Blutend-Zustände beseitigt wurden, erhältst du einen Erschöpft-Zustand.
-
-        \subsubsection*{Erschöpft}
-        Dadurch erleidest du einen Abzug von -10 auf alle Würfe.
-
-        \subsubsection*{Überrascht}
-        Du kannst in deinem Zug weder eine Bewegungsaktion noch eine Handlung durchführen und dich bei Vergleichenden Würfen auch nicht verteidigen. Jeder Gegner, der dich im Nahkampf attackiert, erhält +20 auf den Trefferwurf.
-
-        \subsubsection*{Verwundung}
-        In deinem Zug kannst du deine Bewegungsaktion nur zum Aufstehen oder dazu verwenden, die Hälfte deines Bewegungs-Wertes in Metern weit zu kriechen (Beachte, dass du mit 0 LP nur noch kriechen kannst). Du erhältst einen Abzug von -20 auf alle Würfe, bei denen es um Bewegung irgendwelcher Art geht, und jeder Gegner, der dich im Nahkampf attackiert, erhält einen Bonus von +20 auf den Trefferwurf
+    \begin{slsframe}{Betäubt-Zustand}
+        \begin{itemize}
+            \setlength\itemsep{-0.2em}
+            \item Keine Handlung (nur Bewegung mit Hälfte)
+            \item -10 auf alle Würfe (Gegner +1 SL)
+            \item Ende jeder Runde \textit{Ausdauer}-Wurf, wobei EG-Betäubt-Zustand entfernt werden.
+            \item Wenn alle Betäubt-Zustände entfernt wurden, erhältst du Erschöpft-Zustand.
+        \end{itemize}
     \end{slsframe}
+
+    \begin{slsframe}{Blutend-Zustand}
+        \begin{itemize}
+            \setlength\itemsep{-0.2em}
+            \item Ende jeder Runde -1 LP (bis zu 0 LP; unabhängig von Modifikatoren)
+            \item Bei 0 LP: Bewusstlos, dann pro Blutend-Zustand eine Chance von 10\% zu sterben. Bei Pasch: -1 Blutend-Zustand
+            \item Bewusstsein nur wenn alle Blutend-Zustände entfernt wurden, dann Erschöpft-Zustand
+            \item \textit{Heilen} entfernt $1 + EG$-\textit{Heilen} Zustände
+        \end{itemize}        
+    \end{slsframe}
+
+
+
+    \begin{slsframe}{Überrascht-Zustand}
+        \begin{itemize}
+            \setlength\itemsep{-0.2em}
+            \item Keine (Bewegung-)Aktion 
+            \item Bei Vergleichenden Würfen nicht verteidigen
+            \item +20 auf Nahkampf-Trefferwurf.
+        \end{itemize}   
+    \end{slsframe}     
+
+    \begin{slsframe}{Niedergestreckt-Zustand}
+        \begin{itemize}
+            \setlength\itemsep{-0.2em}
+            \item Bewegungsaktion: Aufstehen oder kriechen 
+            \item Mit 0 LP nur noch kriechen (Hälfte deines Bewegungs-Wertes in Metern)
+            \item -20 auf Bewegungsabhängige Würfe.
+            \item Gegner erhält +20 auf Nahkampf-Trefferwurf
+        \end{itemize}   
+    \end{slsframe} 
+        
+
+    \begin{slsframe}{Demoralisiert-Zustand}
+        \begin{itemize}
+            \setlength\itemsep{-0.2em}
+            \item Muss (Bewegungs-) Aktion nutzen, um sich zu verstecken oder fliehen.
+            \item -10 auf alle Würfe außer fliehen/verstecken.
+            \item Nicht überwindbar wenn gebunden, sonst reduziert Besonnenheits-Wurf pro EG.
+            \item Wenn eine komplette Runde verbracht wurde, sich außer Sicht jedes Feindes zu verstecken, $-1$ Demoralisiert-Zustand.
+            \item Sobald alle Demoralisiert-Zustände entfernt wurden: 1 Erschöpft-Zustand.
+        \end{itemize}   
+    \end{slsframe}
+        
 
 \end{multicols*}
 
