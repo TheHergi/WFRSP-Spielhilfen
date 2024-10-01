@@ -10,6 +10,7 @@
 \usepackage{tabularx}
 \usepackage{environ}
 \usepackage{tcolorbox}
+\usepackage{titlesec}
 
 \usepackage[german]{babel}
 \usepackage[utf8]{inputenc}
@@ -39,6 +40,10 @@
 }
 \renewcommand\tabularxcolumn[1]{m{#1}}% for vertical centering text in X column
 
+
+\setlist[itemize]{noitemsep, topsep=0pt}
+\titlespacing\subsubsection{0pt}{8pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+% \setlist[itemize]{itemsep=0.1em, topsep=0pt}
 
 \begin{document}
 
@@ -351,65 +356,65 @@
     %     \subsubsection*{Demoralisiert}
     % \end{slsframe}
 
-    \begin{slsframe}{Erschöpft-Zustand}
-        \begin{itemize}
-            \setlength\itemsep{-0.2em}
+    \begin{slsframe}{Zustände}
+    % \begin{slsframe}{Erschöpft-Zustand}
+        \subsubsection*{Erschöpft}
+        \begin{itemize}%[noitemsep,topsep=0pt]
             \item -10 auf alle Würfe
         \end{itemize}        
-    \end{slsframe}
+    % \end{slsframe}
 
-    \begin{slsframe}{Betäubt-Zustand}
-        \begin{itemize}
-            \setlength\itemsep{-0.2em}
+    % \begin{slsframe}{Betäubt-Zustand}
+        \subsubsection*{Betäubt}
+        \begin{itemize}%[noitemsep,topsep=0pt]
             \item Keine Handlung (nur Bewegung mit Hälfte)
             \item -10 auf alle Würfe (Gegner +1 SL)
             \item Ende jeder Runde \textit{Ausdauer}-Wurf, wobei EG-Betäubt-Zustand entfernt werden.
             \item Wenn alle Betäubt-Zustände entfernt wurden, erhältst du Erschöpft-Zustand.
         \end{itemize}
-    \end{slsframe}
+    % \end{slsframe}
 
-    \begin{slsframe}{Blutend-Zustand}
-        \begin{itemize}
-            \setlength\itemsep{-0.2em}
+    % \begin{slsframe}{Blutend-Zustand}
+    \subsubsection*{Blutend}
+        \begin{itemize}%[noitemsep,topsep=1em]
             \item Ende jeder Runde -1 LP (bis zu 0 LP; unabhängig von Modifikatoren)
             \item Bei 0 LP: Bewusstlos, dann pro Blutend-Zustand eine Chance von 10\% zu sterben. Bei Pasch: -1 Blutend-Zustand
             \item Bewusstsein nur wenn alle Blutend-Zustände entfernt wurden, dann Erschöpft-Zustand
             \item \textit{Heilen} entfernt $1 + EG$-\textit{Heilen} Zustände
         \end{itemize}        
-    \end{slsframe}
+    % \end{slsframe}
 
-
-
-    \begin{slsframe}{Überrascht-Zustand}
-        \begin{itemize}
-            \setlength\itemsep{-0.2em}
+    % \begin{slsframe}{Überrascht-Zustand}
+    \subsubsection*{Überrascht}
+        \begin{itemize}%[noitemsep,topsep=0pt]
             \item Keine (Bewegung-)Aktion 
             \item Bei Vergleichenden Würfen nicht verteidigen
             \item +20 auf Nahkampf-Trefferwurf.
         \end{itemize}   
-    \end{slsframe}     
+    % \end{slsframe}     
 
-    \begin{slsframe}{Niedergestreckt-Zustand}
-        \begin{itemize}
-            \setlength\itemsep{-0.2em}
+    % \begin{slsframe}{Niedergestreckt-Zustand}
+    \subsubsection*{Niedergestreckt}
+        \begin{itemize}%[noitemsep,topsep=0pt]
             \item Bewegungsaktion: Aufstehen oder kriechen 
             \item Mit 0 LP nur noch kriechen (Hälfte deines Bewegungs-Wertes in Metern)
             \item -20 auf Bewegungsabhängige Würfe.
             \item Gegner erhält +20 auf Nahkampf-Trefferwurf
         \end{itemize}   
-    \end{slsframe} 
+    % \end{slsframe} 
         
 
-    \begin{slsframe}{Demoralisiert-Zustand}
-        \begin{itemize}
-            \setlength\itemsep{-0.2em}
+    % \begin{slsframe}{Demoralisiert-Zustand}
+    \subsubsection*{Demoralisiert}
+        \begin{itemize}%[noitemsep,topsep=0pt]
             \item Muss (Bewegungs-) Aktion nutzen, um sich zu verstecken oder fliehen.
             \item -10 auf alle Würfe außer fliehen/verstecken.
             \item Nicht überwindbar wenn gebunden, sonst reduziert Besonnenheits-Wurf pro EG.
             \item Wenn eine komplette Runde verbracht wurde, sich außer Sicht jedes Feindes zu verstecken, $-1$ Demoralisiert-Zustand.
             \item Sobald alle Demoralisiert-Zustände entfernt wurden: 1 Erschöpft-Zustand.
         \end{itemize}   
-    \end{slsframe}
+    % \end{slsframe}
+\end{slsframe}
         
 
 \end{multicols*}
