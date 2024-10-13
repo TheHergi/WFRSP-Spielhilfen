@@ -1,67 +1,55 @@
-\documentclass[a4paper,10pt,twoside,twocolumn,openany,nodeprecatedcode,bg=print]{dndbook}
+\documentclass[a4paper,10pt,twoside,twocolumn,openany,bg=none]{dndbook}
 
 \usepackage[german]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{enumitem}
-\usepackage{multirow}
 \usepackage[singlelinecheck=false]{caption}
 \usepackage{lipsum}
 \usepackage{listings}
 \usepackage{shortvrb}
 \usepackage{stfloats}
 
-\MakeShortVerb{|}
-
-\lstset{%
-  basicstyle=\ttfamily,
-  language=[LaTeX]{TeX},
-  breaklines=true,
-}
-
 \title{
   Warhammer Fantasy Rollenspiel\newline
   \large Ergänzungen und Erweiterungen zum Regelwerk
   }
-\author{Patrick H.}
+% \author{Patrick H.}
 \date{}
-
-
-\definecolor {WhiteColor}  {HTML} {FFFFFF} % DMG Part 3
-\definecolor {bgtan}    {HTML} {FFFFFF}	% DndReadAloud background
-\definecolor {bgtan2018}{HTML} {FFFFFF} % lighter version of bgtan from the 2018 Basic Rules
-\definecolor {PhbLightGreen} {HTML} {FFFFFF} % PHB Part 1
 
 \begin{document}
 
 
 \frontmatter
 
-\maketitle
+% \maketitle
 % \part*{Warhammer Fantasy Rollenspiel\newline
 %   \large{Zusammenfassung und Ergänzung zum Regelwerk}}
 % \vspace{1em}
-
-
 
 % \mainmatter
 
 
 
-\chapter{Charaktere}
+\chapter{Regelwerk}
+\noindent
+Eine Sammlung von Änderungen, Erweiterungen und Klarstellungen zum Regelwerk.
+Änderungen werden in farbigen Kästchen dargestellt:
+\begin{DndReadAloud}
+  Ich bin eine Änderung zum Regelwerk.
+\end{DndReadAloud}
+
+
 \section{Heldenpunkte}
 Als Heldenpunkte werden die Meta-Spielwerte Zähigkeit, Mut, Schicksal und Glück bezeichnet.
 
-% \subsection{Zähigkeit und Mut}
-\begin{DndReadAloud}[color=WhiteColor]
-  Die Meta-Heldenpunkte Zähigkeit und Mut werden aus dem Spiel entfernt.
-  \begin{DndComment}{Begründung}
-    Diese beiden Punkte tragen unnötig zur Komplexität des Spieles bei und können weitestgehend von Glück und Schicksal abgedeckt werden.
-  \end{DndComment}
-\end{DndReadAloud}
 
+\begin{DndReadAloud}
+  Die Meta-Heldenpunkte Zähigkeit und Mut werden aus dem Spiel entfernt.
+\end{DndReadAloud}
 \noindent
+Diese beiden Punkte tragen unnötig zur Komplexität des Spieles bei und können weitestgehend von Glück und Schicksal abgedeckt werden.
 Damit entfällt auch die Notwendigkeit einer regeltechnischen Motivation.
-Der Spieler sollte aber natürliche eine Motivation finden die den Charakter antreibt.
+Der Spieler sollte aber natürliche eine Motivation finden, die den Charakter antreibt.
 
 
 
@@ -78,36 +66,28 @@ Glückspunkte werden zu Beginn jeder Session auf die Anzahl an Schicksalspunkten
 \begin{itemize}
   \item Durch eine Fügung des Schicksals überlebt dein Charakter den Kampf und stirbt nicht.
   \item Dein Charakter korrumpiert nicht. Dadurch verlierst du keine Korrumpierungspunkte.
-        % \item Der Charakter entgeht auf eine absurde Weise jedwedem Schaden der ihn getroffen hätte.
 \end{itemize}
 Schicksalspunkte werden nur bei Abschluss großer Ziele, oder nach bedeutsamen Ereignissen vergeben.
-
-\section{Vorteil}
-Die bestehenden Regeln aus dem \textit{GRW} werden verworfen.
-Stattdessen wird die Vorteilsregelung von \textit{Lawhammer} verwendet: Der SC bekommt eine Erleichterung von $+20$ auf den Test, wenn er sich dafür mehr Zeit nehmen kann. Heißt, der SC bekommt immer einen $+20$ Vorteil, außer er ist in einer Stresssituation.
-
-\begin{DndComment}{Begründung}
-  Diese Regelung vereinfacht den Vorteil auf ein simples „Kann ich mir dafür mehr Zeit nehmen? Ja oder Nein“. Die vielen Regeln, die für Vorteil existieren, werden dadurch durch eine einzige simple Regel ersetzt.
-\end{DndComment}
 
 
 \vspace{\fill}
 \pagebreak
 
 \section{Karriere}
-Mit dem Erwerb von Erfahrungspunkten (EP) können
+Mit Erfahrungspunkten (EP) können:
 \begin{itemize}
   \item Steigerungen in Spielwerte (Attribute)
   \item Steigerungen in Fähigkeiten
   \item Talente
+  \item Karrierewechsel
 \end{itemize}
-gekauft werden.
+erworben werden.
 
 \subsection[short]{Spielwerte und Fähigkeiten}
 
 Die Kosten zum Steigern eines Spielwertes oder einer Fähigkeit sind in der folgenden Tabelle ersichtlich. Die Tabelle listet dabei die Kosten um ein Attribut oder eine Fähigkeit um 1 zu steigern.
 
-\begin{DndTable}[header=\centerline{EP-Kosten beim Steigern}]{XXX}
+\begin{DndTable}[header=\centerline{EP-Kosten beim Steigern}, color=readaloudcolor]{XXX}
   \textbf{Aktuelle Anzahl an Steigerungen}                              & \textbf{EP-Kosten für Spielwerte}             & \textbf{EP-Kosten für Fähigkeiten}             \\
   0-5                           & 25                   & 10                    \\
   6-10                          & 30                   & 15                    \\
@@ -131,9 +111,11 @@ die doppelte Zahl an angeführten EP-Kosten.
 Das Erlernen eines neuen Talentes aus seiner aktuellen, oder vorherigen Karrierestufe kostet 100 EP.
 Bei einigen Talenten ist es möglich dieses mehrere Male zu kaufen/steigern. In diesem Fall kostet die Steigerung des Talentes 100 EP + 100 EP für jedes Mal, dass dieses Talent bereits gelernt wurde.
 
-\begin{DndComment}{Begründung}
-  Laut GRW sind nur Talente in der aktuellen Karrierestufen verfügbar. Diese Einschränkung ist sehr restriktiv und wird fallen gelassen.
-\end{DndComment}
+Laut GRW sind nur Talente in der aktuellen Karrierestufen verfügbar.
+Diese Einschränkung ist sehr restriktiv und wird fallen gelassen. 
+\begin{DndReadAloud}
+  Man kann Talente aus der vorherigen Karrierestufe ohne Zusatzkosten erlernen.
+\end{DndReadAloud}
 
 \noindent
 Grundsätzlich kann jeder Spieler jedes Talent (auch jene außerhalb der Karrierestufe) erlernen, sofern es sinnvoll für seinen Charakter ist. Zu beachten ist, dass wie bei den Fähigkeiten und Spielwerten, sich die EP-Kosten für das Talent verdoppeln!
@@ -143,28 +125,53 @@ Grundsätzlich kann jeder Spieler jedes Talent (auch jene außerhalb der Karrier
 Talente können eine äußerst starke Auswirkungen auf das Spiel haben, oder können nur über längere Ingame-Zeit erlernt werden (z.B. das Erlernen einer Sprache). 
 Deswegen wird vor Erwerb eines Talentes um eine kurze Rücksprache mit der Spielleitung gebeten.
 
-\subsection{Karriere-Aufstieg}
-Um in der Karriereleiter aufzusteigen, musst du in jedem der in deiner Karrierestufe steigerbaren Spielwert und in acht der auf deiner Karrierestufe zur Verfügung stehenden Fähigkeiten eine bestimmte Anzahl von Steigerungen haben.
+% \subsection{Karrierewechsel}
+% Um in der Karriereleiter aufzusteigen, musst du in jedem der in deiner Karrierestufe steigerbaren Spielwert und in acht der auf deiner Karrierestufe zur Verfügung stehenden Fähigkeiten eine bestimmte Anzahl von Steigerungen haben.
 
-Zusätzlich musst du mindestens ein Talent deiner gegenwärtigen Karrierestufe gelernt haben. Bei alldem zählen auch Fähigkeiten und Talente, die du vor dem Eintritt in die gegenwärtige Karriere erworben hast, sofern es dieselben sind.
+% Zusätzlich musst du mindestens ein Talent deiner gegenwärtigen Karrierestufe gelernt haben. Bei alldem zählen auch Fähigkeiten und Talente, die du vor dem Eintritt in die gegenwärtige Karriere erworben hast, sofern es dieselben sind.
 
-\begin{DndTable}[header=Abschließen einer Karrierestufe]{lXX}
-  \multicolumn{2}{c}{Karrierestufe} & Anzahl an Steigerungen  \\
-  Stufe     & Beispiel              & \\
-  1         & Laienpriester         & 5             \\
-  2         & Kriegerpriester       & 10            \\
-  3         & Feldpriester          & 15            \\
-  4         & Priestergeneral       & 20            
-\end{DndTable}
+% \subsection{Karriere-Wechsel}
+% Es ist zudem 
 
-\vspace{\fill}
-\pagebreak
+% \begin{DndTable}[header=Abschließen einer Karrierestufe]{lXX}
+%   \multicolumn{2}{c}{Karrierestufe} & Anzahl an Steigerungen  \\
+%   Stufe     & Beispiel              & \\
+%   1         & Laienpriester         & 5             \\
+%   2         & Kriegerpriester       & 10            \\
+%   3         & Feldpriester          & 15            \\
+%   4         & Priestergeneral       & 20            
+% \end{DndTable}
 
-\section{Regeln}
-\subsection{}
-\subsection{Kampf}
-\subsubsection{Trefferzone}
-\subsubsection{Kritische Treffer}
+% \vspace{\fill}
+% \pagebreak
+
+\section{Kampf}
+\subsection{Vorteil}
+Die bestehenden Regeln zum Vorteil aus dem \textit{GRW} sind äußerst umfangreich und mit viel 'mentaler Gymnastik' verbunden.
+Stattdessen wird die Vorteilregelung von \textit{Lawhammer} verwendet:
+\begin{DndReadAloud}
+  Der SC bekommt eine Erleichterung von $+20$ auf den Test, wenn er sich für die Handlung mehr Zeit nehmen kann.
+\end{DndReadAloud}
+\noindent
+Heißt, der SC bekommt einen Vorteil von $+20$, außer er ist in einer Stresssituation.
+Das vereinfacht die vielen Regeln auf ein simples „Kann ich mir für die Aktion Zeit nehmen? Ja oder Nein“. 
+
+Diese Regelung gilt auch außerhalb des Kampfes auf alle Fähigkeitstests. 
+Zum Beispiel, wenn man sich beim Schlösser knacken Zeit lassen kann, und nicht schon die Wache um die Ecke hört.
+
+\subsection{Trefferzone}
+Für die Bestimmung der Trefferzone werden laut \textit{GRW:159} die Zahlen bei jedem erfolgreichen Trefferwurf vertauscht.
+\begin{DndReadAloud}
+  Trefferzonen werden nur bei kritischen Treffern ausgewürfelt.\\
+  Die Bestimmung der Trefferzone erfolgt als extra Wurf.
+\end{DndReadAloud} 
+\noindent
+Das vereinfacht den Standardfall einer Attacke, und nur bei kritischen Treffern wo die Trefferzone eine große Rolle spielt, wird extra gewürfelt.
+
+Wenn nicht anders angesagt, wird immer angenommen dass die Zone \textit{(Ober-)Körper} getroffen wird um den Rüstungswert zu bestimmen. 
+Attacken die explizit auf ein anderes Körperteil zielen, treffen weiterhin das angesagte Körperteil mit entsprechenden Rüstungswert.
+
+
 
 \clearpage
 % \section{Magie}
@@ -268,7 +275,7 @@ Bestimme deine 10 Attribute:
 \end{itemize}
 % \end{DndReadAloud}
 
-\begin{DndTable}[header=Basiswerte]{lXXXXX}
+\begin{DndTable}[header=Basiswerte, color=readaloudcolor]{lXXXXX}
   & \textbf{Mensch} & \textbf{Zwerg} & \textbf{Halbling} \\
   KG               & $20$           & $30$          & $10$                \\
   BF               & $20$           & $20$          & $20$                \\
@@ -290,10 +297,10 @@ Bestimme die fünf Talente deines Volkes. Diese sind im Grundregelwerk auf Seite
 Anstatt zufällige Talente zu würfeln, kann der Spieler diese auch selbst aus der Tabelle auswählen.\\
 Die Tabelle wird mit den Talenten \textit{Gesellig}, \textit{Beharrlich} und \textit{Genügsam} erweitert.
 
-\begin{DndComment}{Unkenruf}
-  Dieses Talent ist mehr Fluff als eigentliches Talent und bietet abgesehen von einem Meta-Vorteil (Charakter stirbt) keine Vorteile beim Spielen.
+\begin{DndReadAloud}
+  Das Talent \textit{Unkenruf} ist mehr Fluff als eigentliches Talent und bietet abgesehen von einem Meta-Vorteil (Charakter stirbt) keine Vorteile beim Spielen.
   Der Spieler sucht anstatt Unkenruf ein anderes Talent aus.
-\end{DndComment}
+\end{DndReadAloud}
 
 \subsection[]{5. Volks-Fähigkeiten}
 Entscheide dich für 6 Fähigkeiten von deinem Volk (GRW Seite 36).
@@ -311,7 +318,7 @@ Pro Fähigkeit dürfen in diesem Schritt maximal 10 Punkte vergeben werden.
 Du bekommst die Ausrüstung deiner Klasse (Seite 37) und deiner ersten Karrierestufe.
 Die angegebenen Gegestände sind ein Beispiel. Der Spieler ist angehalten seine Ausrüstung (sinnvoll) zu erweitern.\\
 Zusätzlich erhält der Spieler ein Startgeld:
-\begin{DndTable}[header=Startgeld]{lX}
+\begin{DndTable}[header=Startgeld, color=readaloudcolor]{lX}
   \textbf{Rang} & \textbf{Vermögen} \\
   Messing               & 2W10 Messinggroschen pro Ansehens-Stufe                 \\
   Silber               & 1W10 Silberschilling pro Ansehens-Stufe                 \\
